@@ -1,0 +1,14 @@
+{
+    "name": "Roths Physics",
+    "short_name": "Roths Physics",
+    "icons": [
+        {
+            "src": "/android-chrome-192x192.png?v=GvmmqzW0AN",
+            "sizes": "192x192",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#f5f6fa",
+    "background_color": "#f5f6fa",
+    "display": "standalone"
+}
