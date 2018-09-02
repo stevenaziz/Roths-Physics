@@ -2,7 +2,7 @@
 <html lang="en-us">
     <head>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>Roths Physics</title>
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=GvmmqzW0AN">
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=GvmmqzW0AN">
@@ -19,11 +19,11 @@
             body {
                 opacity: 1;
                 transition: 0.8s opacity;
-                }
+            }
             body.fade-out {
                 opacity: 0;
                 transition: none;
-                }
+            }
             .redirectButton:hover {
                 background:  #4657b9 radial-gradient(circle, transparent 1%,  #4657b9 1%) center/15000%;
                 box-shadow: 0 3px 7px 1px grey;
@@ -59,50 +59,50 @@
         </style>
     </head>
     <body id="body" onload="fadeIn()" style="background-color: rgb(245, 246, 250); margin: 0; padding: 0; min-width: 320px;">
-        <img style="display: block; margin: 20vh auto 0 auto; min-width: 100px; width: 20vmin; max-width: 250px;" src="https://upload.wikimedia.org/wikipedia/en/thumb/2/27/Mount_Rainier_High_SchoolCOA.png/220px-Mount_Rainier_High_SchoolCOA.png" alt="Mount Rainier High School logo">
+        <script>
+            var cookieValue = getCookie("class");
+            document.body.className += ' fade-out';
+            window.onload=function() {
+                redirect();
+            }
+        function fadeIn() {
+            document.getElementById("body").classList.remove("fade-out");
+        }
+        function joinClass(course) {
+            document.cookie = "class=" + course + "; expires=Sat, 08 Dec 2018 03:00:00 UTC; path=/;";
+            window.location = "https://stevenaziz.github.io/Roths-Physics/" + course + ".html";
+        }
+        function getCookie(cname) {
+            var name = cname + "=";
+            var decodedCookie = decodeURIComponent(document.cookie);
+            var ca = decodedCookie.split(';');
+            for(var i = 0; i <ca.length; i++) {
+                var c = ca[i];
+                while (c.charAt(0) == ' ') {
+                    c = c.substring(1);
+                }
+                if (c.indexOf(name) == 0) {
+                    return c.substring(name.length, c.length);
+                }
+            }
+            return "";
+        }
+        function redirect() {
+            if (document.cookie.indexOf("class=") == -1) {
+                return "";
+            } else {
+                window.location = "https://stevenaziz.github.io/Roths-Physics/" + cookieValue + ".html";
+            }
+        }
+        </script>
+        <img style="display: block; margin: 20vh auto 0 auto; min-width: 100px; width: 20vmin; max-width: 250px;" src="https://www.stevenaziz.github.io/Roths-Physics/Mount%20Rainier%20High%20School.png" alt="Mount Rainier High School logo">
             <h1 style="margin: 4vh 16px 0 16px; text-align: center; font-family: helvetica; font-size: 5vmin; font-color: #595959; font-weight: 100;">Welcome to Roths Physics!</h1>
-            <h2 style="margin: 1vh 16px 0 16px; text-align: center; font-family: helvetica; font-size: 3.5vmin; font-color: #8c8c8c; font-weight: 100;">Please choose your class.</h2>
+            <h2 style="margin: 1vh 16px 0 16px; text-align: center; font-family: helvetica; font-size: 3.5vmin; font-color: #8c8c8c; font-weight: 100;">Please select your class.</h2>
             <div style="text-align: center;">
                 <button onclick="joinClass('SL12')" style="margin: 4vh 1.7vw 0 0;" class="redirectButton">SL 1,2</button>
                 <button onclick="joinClass('SL34')" style="margin: 4vh 1.7vw 0 0;" class="redirectButton">SL 3,4</button>
                 <button onclick="joinClass('HL12')" style="margin: 4vh 1.7vw 0 0;" class="redirectButton">HL 1,2</button>
                 <button onclick="joinClass('HL34')" style="margin: 4vh 0 0 0;" class="redirectButton">HL 3,4</button>
             </div>
-            <script>
-                var cookieValue = getCookie("class");
-                window.onload=function() {
-                    redirect();
-                }
-                function fadeIn() {
-                    document.getElementById("body").classList.remove("fade-out");
-                }
-                document.body.className += ' fade-out';
-                function joinClass(course) {
-                    document.cookie = "class=" + course + "; expires=Sat, 08 Dec 2018 03:00:00 UTC; path=/;";
-                    window.location = "https://stevenaziz.github.io/Roths-Physics/" + course + "/";
-                }
-                function getCookie(cname) {
-                    var name = cname + "=";
-                    var decodedCookie = decodeURIComponent(document.cookie);
-                    var ca = decodedCookie.split(';');
-                    for(var i = 0; i <ca.length; i++) {
-                        var c = ca[i];
-                        while (c.charAt(0) == ' ') {
-                            c = c.substring(1);
-                        }
-                        if (c.indexOf(name) == 0) {
-                            return c.substring(name.length, c.length);
-                        }
-                    }
-                    return "";
-                }
-                function redirect() {
-                    if (document.cookie.indexOf('class=') == -1) {
-                        return "";
-                    } else {
-                        window.location = "https://stevenaziz.github.io/Roths-Physics/" + cookieValue + "/";
-                    }
-                }
-            </script>
     </body>
 </html>
