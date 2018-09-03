@@ -1,1 +1,103 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Roths Physics | Home</title>
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=GvmmqzW0AN">
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=GvmmqzW0AN">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=GvmmqzW0AN">
+        <link rel="manifest" href="/site.webmanifest?v=GvmmqzW0AN">
+        <link rel="mask-icon" href="/safari-pinned-tab.svg?v=GvmmqzW0AN" color="#364390">
+        <link rel="shortcut icon" href="/favicon.ico?v=GvmmqzW0AN">
+        <meta name="apple-mobile-web-app-title" content="Roths Physics">
+        <meta name="application-name" content="Roths Physics">
+        <meta name="msapplication-TileColor" content="#364390">
+        <meta name="msapplication-TileImage" content="/mstile-144x144.png?v=GvmmqzW0AN">
+        <meta name="theme-color" content="#f5f6fa">
+        <style>
+            body {
+                opacity: 1;
+                transition: 0.8s opacity;
+            }
+            body.fade-out {
+                opacity: 0;
+                transition: none;
+            }
+            #leftArrow {
+                fill: grey;
+                transition: fill 0.4s;
+            }
+            #leaveClassLink {
+                color: grey;
+                vertical-align: top;
+                font-size: 16px;
+                font-family: helvetica, sans-serif;
+                font-weight: 100;
+                text-decoration: none;
+                transition: color 0.4s;
+                cursor: pointer;
+            }
+            #leaveClass:hover #leftArrow {
+                fill: rgb(54,67,144);
+            }
+            #leaveClass:hover #leaveClassLink {
+                color: rgb(54,67,144);
+                font-weight: 500;
+            }
+        </style>
+    </head>
+    <body id="body" style="background-color: rgb(245, 246, 250); margin: 0; padding: 0; min-width: 320px;">
+        <script>
+            document.body.className += 'fade-out';
+            var cookieValue = getCookie("class");
+            window.onload=function() {
+                fadeIn();
+                relevantClass();
+            }
+            function fadeIn() {
+                document.getElementById("body").classList.remove("fade-out");
+            }
+            function leaveClass() {
+                document.cookie = "class=; expires=Fri, 08 Dec 2017 03:00:00 UTC; path=/;";
+                window.location = "https://stevenaziz.github.io/Roths-Physics/";
+            }
+            function getCookie(cname) {
+                var name = cname + "=";
+                var decodedCookie = decodeURIComponent(document.cookie);
+                var ca = decodedCookie.split(';');
+                for(var i = 0; i <ca.length; i++) {
+                    var c = ca[i];
+                    while (c.charAt(0) == ' ') {
+                        c = c.substring(1);
+                    }
+                    if (c.indexOf(name) == 0) {
+                        return c.substring(name.length, c.length);
+                    }
+                }
+                return "";
+            }
+            function relevantClass() {
+                if (cookieValue == "SL12") {
+                    document.getElementById("leaveClassLink").innerHTML = "Leave <b>SL 1,2</b>";
+                } else if (cookieValue == "SL34") {
+                    
+                } else if (cookieValue == "HL12") {
+                    
+                } else if (cookieValue == "HL34") {
+                    
+                } else {
+                    return "";
+                }
+            }
+        </script>
+        <div id="leaveClass" onclick="leaveClass()" style="display: inline-block; cursor: pointer; height: 18px; background-color: rgb(245, 246, 250); padding: 7px;">
+            <?xml version="1.0" encoding="iso-8859-1"?>
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 31.494 31.494" style="width: 18px; enable-background: new 0 0 31.494 31.494;" xml:space="preserve">
+                    <path id="leftArrow" d="M10.273,5.009c0.444-0.444,1.143-0.444,1.587,0c0.429,0.429,0.429,1.143,0,1.571l-8.047,8.047h26.554c0.619,0,1.127,0.492,1.127,1.111c0,0.619-0.508,1.127-1.127,1.127H3.813l8.047,8.032c0.429,0.444,0.429,1.159,0,1.587c-0.444,0.444-1.143,0.444-1.587,0l-9.952-9.952c-0.429-0.429-0.429-1.143,0-1.571L10.273,5.009z"/>
+            </svg>
+            <a id="leaveClassLink">Leave SL 1,2</a>
+        </div>
+    </body>
+</html>
 
