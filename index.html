@@ -56,6 +56,39 @@
                 outline: none;
                 border: none;
                 }
+        .otherButton {
+            background-position: center;
+            transition: background 0.4s, box-shadow 0.4s, color 0.4s;
+            min-width: 141px;
+            min-height: 27px;
+            width: 45vw;
+            height: 6vw;
+            max-width: 252px;
+            max-height: 33px;
+            font-weight: 100;
+            border-radius: 9px;
+            padding: 4px;
+            font-size: 94%;
+            font-family: helvetica;
+            text-align: center;
+            color: black;
+            background-color: #f2f2f2;
+            box-shadow: 0 2px 3px 1px grey;
+            outline: none;
+            cursor: pointer;
+            border: none;
+        }
+        .otherButton:hover {
+            background:  #d9d9d9 radial-gradient(circle, transparent 1%,  #d9d9d9 1%) center/15000%;
+            box-shadow: 0 3px 7px 1px grey;
+            color: white;
+        }
+        .otherButton:active {
+            background-color: #cccccc;
+            background-size: 100%;
+            transition: background 0s;
+            box-shadow: 0 3px 10px 1px grey;
+        }
         </style>
     </head>
     <body id="body" style="background-color: rgb(245, 246, 250); margin: 0; padding: 0; min-width: 320px;">
@@ -70,7 +103,7 @@
                 document.getElementById("body").classList.remove("fade-out");
             }
             function joinClass(course) {
-                document.cookie = "class=" + course + "; expires=Sat, 08 Dec 2018 03:00:00 UTC; path=/;";
+                document.cookie = "class=" + course + "; expires=Sun, 01 Jan 2040 03:00:00 UTC; path=/;";
                 window.location = "https://stevenaziz.github.io/Roths-Physics/homepage.html";
             }
             function getCookie(cname) {
@@ -105,5 +138,6 @@
             <button onclick="joinClass('HL12')" style="margin: 4vh 1.7vw 0 0;" class="redirectButton">HL 1,2</button>
             <button onclick="joinClass('HL34')" style="margin: 4vh 0 0 0;" class="redirectButton">HL 3,4</button>
         </div>
+        <button class="otherButton" onclick="joinClass()" style="margin: 5vh auto 0 auto; display: block;">I'm not a student</button>
     </body>
 </html>

@@ -45,6 +45,63 @@
                 color: rgb(54,67,144);
                 font-weight: 500;
             }
+        .navBar {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: rgb(54, 67, 144);
+            text-align: center;
+        }
+        .navLink {
+            display: inline-block;
+            background-color: rgb(54, 67, 144);
+            text-align: center;
+            font-family: helvetica;
+            font-size: 16px;
+            color: white;
+            text-decoration: none;
+            transition: background-color 0.4s;
+            padding: 7px;
+            font-weight: 100;
+        }
+        .navLink:active {
+            background-color: #7e8ace;
+        }
+        .navLink:hover {
+            background-color: #4657b9;
+        }
+        .dropdown {
+            overflow: hidden;
+            display: inline-block;
+        }
+        
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f2f2f2;
+            min-width: 60px;
+            box-shadow: 0px 11px 11px -4px grey;
+            z-index: 1;
+        }
+        .dropdown-content a {
+            display: block;
+            background-color: #f2f2f2;
+            text-align: left;
+            font-family: helvetica;
+            font-size: 14px;
+            color: black;
+            text-decoration: none;
+            transition: background-color 0.4s;
+            padding: 7px;
+            font-weight: 100;
+        }
+        .dropdown-content a:hover {
+            background-color: #d9d9d9;
+            color: black;
+        }
+            .dropdown:hover .dropdown-content {
+            display: block;
+        }
         </style>
     </head>
     <body id="body" style="background-color: rgb(245, 246, 250); margin: 0; padding: 0; min-width: 320px;">
@@ -84,9 +141,26 @@
                     document.getElementById("leaveClassLink").innerHTML = "Leave <b style='vertical-align: top;'>SL 3,4</b>";
                 } else if (cookieValue == "HL12") {
                     document.getElementById("leaveClassLink").innerHTML = "Leave <b style='vertical-align: top;'>HL 1,2</b>";
+                    document.getElementById("ch20").style.display = "none";
+                    document.getElementById("ch21").style.display = "none";
+                    document.getElementById("ch22").style.display = "none";
+                    document.getElementById("ch23").style.display = "none";
+                    document.getElementById("ch24").style.display = "none";
+                    document.getElementById("ch25").style.display = "none";
+                    document.getElementById("ch26").style.display = "none";
+                    document.getElementById("ch27").style.display = "none";
+                    document.getElementById("ch28").style.display = "none";
+                    document.getElementById("ch29").style.display = "none";
+                    document.getElementById("ch30").style.display = "none";
+                    document.getElementById("ch31").style.display = "none";
+                    document.getElementById("ch32").style.display = "none";
+                    document.getElementById("ch33").style.display = "none";
+                    document.getElementById("ch34").style.display = "none";
                 } else if (cookieValue == "HL34") {
                     document.getElementById("leaveClassLink").innerHTML = "Leave <b style='vertical-align: top;'>HL 3,4</b>";
                 } else {
+                    document.getElementById("leaveClassLink").innerHTML = "Select Class";
+                    //window.location = "https://stevenaziz.github.io/Roths-Physics/";
                     return "";
                 }
             }
@@ -97,6 +171,62 @@
                     <path id="leftArrow" d="M10.273,5.009c0.444-0.444,1.143-0.444,1.587,0c0.429,0.429,0.429,1.143,0,1.571l-8.047,8.047h26.554c0.619,0,1.127,0.492,1.127,1.111c0,0.619-0.508,1.127-1.127,1.127H3.813l8.047,8.032c0.429,0.444,0.429,1.159,0,1.587c-0.444,0.444-1.143,0.444-1.587,0l-9.952-9.952c-0.429-0.429-0.429-1.143,0-1.571L10.273,5.009z"/>
             </svg>
             <a id="leaveClassLink">Leave SL 1,2</a>
+        </div>
+        <div class="navBar">
+            <a class="navLink" href="https://www.stevenaziz.com/Roths-Physics">Home</a>
+            <div class="dropdown">
+                <a class="navLink dropbtn" href="/course.html">Course</a>
+                <div class="dropdown-content">
+                    <a class="navLink" href="/course.html#classExpectations">Class Expectations</a>
+                    <a class="navLink" href="/course.html#gradingThresholds">Grading Thresholds</a>
+                    <a class="navLink" href="/course.html#categoriesReassessments">Categories &amp; Reassessments</a>
+                    <a class="navLink" href="/course.html#gradingRoutines">Grading Routines</a>
+                    <a class="navLink" href="/course.html#FAQ">FAQ</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a class="navLink dropbtn" href="/homework.html">Homework</a>
+                <div class="dropdown-content" style="height: 256px; overflow: auto;">
+                    <a id="ch1" class="navLink" href="/homework.html#ch1">Chapter 1:</a>
+                    <a id="ch2" class="navLink" href="/homework.html#ch2">Chapter 2:</a>
+                    <a id="ch3" class="navLink" href="/homework.html#ch3">Chapter 3:</a>
+                    <a id="ch4" class="navLink" href="/homework.html#ch4">Chapter 4:</a>
+                    <a id="ch5" class="navLink" href="/homework.html#ch5">Chapter 5:</a>
+                    <a id="ch6" class="navLink" href="/homework.html#ch6">Chapter 6:</a>
+                    <a id="ch7" class="navLink" href="/homework.html#ch7">Chapter 7:</a>
+                    <a id="ch8" class="navLink" href="/homework.html#ch8">Chapter 8:</a>
+                    <a id="ch9" class="navLink" href="/homework.html#ch9">Chapter 9:</a>
+                    <a id="ch10" class="navLink" href="/homework.html#ch10">Chapter 10:</a>
+                    <a id="ch11" class="navLink" href="/homework.html#ch11">Chapter 11:</a>
+                    <a id="ch12" class="navLink" href="/homework.html#ch12">Chapter 12:</a>
+                    <a id="ch13" class="navLink" href="/homework.html#ch13">Chapter 13:</a>
+                    <a id="ch14" class="navLink" href="/homework.html#ch14">Chapter 14:</a>
+                    <a id="ch15" class="navLink" href="/homework.html#ch15">Chapter 15:</a>
+                    <a id="ch16" class="navLink" href="/homework.html#ch16">Chapter 16:</a>
+                    <a id="ch17" class="navLink" href="/homework.html#ch17">Chapter 17:</a>
+                    <a id="ch18" class="navLink" href="/homework.html#ch18">Chapter 18:</a>
+                    <a id="ch19" class="navLink" href="/homework.html#ch19">Chapter 19:</a>
+                    <a id="ch20" class="navLink" href="/homework.html#ch20">Chapter 20:</a>
+                    <a id="ch21" class="navLink" href="/homework.html#ch21">Chapter 21:</a>
+                    <a id="ch22" class="navLink" href="/homework.html#ch22">Chapter 22:</a>
+                    <a id="ch23" class="navLink" href="/homework.html#ch23">Chapter 23:</a>
+                    <a id="ch24" class="navLink" href="/homework.html#ch24">Chapter 24:</a>
+                    <a id="ch25" class="navLink" href="/homework.html#ch25">Chapter 25:</a>
+                    <a id="ch26" class="navLink" href="/homework.html#ch26">Chapter 26:</a>
+                    <a id="ch27" class="navLink" href="/homework.html#ch27">Chapter 27:</a>
+                    <a id="ch28" class="navLink" href="/homework.html#ch28">Chapter 28:</a>
+                    <a id="ch29" class="navLink" href="/homework.html#ch29">Chapter 29:</a>
+                    <a id="ch30" class="navLink" href="/homework.html#ch30">Chapter 30:</a>
+                    <a id="ch31" class="navLink" href="/homework.html#ch31">Chapter 31:</a>
+                    <a id="ch32" class="navLink" href="/homework.html#ch32">Chapter 32:</a>
+                    <a id="ch33" class="navLink" href="/homework.html#ch33">Chapter 33:</a>
+                    <a id="ch34" class="navLink" href="/homework.html#ch34">Chapter 34:</a>
+                    <a class="navLink" href="/homework.html#textbook">Full Textbook</a>
+                </div>
+            </div>
+            <a class="navLink" href="/experiments.html">Experiments</a>
+            <a class="navLink" href="/projects.html">Projects</a>
+            <a class="navLink" href="/resources.html">Resources</a>
         </div>
     </body>
 </html>
