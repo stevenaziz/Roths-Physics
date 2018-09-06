@@ -98,8 +98,13 @@
                 background-color: #d9d9d9;
                 color: black;
             }
-                .dropdown:hover .dropdown-content {
+            .dropdown:hover .dropdown-content {
                 display: block;
+            }
+            iframe {
+                width: 550px;
+                height: 600px;
+                display: inline-block;
             }
         </style>
     </head>
@@ -137,9 +142,11 @@
                 if (cookieValue == "SL12") {
                     document.getElementById("leaveClassLink").innerHTML = "Leave <b style='vertical-align: top;'>SL 1,2</b>";
                     document.getElementById("welcome").innerHTML = "Welcome Standard Level Physics 1,2 Students!";
+                    document.getElementById("courseDescription").innerHTML = "Physics is the study of the interaction of matter and energy with our environment.  This is the first year of a two-year inquiry and albebra-based physics course, jointly addressing the Next Generation Science Standards (NGSS) for high school physics and a portio of the IB Standard Level Physics standards.  The remaining IB SL Physics standards are completed in IB SL Physics 3-4, which is the second year of the course sequence.  Students will be engaged in the study of basic mechanics, waves, electric circuits, and earth/space sciences, with the latter unit relating to applications of physics and addressing additional NGSS requirements.  The world of mechanics includes the fields of kinematics, dynamics, and energy.  Waves encompass a detailed study of the physics of vibrations and how they lead to energy transfer via oscillating meda.  Electric circuits addresses voltage, resistance, current, power, magnetism, and induction.  The first year ends with applications of physics in earth and space sciences.  Examples of specific topics are continental drift, mountain formation, and select topics in astrophysics and cosmology.  The course uses the district adopted textbook, Active Physics, which engages students in a largely inquiry-based, experimental science philosophy.  Students will be expeosed to the theorietical, experimental, and engineering aspects of physics, thus attaing the skills to excel at theoretical problem solving, experimental design and analysis, and the engineering design cycle.<br><br>Although the primary goal of the course is to prepare the student for the NGSS state science exam, it should also be understood that the topics for the IB Standard Level curriculum are meant to prepare students for the IB SL Physics exam.  There is a level of compatibility between these two sets of standards, with the IB curriculum generally expanding on standard physics content beyond those minimal requirements espoused by the state through NGSS.  Thus, the first-year course will also serve to partially explore the IB standards that are shared with NGSS and covered in Active Physics.  If a student wishes to continue their studies in physics for year two, they will be able to do so by enrolling in IB SL Physics 3-4 after successful completion of the first year course.  In this case, the second year will cover the remaining topics for the Standard Level curriculum while also preparing students for the IB SL Physics exam.";
                 } else if (cookieValue == "SL34") {
                     document.getElementById("leaveClassLink").innerHTML = "Leave <b style='vertical-align: top;'>SL 3,4</b>";
                     document.getElementById("welcome").innerHTML = "Welcome Standard Level Physics 3,4 Students!";
+                    document.getElementById("courseDescription").innerHTML = "";
                 } else if (cookieValue == "HL12") {
                     document.getElementById("leaveClassLink").innerHTML = "Leave <b style='vertical-align: top;'>HL 1,2</b>";
                     document.getElementById("ch20").style.display = "none";
@@ -158,12 +165,34 @@
                     document.getElementById("ch33").style.display = "none";
                     document.getElementById("ch34").style.display = "none";
                     document.getElementById("welcome").innerHTML = "Welcome Higher Level Physics 1,2 Students!";
+                    document.getElementById("courseDescription").innerHTML = "IB Higher Level Physics 1-2 is the first year of a two year introductory, algebra-based course in college physics.  Many science-based majors in college require a course in physics and the Higher Level sequence is roughly equivalent in pace and scope.  Many students will find themselves only taking one year of physics, which is typical.  A few who show strong interest in college science fields or plan on majoring in physics or engineering will opt to take the course for both years.  The two year IB programs will prepare you for the IB Standard Level (SL) or Higher Level (HL) exams.<br><br>The first year of the course encompasses a variety of topics ranging from classical Newtonian mechanics that includes kinematics, dynamics, gravitation, work, energy, and linear momentum during the first semester to heat, temperature, kinetic theory, waves and oscillations, electric forces, electric potential, and electric potential energy.  Students can expect a rigorous treatment on the theoretical concepts noted above along with ample opportunities to learn and utilize the techniques of experimental scientists through laboratory practicals allowing for experimental design, analysis, and evaluation.  Engineering principles will be touched upon through a number of projects, such as 'catapult design', 'destructive testing', 'heating principles', 'The Egg Drop', and 'musical instrument design'.<br><br>It is often the case that many students who are in the HL Physics program are also in the HL Math sequence.  Typically, a junior would then be in HL Math 3-4, calculus, as juniors.  Alternatively, a student in the SL Math sequence would be taking SL Math 1-2, pre-calculus, or may be in SL Math 3-4, calculus, as seniors.  Being enrolled in SL/HL Math 3-4, although highly recommended, is not a requirement.  Students in pre-calculus can still be successful but the mathematical problem-solving techniques may seem somewhat more difficult, but not impossible to master, with patience and practice.";
                 } else if (cookieValue == "HL34") {
                     document.getElementById("leaveClassLink").innerHTML = "Leave <b style='vertical-align: top;'>HL 3,4</b>";
                     document.getElementById("welcome").innerHTML = "Welcome Higher Level Physics 3,4 Students!";
+                    document.getElementById("ch1").style.display = "none";
+                    document.getElementById("ch2").style.display = "none";
+                    document.getElementById("ch3").style.display = "none";
+                    document.getElementById("ch4").style.display = "none";
+                    document.getElementById("ch5").style.display = "none";
+                    document.getElementById("ch6").style.display = "none";
+                    document.getElementById("ch7").style.display = "none";
+                    document.getElementById("ch8").style.display = "none";
+                    document.getElementById("ch9").style.display = "none";
+                    document.getElementById("ch10").style.display = "none";
+                    document.getElementById("ch11").style.display = "none";
+                    document.getElementById("ch12").style.display = "none";
+                    document.getElementById("ch13").style.display = "none";
+                    document.getElementById("ch14").style.display = "none";
+                    document.getElementById("ch15").style.display = "none";
+                    document.getElementById("ch16").style.display = "none";
+                    document.getElementById("ch17").style.display = "none";
+                    document.getElementById("ch18").style.display = "none";
+                    document.getElementById("ch19").style.display = "none";
+                    document.getElementById("courseDescription").innerHTML = "IB Higher Level Physics 3-4 is the second year of a course that cover two years of an introductory, algebra-based course in college physics.  At this point in time, perhaps you have shown a strong interest in the content and wish to pursue further understanding or maybe you have a desire to be a physicist or engineer.  You may also have decided to test in IB Physics as a Certificate or Diploma candidate.  There may be many reasons for your choice but, nevertheless, your passion for physics will continue to be piqued this year.  As you should be aware, this course will prepare you for the IB Standard Level (SL) or Higher Level (HL) exams, although you are not required to partake in these tests.  The exam, at both levels, includes three papers covering core content requirements plus a component called the Interal Assessment which incorporates performance on laboratory skills and an interdisciplinary and collaborative research project known as the 'Group 4 Project'.<br><br>This year the course will give you the opportunity to continue your exploration into the field of electromagnetism that you started at the end of last year with electric force and energy.  The content will encompass the topics of electric circuits, magnetic force, Faraday's Law of Electromagnetic Induction, electromagnetic waves, geometric and wave optics, Special and General Relativity, atomic and nuclear physics, and elementary particle physics.  Much like the previous year, you should still expect to explore theoretical concepts in a rigorous fashion through problem-solving along with representative laboratory experiments based on current and relevant topics of study.  Engineering principles may be utilized through the Internal Assessment in an appropriate way, which you will be engaged in during the 1st semester and a couple of weeks into the 2nd semester.  After the exams in May, further opportunities for projects will be available to do since we will have completed the curriculum for the entire course by the end of April.  Additionally, you will be afforded opportunities and resources to prepare for the IB Physics exam throughout the year. After school sessions for test practice and/or content review will be offered but attendance would not be required, only recommendeded.";
                 } else {
                     document.getElementById("leaveClassLink").innerHTML = "Select Class";
                     document.getElementById("welcome").innerHTML = "Welcome Non-IB Physics Students!";
+                    document.getElementById("courseDescription").innerHTML = "";
                     return "";
                 }
             }
@@ -271,6 +300,16 @@
             <a class="navLink" href="/resources.html">Resources</a>
         </div>
         <h1 id="welcome" style="font-family: helvetica; font-weight: 100; font-size: 5vmin; color: black; text-align: left; margin: 2vh 0 0 2vh;"></h1>
+        <div style="text-align: center;">
+            <p id="courseDescription" style="display: inline-block; font-family: helvetica; font-weight: 100; font-size: 3vmin; color: #4d4d4d; text-align: left; margin: 2vh 0 0 0; min-width: 350px; width: calc(100vw - 600px); max-width: 850px;"></p>
+            <div style="width: 550px;">
+                <h1 style="font-family: helvetica; font-weight: 100; font-size: 4vmin; color: black; text-align: center; margin: 2vh 10px 2vh 10px;">Quick Look</h1>
+                <button></button>
+                <button></button>
+                <button></button>
+                <iframe src="https://calendar.google.com/calendar/embed?title=IB%20HL%20Physics%203%2C4&amp;mode=AGENDA&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=vn4svtaf3dprnohv6nncqm3leg%40group.calendar.google.com&amp;color=%2323164E&amp;ctz=America%2FLos_Angeles" style="border-width:0" frameborder="0" scrolling="no"></iframe>
+            </div>
+        <div>
     </body>
 </html>
 
