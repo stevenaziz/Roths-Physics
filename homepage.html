@@ -45,63 +45,63 @@
                 color: rgb(54,67,144);
                 font-weight: 500;
             }
-        .navBar {
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-            background-color: rgb(54, 67, 144);
-            text-align: center;
-        }
-        .navLink {
-            display: inline-block;
-            background-color: rgb(54, 67, 144);
-            text-align: center;
-            font-family: helvetica;
-            font-size: 16px;
-            color: white;
-            text-decoration: none;
-            transition: background-color 0.4s;
-            padding: 7px;
-            font-weight: 100;
-        }
-        .navLink:active {
-            background-color: #7e8ace;
-        }
-        .navLink:hover {
-            background-color: #4657b9;
-        }
-        .dropdown {
-            overflow: hidden;
-            display: inline-block;
-        }
+            .navBar {
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+                background-color: rgb(54, 67, 144);
+                text-align: center;
+            }
+            .navLink {
+                display: inline-block;
+                background-color: rgb(54, 67, 144);
+                text-align: center;
+                font-family: helvetica;
+                font-size: 16px;
+                color: white;
+                text-decoration: none;
+                transition: background-color 0.4s;
+                padding: 7px;
+                font-weight: 100;
+            }
+            .navLink:active {
+                background-color: #7e8ace;
+            }
+            .navLink:hover {
+                background-color: #4657b9;
+            }
+            .dropdown {
+                overflow: hidden;
+                display: inline-block;
+            }
         
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: #f2f2f2;
-            min-width: 60px;
-            box-shadow: 0px 11px 11px -4px grey;
-            z-index: 1;
-        }
-        .dropdown-content a {
-            display: block;
-            background-color: #f2f2f2;
-            text-align: left;
-            font-family: helvetica;
-            font-size: 14px;
-            color: black;
-            text-decoration: none;
-            transition: background-color 0.4s;
-            padding: 7px;
-            font-weight: 100;
-        }
-        .dropdown-content a:hover {
-            background-color: #d9d9d9;
-            color: black;
-        }
-            .dropdown:hover .dropdown-content {
-            display: block;
-        }
+            .dropdown-content {
+                display: none;
+                position: absolute;
+                background-color: #f2f2f2;
+                min-width: 60px;
+                box-shadow: 0px 11px 11px -4px grey;
+                z-index: 1;
+            }
+            .dropdown-content a {
+                display: block;
+                background-color: #f2f2f2;
+                text-align: left;
+                font-family: helvetica;
+                font-size: 14px;
+                color: black;
+                text-decoration: none;
+                transition: background-color 0.4s;
+                padding: 7px;
+                font-weight: 100;
+            }
+            .dropdown-content a:hover {
+                background-color: #d9d9d9;
+                color: black;
+            }
+                .dropdown:hover .dropdown-content {
+                display: block;
+            }
         </style>
     </head>
     <body id="body" style="background-color: rgb(245, 246, 250); margin: 0; padding: 0; min-width: 320px;">
@@ -137,8 +137,10 @@
             function relevantClass() {
                 if (cookieValue == "SL12") {
                     document.getElementById("leaveClassLink").innerHTML = "Leave <b style='vertical-align: top;'>SL 1,2</b>";
+                    document.getElementById("welcome").innerHTML = "Welcome Standard Level Physics 1,2 Students!";
                 } else if (cookieValue == "SL34") {
                     document.getElementById("leaveClassLink").innerHTML = "Leave <b style='vertical-align: top;'>SL 3,4</b>";
+                    document.getElementById("welcome").innerHTML = "Welcome Standard Level Physics 3,4 Students!";
                 } else if (cookieValue == "HL12") {
                     document.getElementById("leaveClassLink").innerHTML = "Leave <b style='vertical-align: top;'>HL 1,2</b>";
                     document.getElementById("ch20").style.display = "none";
@@ -156,12 +158,14 @@
                     document.getElementById("ch32").style.display = "none";
                     document.getElementById("ch33").style.display = "none";
                     document.getElementById("ch34").style.display = "none";
+                    document.getElementById("welcome").innerHTML = "Welcome Higher Level Physics 1,2 Students!";
                 } else if (cookieValue == "HL34") {
                     document.getElementById("leaveClassLink").innerHTML = "Leave <b style='vertical-align: top;'>HL 3,4</b>";
+                    document.getElementById("welcome").innerHTML = "Welcome Higher Level Physics 3,4 Students!";
                 } else {
                     document.getElementById("leaveClassLink").innerHTML = "Select Class";
-                    //window.location = "https://stevenaziz.github.io/Roths-Physics/";
                     return "";
+                    document.getElementById("welcome").innerHTML = "Welcome Non-IB Physics Students!";
                 }
             }
         </script>
@@ -181,53 +185,93 @@
                     <a class="navLink" href="/course.html#gradingThresholds">Grading Thresholds</a>
                     <a class="navLink" href="/course.html#categoriesReassessments">Categories &amp; Reassessments</a>
                     <a class="navLink" href="/course.html#gradingRoutines">Grading Routines</a>
+                    <a class="navLink" href="">Safety Contract</a>
                     <a class="navLink" href="/course.html#FAQ">FAQ</a>
                 </div>
             </div>
             <div class="dropdown">
                 <a class="navLink dropbtn" href="/homework.html">Homework</a>
-                <div class="dropdown-content" style="height: 256px; overflow: auto;">
-                    <a id="ch1" class="navLink" href="/homework.html#ch1">Chapter 1:</a>
-                    <a id="ch2" class="navLink" href="/homework.html#ch2">Chapter 2:</a>
-                    <a id="ch3" class="navLink" href="/homework.html#ch3">Chapter 3:</a>
-                    <a id="ch4" class="navLink" href="/homework.html#ch4">Chapter 4:</a>
-                    <a id="ch5" class="navLink" href="/homework.html#ch5">Chapter 5:</a>
-                    <a id="ch6" class="navLink" href="/homework.html#ch6">Chapter 6:</a>
-                    <a id="ch7" class="navLink" href="/homework.html#ch7">Chapter 7:</a>
-                    <a id="ch8" class="navLink" href="/homework.html#ch8">Chapter 8:</a>
-                    <a id="ch9" class="navLink" href="/homework.html#ch9">Chapter 9:</a>
-                    <a id="ch10" class="navLink" href="/homework.html#ch10">Chapter 10:</a>
-                    <a id="ch11" class="navLink" href="/homework.html#ch11">Chapter 11:</a>
-                    <a id="ch12" class="navLink" href="/homework.html#ch12">Chapter 12:</a>
-                    <a id="ch13" class="navLink" href="/homework.html#ch13">Chapter 13:</a>
-                    <a id="ch14" class="navLink" href="/homework.html#ch14">Chapter 14:</a>
-                    <a id="ch15" class="navLink" href="/homework.html#ch15">Chapter 15:</a>
-                    <a id="ch16" class="navLink" href="/homework.html#ch16">Chapter 16:</a>
-                    <a id="ch17" class="navLink" href="/homework.html#ch17">Chapter 17:</a>
-                    <a id="ch18" class="navLink" href="/homework.html#ch18">Chapter 18:</a>
-                    <a id="ch19" class="navLink" href="/homework.html#ch19">Chapter 19:</a>
-                    <a id="ch20" class="navLink" href="/homework.html#ch20">Chapter 20:</a>
-                    <a id="ch21" class="navLink" href="/homework.html#ch21">Chapter 21:</a>
-                    <a id="ch22" class="navLink" href="/homework.html#ch22">Chapter 22:</a>
-                    <a id="ch23" class="navLink" href="/homework.html#ch23">Chapter 23:</a>
-                    <a id="ch24" class="navLink" href="/homework.html#ch24">Chapter 24:</a>
-                    <a id="ch25" class="navLink" href="/homework.html#ch25">Chapter 25:</a>
-                    <a id="ch26" class="navLink" href="/homework.html#ch26">Chapter 26:</a>
-                    <a id="ch27" class="navLink" href="/homework.html#ch27">Chapter 27:</a>
-                    <a id="ch28" class="navLink" href="/homework.html#ch28">Chapter 28:</a>
-                    <a id="ch29" class="navLink" href="/homework.html#ch29">Chapter 29:</a>
-                    <a id="ch30" class="navLink" href="/homework.html#ch30">Chapter 30:</a>
-                    <a id="ch31" class="navLink" href="/homework.html#ch31">Chapter 31:</a>
-                    <a id="ch32" class="navLink" href="/homework.html#ch32">Chapter 32:</a>
-                    <a id="ch33" class="navLink" href="/homework.html#ch33">Chapter 33:</a>
-                    <a id="ch34" class="navLink" href="/homework.html#ch34">Chapter 34:</a>
+                <div class="dropdown-content" style="height: 400px; overflow: auto;">
+                    <a id="ch1" class="navLink" href="/homework.html#ch1">Chapter 1: The Nature of Science and Physics</a>
+                    <a id="ch2" class="navLink" href="/homework.html#ch2">Chapter 2: Kinematics</a>
+                    <a id="ch3" class="navLink" href="/homework.html#ch3">Chapter 3: Two-Dimensional Kinematics</a>
+                    <a id="ch4" class="navLink" href="/homework.html#ch4">Chapter 4: Force and Newton's Laws of Motion</a>
+                    <a id="ch5" class="navLink" href="/homework.html#ch5">Chapter 5: Friction, Drag, and Elaticity</a>
+                    <a id="ch6" class="navLink" href="/homework.html#ch6">Chapter 6: Uniform Circular Motion and Gravitation</a>
+                    <a id="ch7" class="navLink" href="/homework.html#ch7">Chapter 7: Work, Energy, and Energy Resources</a>
+                    <a id="ch8" class="navLink" href="/homework.html#ch8">Chapter 8: Linear Momentum and Collisions</a>
+                    <a id="ch9" class="navLink" href="/homework.html#ch9">Chapter 9: Statics and Torqe</a>
+                    <a id="ch10" class="navLink" href="/homework.html#ch10">Chapter 10: Rotational Momentum and Angular Momentum</a>
+                    <a id="ch11" class="navLink" href="/homework.html#ch11">Chapter 11: Fluid Statics</a>
+                    <a id="ch12" class="navLink" href="/homework.html#ch12">Chapter 12: Fluid Dynamics</a>
+                    <a id="ch13" class="navLink" href="/homework.html#ch13">Chapter 13: Temperature, Kinetic Theory, and the Gas Laws</a>
+                    <a id="ch14" class="navLink" href="/homework.html#ch14">Chapter 14: Heat and Heat Transfer Methods</a>
+                    <a id="ch15" class="navLink" href="/homework.html#ch15">Chapter 15: Thermodynamics</a>
+                    <a id="ch16" class="navLink" href="/homework.html#ch16">Chapter 16: Oscillatory Motion and Waves</a>
+                    <a id="ch17" class="navLink" href="/homework.html#ch17">Chapter 17: Physics of Hearing</a>
+                    <a id="ch18" class="navLink" href="/homework.html#ch18">Chapter 18: Electric Charge and Electric Field</a>
+                    <a id="ch19" class="navLink" href="/homework.html#ch19">Chapter 19: Electric Potential and Electric Field</a>
+                    <a id="ch20" class="navLink" href="/homework.html#ch20">Chapter 20: Electric Current, Resistance, and Ohm's Law</a>
+                    <a id="ch21" class="navLink" href="/homework.html#ch21">Chapter 21: Circuits and DC Instruments</a>
+                    <a id="ch22" class="navLink" href="/homework.html#ch22">Chapter 22: Magnetism</a>
+                    <a id="ch23" class="navLink" href="/homework.html#ch23">Chapter 23: Electromagnetic Induction, AC Circuits, and Electrical Technologies</a>
+                    <a id="ch24" class="navLink" href="/homework.html#ch24">Chapter 24: Electromagnetic Waves</a>
+                    <a id="ch25" class="navLink" href="/homework.html#ch25">Chapter 25: Geometric Options</a>
+                    <a id="ch26" class="navLink" href="/homework.html#ch26">Chapter 26: Vision and Optical Instruments</a>
+                    <a id="ch27" class="navLink" href="/homework.html#ch27">Chapter 27: Wave Optics</a>
+                    <a id="ch28" class="navLink" href="/homework.html#ch28">Chapter 28: Special Relativity</a>
+                    <a id="ch29" class="navLink" href="/homework.html#ch29">Chapter 29: Introduction to Quantum Physics</a>
+                    <a id="ch30" class="navLink" href="/homework.html#ch30">Chapter 30: Atomic Physics</a>
+                    <a id="ch31" class="navLink" href="/homework.html#ch31">Chapter 31: Radioactrivity and Nuclear Physics</a>
+                    <a id="ch32" class="navLink" href="/homework.html#ch32">Chapter 32: Medical Applications of Nuclear Physics</a>
+                    <a id="ch33" class="navLink" href="/homework.html#ch33">Chapter 33: Particle Physics</a>
+                    <a id="ch34" class="navLink" href="/homework.html#ch34">Chapter 34: Frontiers of Physics</a>
                     <a class="navLink" href="/homework.html#textbook">Full Textbook</a>
                 </div>
             </div>
-            <a class="navLink" href="/experiments.html">Experiments</a>
-            <a class="navLink" href="/projects.html">Projects</a>
+            <div class="dropdown">
+                <a class="navLink dropbtn" href="/experiments.html">Experiments</a>
+                <div class="dropdown-content" style="height: 400px; overflow: auto;">
+                    <a class="navLink" href="/experiments.html#1">The Sextant</a>
+                    <a class="navLink" href="/experiments.html#2">Determining g on an incline plane</a>
+                    <a class="navLink" href="/experiments.html#3">The Atwood Machine</a>
+                    <a class="navLink" href="/experiments.html#4">Hooke's Law Springs</a>
+                    <a class="navLink" href="/experiments.html#5">Impulse and Momentum</a>
+                    <a class="navLink" href="/experiments.html#6">Gas Laws</a>
+                    <a class="navLink" href="/experiments.html#7">Specific Heat Calorimetry</a>
+                    <a class="navLink" href="/experiments.html#8">Hooke's Law Oscillations</a>
+                    <a class="navLink" href="/experiments.html#9">The Speed of Sound</a>
+                    <a class="navLink" href="/experiments.html#10">Standing Waves on a String</a>
+                    <a class="navLink" href="/experiments.html#11">Closed-Pipe Resonance</a>
+                    <a class="navLink" href="/experiments.html#12">Mapping the Electric Field</a>
+                    <a class="navLink" href="/experiments.html#13">Resistance Factors</a>
+                    <a class="navLink" href="/experiments.html#14">Internal Resistance</a>
+                    <a class="navLink" href="/experiments.html#15">Bridge Diode Rectification</a>
+                    <a class="navLink" href="/experiments.html#16">Refraction and Image Formation</a>
+                    <a class="navLink" href="/experiments.html#17">Double/Single Slit Interference</a>
+                    <a class="navLink" href="/experiments.html#18">Spectroscopy and Interferometry</a>
+                    <a class="navLink" href="/experiments.html#19">The Photoelectric Effect</a>
+                    <a class="navLink" href="/experiments.html#20">Radioactive Decay</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a class="navLink dropbtn" href="/projects.html">Projects</a>
+                <div class="dropdown-content">
+                    <a class="navLink" href="/projects.html#1">Target Practice</a>
+                    <a class="navLink" href="/projects.html#2">Destructive Testing</a>
+                    <a class="navLink" href="/projects.html#3">Solar Oven</a>
+                    <a class="navLink" href="/projects.html#4">Egg Drop</a>
+                    <a class="navLink" href="/projects.html#5">Musical Instruments</a>
+                    <a class="navLink" href="/projects.html#6">Rube Goldberg</a>
+                    <a class="navLink" href="/projects.html#7">Applied Circuits</a>
+                    <a class="navLink" href="/projects.html#8">Compound Lenses</a>
+                    <a class="navLink" href="/projects.html#9">Camera Obscura</a>
+                    <a class="navLink" href="/projects.html#10">Human Enhancement Debates</a>
+                </div>
+            </div>
             <a class="navLink" href="/resources.html">Resources</a>
         </div>
+        <h1 id="welcome" style="font-family: helvetica; font-weight: 100; font-size: 5vmin; color: black; text-align: left; margin: 2vh 0 0 2vh;"></h1>
     </body>
 </html>
 
