@@ -25,11 +25,11 @@
                 transition: none;
             }
             #leftArrow {
-                fill: grey;
+                fill: white;
                 transition: fill 0.4s;
             }
             #leaveClassLink {
-                color: grey;
+                color: white;
                 vertical-align: top;
                 font-size: 16px;
                 font-family: helvetica, sans-serif;
@@ -38,19 +38,15 @@
                 transition: color 0.4s;
                 cursor: pointer;
             }
-            #leaveClass:hover #leftArrow {
-                fill: rgb(54,67,144);
-            }
-            #leaveClass:hover #leaveClassLink {
-                color: rgb(54,67,144);
-                font-weight: 500;
+            #leaveClass:hover  {
+                background-color: #4657b9;
             }
             .navBar {
                 margin: 0;
                 padding: 0;
                 overflow: hidden;
                 background-color: rgb(54, 67, 144);
-                text-align: center;
+                text-align: left;
             }
             .navLink {
                 display: inline-block;
@@ -115,6 +111,7 @@
             window.onload=function() {
                 fadeIn();
                 relevantClass();
+                responsiveDesign();
             }
             function fadeIn() {
                 document.getElementById("body").classList.remove("fade-out");
@@ -196,17 +193,13 @@
                     return "";
                 }
             }
+        function responsiveDesign() {
+            
+        }
         </script>
-        <div id="leaveClass" onclick="leaveClass()" style="display: inline-block; cursor: pointer; height: 18px; background-color: rgb(245, 246, 250); padding: 7px;">
-            <?xml version="1.0" encoding="iso-8859-1"?>
-            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 31.494 31.494" style="width: 18px; enable-background: new 0 0 31.494 31.494;" xml:space="preserve">
-                    <path id="leftArrow" d="M10.273,5.009c0.444-0.444,1.143-0.444,1.587,0c0.429,0.429,0.429,1.143,0,1.571l-8.047,8.047h26.554c0.619,0,1.127,0.492,1.127,1.111c0,0.619-0.508,1.127-1.127,1.127H3.813l8.047,8.032c0.429,0.444,0.429,1.159,0,1.587c-0.444,0.444-1.143,0.444-1.587,0l-9.952-9.952c-0.429-0.429-0.429-1.143,0-1.571L10.273,5.009z"/>
-            </svg>
-            <a id="leaveClassLink">Leave SL 1,2</a>
-        </div>
         <div class="navBar">
-            <a class="navLink" href="https://www.stevenaziz.com/Roths-Physics">Home</a>
-            <div class="dropdown">
+            <a id="home" class="navLink" href="https://www.stevenaziz.com/Roths-Physics" style="margin-left: 12px;">Home</a>
+            <div id="course" class="dropdown">
                 <a class="navLink" href="/course.html">Course</a>
                 <div class="dropdown-content">
                     <a class="navLink" href="/course.html#classExpectations">Class Expectations</a>
@@ -217,7 +210,7 @@
                     <a class="navLink" href="/course.html#FAQ">FAQ</a>
                 </div>
             </div>
-            <div class="dropdown">
+            <div id="hw" class="dropdown">
                 <a class="navLink" href="/homework.html">Homework</a>
                 <div class="dropdown-content" style="height: 400px; overflow: auto;">
                     <a id="ch1" class="navLink" href="/homework.html#ch1">Chapter 1: The Nature of Science and Physics</a>
@@ -257,7 +250,7 @@
                     <a class="navLink" href="/homework.html#textbook">Full Textbook</a>
                 </div>
             </div>
-            <div class="dropdown">
+            <div id="labs" class="dropdown">
                 <a class="navLink" href="/experiments.html">Experiments</a>
                 <div class="dropdown-content" style="height: 400px; overflow: auto;">
                     <a class="navLink" href="/experiments.html#1">The Sextant</a>
@@ -282,7 +275,7 @@
                     <a class="navLink" href="/experiments.html#20">Radioactive Decay</a>
                 </div>
             </div>
-            <div class="dropdown">
+            <div id="projects" class="dropdown">
                 <a class="navLink" href="/projects.html">Projects</a>
                 <div class="dropdown-content">
                     <a class="navLink" href="/projects.html#1">Target Practice</a>
@@ -297,11 +290,32 @@
                     <a class="navLink" href="/projects.html#10">Human Enhancement Debates</a>
                 </div>
             </div>
-            <a class="navLink" href="/resources.html">Resources</a>
+            <div id="resources" class="dropdown">
+                <a class="navLink" href="/resources.html">Resources</a>
+                <div class="dropdown-content">
+                    <a class="navLink" href="/resources.html#1">Target Practice</a>
+                    <a class="navLink" href="/resources.html#2">Destructive Testing</a>
+                    <a class="navLink" href="/resources.html#3">Solar Oven</a>
+                    <a class="navLink" href="/resources.html#4">Egg Drop</a>
+                    <a class="navLink" href="/resources.html#5">Musical Instruments</a>
+                    <a class="navLink" href="/resources.html#6">Rube Goldberg</a>
+                    <a class="navLink" href="/resources.html#7">Applied Circuits</a>
+                    <a class="navLink" href="/resources.html#8">Compound Lenses</a>
+                    <a class="navLink" href="/resources.html#9">Camera Obscura</a>
+                    <a class="navLink" href="/resources.html#10">Human Enhancement Debates</a>
+                </div>
+            </div>
+            <div id="leaveClass" onclick="leaveClass()" style="display: inline-block; cursor: pointer; height: 18px; padding: 7px; float: right; transition: background-color 0.4s;">
+                <?xml version="1.0" encoding="iso-8859-1"?>
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 31.494 31.494" style="width: 18px; enable-background: new 0 0 31.494 31.494;" xml:space="preserve">
+                    <path id="leftArrow" d="M10.273,5.009c0.444-0.444,1.143-0.444,1.587,0c0.429,0.429,0.429,1.143,0,1.571l-8.047,8.047h26.554c0.619,0,1.127,0.492,1.127,1.111c0,0.619-0.508,1.127-1.127,1.127H3.813l8.047,8.032c0.429,0.444,0.429,1.159,0,1.587c-0.444,0.444-1.143,0.444-1.587,0l-9.952-9.952c-0.429-0.429-0.429-1.143,0-1.571L10.273,5.009z"/>
+                </svg>
+                <a id="leaveClassLink">Leave SL 1,2</a>
+            </div>
         </div>
         <h1 id="welcome" style="font-family: helvetica; font-weight: 100; font-size: 3vmax; color: black; text-align: center; margin: 2vh 0 0 2vh;"></h1>
         <div style="text-align: center;">
-            <p id="courseDescription" style="vertical-align: top; display: inline-block; font-family: helvetica; font-weight: 100; font-size: 1.75vmax; color: #4d4d4d; text-align: left; margin: 2vh 0 0 0; min-width: 550px; width: calc(100vw - 600px); max-width: 850px;"></p>
+            <p id="courseDescription" style="vertical-align: top; display: inline-block; font-family: helvetica; font-weight: 100; font-size: 1.75vmax; color: #4d4d4d; text-align: left; margin: 2vh 0 0 2vh; min-width: 550px; width: calc(100vw - 600px); max-width: 850px;"></p>
             <div style="width: 550px; display: inline-block; vertical-align: top;">
                 <h1 style="font-family: helvetica; font-weight: 100; font-size: 2.5vmax; color: black; text-align: center; margin: 0 10px 2vh 10px;">Quick Look</h1>
                 <button></button>
