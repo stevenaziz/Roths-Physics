@@ -4,16 +4,16 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>Roths Physics | Home</title>
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=GvmmqzW0AN">
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=GvmmqzW0AN">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=GvmmqzW0AN">
-        <link rel="manifest" href="/site.webmanifest?v=GvmmqzW0AN">
-        <link rel="mask-icon" href="/safari-pinned-tab.svg?v=GvmmqzW0AN" color="#364390">
-        <link rel="shortcut icon" href="/favicon.ico?v=GvmmqzW0AN">
+        <link rel="apple-touch-icon" sizes="180x180" href="https://www.stevenaziz.com/Roths-Physics/apple-touch-icon.png?v=GvmmqzW0AN">
+        <link rel="icon" type="image/png" sizes="32x32" href="https://www.stevenaziz.com/Roths-Physics//favicon-32x32.png?v=GvmmqzW0AN">
+        <link rel="icon" type="image/png" sizes="16x16" href="https://www.stevenaziz.com/Roths-Physics//favicon-16x16.png?v=GvmmqzW0AN">
+        <link rel="manifest" href="https://www.stevenaziz.com/Roths-Physics//site.webmanifest?v=GvmmqzW0AN">
+        <link rel="mask-icon" href="https://www.stevenaziz.com/Roths-Physics//safari-pinned-tab.svg?v=GvmmqzW0AN" color="#364390">
+        <link rel="shortcut icon" href="https://www.stevenaziz.com/Roths-Physics//favicon.ico?v=GvmmqzW0AN">
         <meta name="apple-mobile-web-app-title" content="Roths Physics">
         <meta name="application-name" content="Roths Physics">
         <meta name="msapplication-TileColor" content="#364390">
-        <meta name="msapplication-TileImage" content="/mstile-144x144.png?v=GvmmqzW0AN">
+        <meta name="msapplication-TileImage" content="https://www.stevenaziz.com/Roths-Physics//mstile-144x144.png?v=GvmmqzW0AN">
         <meta name="theme-color" content="#f5f6fa">
         <style>
             body {
@@ -102,6 +102,46 @@
                 height: 600px;
                 display: inline-block;
             }
+            .container {
+                display: none;
+                cursor: pointer;
+                margin: 7px 0 7px 12px;
+                vertical-align: top;
+            }
+        
+        .bar1 {
+            width: 25px;
+            height: 2px;
+            background-color: white;
+            margin: 0 0 5px 0;
+            transition: 0.4s;
+        }
+        .bar2 {
+            width: 25px;
+            height: 2px;
+            background-color: white;
+            margin: 0 0 5px 0;
+            transition: 0.4s;
+        }
+            .bar3 {
+                width: 25px;
+                height: 2px;
+                background-color: white;
+                margin: 0;
+                transition: 0.4s;
+            }
+        
+            .change .bar1 {
+                -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+                transform: rotate(-45deg) translate(-9px, 6px);
+            }
+        
+            .change .bar2 {opacity: 0;}
+            
+            .change .bar3 {
+                -webkit-transform: rotate(45deg) translate(-8px, -8px);
+                transform: rotate(45deg) translate(-8px, -8px);
+            }
         </style>
     </head>
     <body id="body" style="background-color: rgb(245, 246, 250); margin: 0; padding: 0; min-width: 320px;">
@@ -113,6 +153,7 @@
                 relevantClass();
                 responsiveDesign();
             }
+        window.onresize = responsiveDesign;
             function fadeIn() {
                 document.getElementById("body").classList.remove("fade-out");
             }
@@ -193,8 +234,20 @@
                     return "";
                 }
             }
+        function animate(x) {
+            x.classList.toggle("change");
+        }
         function responsiveDesign() {
-            
+            if (window.innerWidth < 650) {
+                document.getElementById("home").style.display = "none";
+                document.getElementById("course").style.display = "none";
+                document.getElementById("hw").style.display = "none";
+                document.getElementById("labs").style.display = "none";
+                document.getElementById("projects").style.display = "none";
+                document.getElementById("resources").style.display = "none";
+                document.getElementById("hamburgerMenu").style.display = "inline-block";
+                
+            }
         }
         </script>
         <div class="navBar">
@@ -304,6 +357,11 @@
                     <a class="navLink" href="/resources.html#9">Camera Obscura</a>
                     <a class="navLink" href="/resources.html#10">Human Enhancement Debates</a>
                 </div>
+            </div>
+            <div id="hamburgerMenu" class="container" onclick="animate(this)">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
             </div>
             <div id="leaveClass" onclick="leaveClass()" style="display: inline-block; cursor: pointer; height: 18px; padding: 7px; float: right; transition: background-color 0.4s;">
                 <?xml version="1.0" encoding="iso-8859-1"?>
