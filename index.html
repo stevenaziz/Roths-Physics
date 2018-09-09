@@ -22,7 +22,6 @@
             body {
                 opacity: 1;
                 transition: 0.8s opacity;
-                height: 100vh;
             }
             body.fade-out {
                 opacity: 0;
@@ -96,7 +95,7 @@
         }
         </style>
     </head>
-    <body id="body" style="background-color: rgb(245, 246, 250); margin: 0; padding: 0; min-width: 320px;">
+    <body id="body" style="height: 100vh; background-color: rgb(245, 246, 250); margin: 0; padding: 0; min-width: 320px;">
         <script>
             document.body.className += 'fade-out';
             var cookieValue = getCookie("class");
