@@ -199,15 +199,18 @@
         }
         #mrhsIcon {
             fill: white;
-            transition: fill 0.4s;
+            transition: fill 0.8s;
             vertical-align: top;
         }
         #homeLink:hover #mrhsIcon {
             fill: #b5b6e3;
         }
+        html {
+            background-color: rgb(54,67,144);
+        }
         </style>
     </head>
-    <body id="body" onresize="responsiveDesign()" style="background-color: rgb(245, 246, 250); margin: 0; padding: 0; min-width: 320px;">
+    <body id="body" onresize="responsiveDesign()" style="background-color: rgb(245, 246, 250); margin: 0; padding: 0; min-width: 320px; height: 100vh;">
         <script>
             document.body.className += 'fade-out';
             var cookieValue = getCookie("class");
@@ -310,6 +313,7 @@
                 document.getElementById("resources").style.display = "none";
                 document.getElementById("mobileMenu").style.display = "inline-block";
                 document.getElementById("mrhs").style.display = "inline-block";
+                document.getElementById("welcome").style.textAlign = "center";
             } else {
                 document.getElementById("home").style.display = "inline-block";
                 document.getElementById("course").style.display = "inline-block";
@@ -319,6 +323,7 @@
                 document.getElementById("resources").style.display = "inline-block";
                 document.getElementById("mobileMenu").style.display = "none";
                 document.getElementById("mrhs").style.display = "none";
+                document.getElementById("welcome").style.textAlign = "left";
             }
         }
         </script>
