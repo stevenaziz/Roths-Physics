@@ -190,49 +190,55 @@
                 -webkit-transform: rotate(45deg) translate(-5px, -3px);
                 transform: rotate(45deg) translate(-5px, -3px);
             }
-        #mrhs {
-            position: absolute;
-            left: calc((100vw - 34px)/2);
-            height: 34px;
-            margin: 7px 0 7px 0;
-            display: inline-block;
-            cursor: pointer;
-        }
-        #mrhsIcon {
-            fill: white;
-            transition: fill 0.8s;
-            vertical-align: top;
-        }
-        #homeLink:hover #mrhsIcon {
-            fill: #b5b6e3;
-        }
-        html {
-            background-color: rgb(54,67,144);
-        }
-        button {
-            display: inline-block;
-            border-radius: 5px;
-            outline: none;
-            border: none;
-            background-color: white;
-            box-shadow: 0px 1px 4px -1px grey;
-            color: black;
-            cursor: pointer;
-            text-align: center;
-            font-family: helvetica;
-            font-size: 14px;
-            padding: 4px;
-            font-weight: 100;
-            transition: background-color 0.4s;
-        }
-        button:hover {
-            background-color: #b5b6e3;
-            box-shadow: 0px 1px 4px 0px grey;
-        }
-        button:active {
-            background-color: #9091d5;
-            box-shadow: 0px 1px 4px 1px grey;
-        }
+            #mrhs {
+                position: absolute;
+                left: calc((100vw - 34px)/2);
+                height: 34px;
+                margin: 7px 0 7px 0;
+                display: inline-block;
+                cursor: pointer;
+            }
+            #mrhsIcon {
+                fill: white;
+                transition: fill 0.8s;
+                vertical-align: top;
+            }
+            #homeLink:hover #mrhsIcon {
+                fill: #b5b6e3;
+            }
+            html {
+                background-color: rgb(54,67,144);
+            }
+            button {
+                display: inline-block;
+                border-radius: 5px;
+                outline: none;
+                border: none;
+                background-color: white;
+                box-shadow: 0px 1px 4px -1px grey;
+                color: black;
+                cursor: pointer;
+                text-align: center;
+                font-family: helvetica;
+                font-size: 14px;
+                padding: 4px;
+                font-weight: 100;
+                transition: background-color 0.4s;
+            }
+            button:hover {
+                background-color: #b5b6e3;
+                box-shadow: 0px 1px 4px 0px grey;
+            }
+            button:active {
+                background-color: #9091d5;
+                box-shadow: 0px 1px 4px 1px grey;
+            }
+            #contactInfo {
+                margin-top: 1vh;
+                padding: 10px;
+                background-color: white;
+                text-align: left;
+            }
         </style>
     </head>
     <body id="body" onresize="responsiveDesign()" style="background-color: rgb(245, 246, 250); margin: 0; padding: 0; min-width: 320px;">
@@ -355,19 +361,19 @@
             }
         }
         function quickLook(option) {
-            /*if (option == "calendar") {
-                document.getElementById("remind").style.display = "none";
+            if (option == "calendar") {
+                //document.getElementById("remind").style.display = "none";
                 document.getElementById("contactInfo").style.display = "none";
-                document.getElementById("calendar").style.display = "inline-block";
+                document.getElementById("calendar").style.display = "block";
             } else if (option == "remind") {
                 document.getElementById("calendar").style.display = "none";
                 document.getElementById("contactInfo").style.display = "none";
-                document.getElementById("remind").style.display = "inline-block";
+                //document.getElementById("remind").style.display = "inline-block";
             } else {
                 document.getElementById("calendar").style.display = "none";
-                document.getElementById("remind").style.display = "none";
-                document.getElementById("contactInfo").style.display = "inline-block":
-            }*/
+                //document.getElementById("remind").style.display = "none";
+                document.getElementById("contactInfo").style.display = "block";
+            }
         }
         </script>
         <div class="navBar">
@@ -779,6 +785,12 @@
                     <button onclick="quickLook('remind')" style="margin: 0 6px 0 0;">Remind</button>
                     <button onclick="quickLook('contactInfo')">Contact</button>
                 <iframe id="calendar" style="border-width:0" frameborder="0" scrolling="no"></iframe>
+                <div id="contactInfo">
+                    <h1 style="font-family: helvetica; font-weight: 100; margin: 10px 0 3px 0; font-size: 2vmax; color: black;">Richard Roths</h1>
+                    <h3 style="font-family: helvetica; font-weight: 100; margin: 0; font-size: 1.3vmax; color: black; margin-top: 0.5vh;">MRHS Math Team Coach</h3>
+                    <p style="font-family: helvetica; font-weight: 100; font-size: 1.5vmax; color: black; margin: 2vh 0 2vh 0;"><b>Phone:</b> <a href="tel:1-206-631-7085">(206) 631-7085</a><br><b>Email (For Parents):</b> <a href="mailto:richard.roths@highlineschools.org">richard.roths@highlineschools.org</a><br><b>Email (For Students):</b> <a href="mailto:richard.roths@g.highlineschools.org">richard.roths@g.highlineschools.org</a><br><br>Mount Rainier High School<br>22450 19th Ave S<br>Des Moines, WA 98198<br><br><b>Sponsor:</b> <a href="https://mualphatheta.org/">Mu Alpha Theta</a
+                    </p>
+                </div>
             </div>
         <div>
     </body>
