@@ -313,7 +313,7 @@
             document.getElementById("mobileMenuDropdown").classList.toggle("display");
         }
         function responsiveDesign() {
-            if (window.innerWidth < 750) {
+            if (window.innerWidth < 755) {
                 document.getElementById("home").style.display = "none";
                 document.getElementById("course").style.display = "none";
                 document.getElementById("hw").style.display = "none";
@@ -323,8 +323,8 @@
                 document.getElementById("mobileMenu").style.display = "inline-block";
                 document.getElementById("mrhs").style.display = "inline-block";
                 document.getElementById("welcome").style.textAlign = "center";
-                document.getElementById("courseDescription").style.width = "95vw";
-                document.getElementById("quickLook").style.width = "80vw";
+                document.getElementById("courseDescription").style.width = "calc(100vw - 4vh)";
+                document.getElementById("quickLook").style.width = "calc(100vw - 4vh)";
             } else {
                 document.getElementById("home").style.display = "inline-block";
                 document.getElementById("course").style.display = "inline-block";
@@ -336,7 +336,7 @@
                 document.getElementById("mrhs").style.display = "none";
                 document.getElementById("welcome").style.textAlign = "left";
                 document.getElementById("courseDescription").style.width = "55vw";
-                document.getElementById("quickLook").style.width = "35vw";
+                document.getElementById("quickLook").style.width = "calc(45vw - 8vh)";
             }
         }
         function quickLook(option) {
@@ -719,8 +719,8 @@
         </div>
         <h1 id="welcome" style="font-family: helvetica; font-weight: 100; font-size: 3vmax; color: black; text-align: left; margin: 2vh 2vh 3vh 2vh;"></h1>
         <div style="text-align: center;">
-            <p id="courseDescription" style="vertical-align: top; display: inline-block; font-family: helvetica; font-weight: 100; font-size: 1.75vmax; color: #4d4d4d; text-align: left; margin: 0 15px 2vh 15px; min-width: 320px;"></p>
-            <div id="quickLook" style="min-width: 320px; display: inline-block; vertical-align: top;">
+            <p id="courseDescription" style="vertical-align: top; display: inline-block; font-family: helvetica; font-weight: 100; font-size: 1.75vmax; color: #4d4d4d; text-align: left; margin: 0 2vh 5vh 2vh;"></p>
+            <div id="quickLook" style="display: inline-block; vertical-align: top; margin: 0 2vh 5vh 2vh;">
                 <h1 style="font-family: helvetica; font-weight: 100; font-size: 2.5vmax; color: black; text-align: center; margin: 0 10px 1vh 10px;">Quick Look</h1>
                     <button onclick="quickLook('calendar')" style="margin: 0 6px 0 0;">Calendar</button>
                     <button type="button" disabled onclick="quickLook('remind')" style="margin: 0 6px 0 0; pointer-events: none;">Remind</button>
