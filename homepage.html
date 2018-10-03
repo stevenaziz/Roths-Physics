@@ -16,6 +16,8 @@
         <meta name="msapplication-TileImage" content="https://www.stevenaziz.com/Roths-Physics/mstile-144x144.png?v=GvmmqzW0AN">
         <meta name="theme-color" content="#f5f6fa">
         <style>
+            /* BEGINNING OF GLOBAL STYLES */
+            
             body {
                 opacity: 1;
                 transition: 0.8s opacity;
@@ -74,7 +76,6 @@
             .dropdown {
                 display: inline-block;
             }
-        
             .dropdown-content {
                 display: none;
                 position: absolute;
@@ -101,61 +102,55 @@
             .dropdown:hover .dropdown-content {
                 display: block;
             }
-        .navLinkMobile {
-            display: block;
-            text-align: left;
-            font-family: helvetica;
-            font-size: 17px;
-            color: white;
-            text-decoration: none;
-            transition: background-color 0.4s;
-            padding: 11px;
-            font-weight: 100;
-        }
-        .navLinkMobile:active {
-            background-color: #7e8ace;
-        }
-        .navLinkMobile:hover {
-            background-color: #4657b9;
-        }
-        #calendar {
-                width: 100%;
-                height: 80vh;
+            .navLinkMobile {
                 display: block;
-                margin-top: 1vh;
+                text-align: left;
+                font-family: helvetica;
+                font-size: 17px;
+                color: white;
+                text-decoration: none;
+                transition: background-color 0.4s;
+                padding: 11px;
+                font-weight: 100;
+            }
+            .navLinkMobile:active {
+                background-color: #7e8ace;
+            }
+            .navLinkMobile:hover {
+                background-color: #4657b9;
             }
             #mobileMenu {
                 display: none;
             }
-        .mobileMenuDropdown {
-            display: none;
-            position: absolute;
-            background-color: rgb(54, 67, 144);
-            opacity: 0;
-            z-index: 2;
-            transition: opacity 0.8s;
-            width: 100vw;
-        }
-        .display {
-            display: block;
-            transition: opacity 0.8s;
-            opacity: 0.9;
-        }
+            .mobileMenuDropdown {
+                display: none;
+                position: absolute;
+                background-color: rgb(54, 67, 144);
+                opacity: 0;
+                z-index: 2;
+                transition: opacity 0.8s;
+                width: 100vw;
+            }
+            .display {
+                display: block;
+                transition: opacity 0.8s;
+                opacity: 0.9;
+            }
             .container {
                 display: inline-block;
                 cursor: pointer;
                 margin: 17px 0 17px 12px;
                 vertical-align: top;
             }
-        .container:hover .bar1 {
-            background-color: #b5b6e3;
-        }
-        .container:hover .bar2 {
-            background-color: #b5b6e3;
-        }
-        .container:hover .bar3 {
-            background-color: #b5b6e3;
-        }
+            .container:hover .bar1 {
+                background-color: #b5b6e3;
+            }
+            .container:hover .bar2 {
+                background-color: #b5b6e3;
+            }
+            .container:hover .bar3 {
+                background-color: #b5b6e3;
+            }
             .bar1 {
                 width: 18px;
                 height: 1px;
@@ -176,7 +171,7 @@
                 background-color: white;
                 margin: 0;
                 transition: 0.4s;
-                }
+            }
         
             .change .bar1 {
                 -webkit-transform: rotate(-45deg) translate(-5px, 4px);
@@ -207,6 +202,15 @@
             }
             html {
                 background-color: rgb(54,67,144);
+            }
+        
+            /* END OF GLOBAL STYLES */
+            
+            #calendar {
+                    width: 100%;
+                    height: 80vh;
+                    display: block;
+                    margin-top: 1vh;
             }
             button {
                 display: inline-block;
@@ -239,18 +243,21 @@
                 text-align: left;
                 display: none;
             }
-        /*#remind {
-            margin-top: 1vh;
-            width: 100%;
-            height: 80vh;
-            display: none;
-        }*/
+            /*
+             #remind {
+                margin-top: 1vh;
+                width: 100%;
+                height: 80vh;
+                display: none;
+            }
+            */
         </style>
     </head>
     <body id="body" onresize="responsiveDesign()" style="min-height: 100vh; background-color: rgb(245, 246, 250); margin: 0; padding: 0; min-width: 320px;">
         <script>
+            /* BEGINNING OF GLOBAL SCRIPT */
+            
             document.body.className += 'fade-out';
-            var cookieValue = getCookie("class");
             window.onload=function() {
                 fadeIn();
                 relevantClass();
@@ -263,6 +270,7 @@
                 document.cookie = "class=; expires=Fri, 08 Dec 2017 03:00:00 UTC; path=/;";
                 window.location = "https://stevenaziz.github.io/Roths-Physics/";
             }
+            var cookieValue = getCookie("class");
             function getCookie(cname) {
                 var name = cname + "=";
                 var decodedCookie = decodeURIComponent(document.cookie);
@@ -307,53 +315,59 @@
                     return "";
                 }
             }
-        function myFunction(x) {
-            x.classList.toggle("change");
-            document.getElementById("mobileMenuDropdown").classList.toggle("display");
-        }
-        function responsiveDesign() {
-            if (window.innerWidth < 755) {
-                document.getElementById("home").style.display = "none";
-                document.getElementById("course").style.display = "none";
-                document.getElementById("hw").style.display = "none";
-                document.getElementById("labs").style.display = "none";
-                document.getElementById("projects").style.display = "none";
-                document.getElementById("resources").style.display = "none";
-                document.getElementById("mobileMenu").style.display = "inline-block";
-                document.getElementById("mrhs").style.display = "inline-block";
-                document.getElementById("welcome").style.textAlign = "center";
-                document.getElementById("courseDescription").style.width = "calc(100vw - 4vh)";
-                document.getElementById("quickLook").style.width = "calc(100vw - 4vh)";
-            } else {
-                document.getElementById("home").style.display = "inline-block";
-                document.getElementById("course").style.display = "inline-block";
-                document.getElementById("hw").style.display = "inline-block";
-                document.getElementById("labs").style.display = "inline-block";
-                document.getElementById("projects").style.display = "inline-block";
-                document.getElementById("resources").style.display = "inline-block";
-                document.getElementById("mobileMenu").style.display = "none";
-                document.getElementById("mrhs").style.display = "none";
-                document.getElementById("welcome").style.textAlign = "left";
-                document.getElementById("courseDescription").style.width = "55vw";
-                document.getElementById("quickLook").style.width = "calc(45vw - 10vh)";
+            function myFunction(x) {
+                x.classList.toggle("change");
+                document.getElementById("mobileMenuDropdown").classList.toggle("display");
             }
-        }
-        function quickLook(option) {
-            if (option == "calendar") {
-                //document.getElementById("remind").style.display = "none";
-                document.getElementById("contactInfo").style.display = "none";
-                document.getElementById("calendar").style.display = "block";
-            } else if (option == "remind") {
-                document.getElementById("calendar").style.display = "none";
-                document.getElementById("contactInfo").style.display = "none";
-                //document.getElementById("remind").style.display = "inline-block";
-            } else {
-                document.getElementById("calendar").style.display = "none";
-                //document.getElementById("remind").style.display = "none";
-                document.getElementById("contactInfo").style.display = "block";
+            function responsiveDesign() {
+                if (window.innerWidth < 755) {
+                    document.getElementById("home").style.display = "none";
+                    document.getElementById("course").style.display = "none";
+                    document.getElementById("hw").style.display = "none";
+                    document.getElementById("labs").style.display = "none";
+                    document.getElementById("projects").style.display = "none";
+                    document.getElementById("resources").style.display = "none";
+                    document.getElementById("mobileMenu").style.display = "inline-block";
+                    document.getElementById("mrhs").style.display = "inline-block";
+                    document.getElementById("welcome").style.textAlign = "center";
+                    document.getElementById("courseDescription").style.width = "calc(100vw - 4vh)";
+                    document.getElementById("quickLook").style.width = "calc(100vw - 4vh)";
+                } else {
+                    document.getElementById("home").style.display = "inline-block";
+                    document.getElementById("course").style.display = "inline-block";
+                    document.getElementById("hw").style.display = "inline-block";
+                    document.getElementById("labs").style.display = "inline-block";
+                    document.getElementById("projects").style.display = "inline-block";
+                    document.getElementById("resources").style.display = "inline-block";
+                    document.getElementById("mobileMenu").style.display = "none";
+                    document.getElementById("mrhs").style.display = "none";
+                    document.getElementById("welcome").style.textAlign = "left";
+                    document.getElementById("courseDescription").style.width = "55vw";
+                    document.getElementById("quickLook").style.width = "calc(45vw - 10vh)";
+                }
             }
-        }
+        
+            /* END OF GLOBAL SCRIPT */
+            
+            function quickLook(option) {
+                if (option == "calendar") {
+                    //document.getElementById("remind").style.display = "none";
+                    document.getElementById("contactInfo").style.display = "none";
+                    document.getElementById("calendar").style.display = "block";
+                } else if (option == "remind") {
+                    document.getElementById("calendar").style.display = "none";
+                    document.getElementById("contactInfo").style.display = "none";
+                    //document.getElementById("remind").style.display = "inline-block";
+                } else {
+                    document.getElementById("calendar").style.display = "none";
+                    //document.getElementById("remind").style.display = "none";
+                    document.getElementById("contactInfo").style.display = "block";
+                }
+            }
         </script>
+        
+        <!--    BEGINNING OF GLOBAL HTML    -->
+        
         <div class="navBar">
             <a id="home" class="navLink" href="https://www.stevenaziz.com/Roths-Physics/homepage.html" style="margin-left: 12px;">Home</a>
             <div id="course" class="dropdown">
@@ -716,14 +730,15 @@
                 <a id="leaveClassLink">Leave Class</a>
             </div>
         </div>
+        <!--    END OF GLOBAL HTML    -->
         <h1 id="welcome" style="font-family: helvetica; font-weight: 100; font-size: 3vmax; color: black; text-align: left; margin: 2vh 2vh 3vh 2vh;"></h1>
         <div style="text-align: center;">
             <p id="courseDescription" style="vertical-align: top; display: inline-block; font-family: helvetica; font-weight: 100; font-size: 3vmin; color: #4d4d4d; text-align: left; margin: 0 2vh 5vh 2vh;"></p>
             <div id="quickLook" style="display: inline-block; vertical-align: top; margin: 0 2vh 5vh 2vh;">
                 <h1 style="font-family: helvetica; font-weight: 100; font-size: 2.5vmax; color: black; text-align: center; margin: 0 10px 1vh 10px;">Quick Look</h1>
-                    <button onclick="quickLook('calendar')" style="margin: 0 6px 0 0;">Calendar</button>
-                    <button type="button" disabled onclick="quickLook('remind')" style="margin: 0 6px 0 0; pointer-events: none;">Remind</button>
-                    <button onclick="quickLook('contactInfo')">Contact</button>
+                <button onclick="quickLook('calendar')" style="margin: 0 6px 0 0;">Calendar</button>
+                <button type="button" disabled onclick="quickLook('remind')" style="margin: 0 6px 0 0; pointer-events: none;">Remind</button>
+                <button onclick="quickLook('contactInfo')">Contact</button>
                 <iframe id="calendar" style="border-width:0"></iframe>
                 <div id="contactInfo">
                     <h1 style="font-family: helvetica; font-weight: 100; margin: 10px 0 3px 0; font-size: 2vmax; color: black;">Richard Roths</h1>
