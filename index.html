@@ -60,46 +60,45 @@
                 border: none;
                 opacity: 0.95;
                 }
-        .otherButton {
-            background-position: center;
-            transition: background 0.4s, box-shadow 0.4s, color 0.4s;
-            min-width: 141px;
-            min-height: 27px;
-            width: 45vw;
-            height: 6vw;
-            max-width: 252px;
-            max-height: 33px;
-            font-weight: 100;
-            border-radius: 9px;
-            padding: 4px;
-            font-size: 94%;
-            font-family: helvetica;
-            text-align: center;
-            color: black;
-            background-color: #f2f2f2;
-            box-shadow: 0 2px 3px 1px grey;
-            outline: none;
-            cursor: pointer;
-            border: none;
-        }
-        .otherButton:hover {
-            background:  #d9d9d9 radial-gradient(circle, transparent 1%,  #d9d9d9 1%) center/15000%;
-            box-shadow: 0 3px 7px 1px grey;
-            color: white;
-        }
-        .otherButton:active {
-            background-color: #cccccc;
-            background-size: 100%;
-            transition: background 0s;
-            box-shadow: 0 3px 10px 1px grey;
-        }
+            .otherButton {
+                background-position: center;
+                transition: background 0.4s, box-shadow 0.4s, color 0.4s;
+                min-width: 141px;
+                min-height: 27px;
+                width: 45vw;
+                height: 6vw;
+                max-width: 252px;
+                max-height: 33px;
+                font-weight: 100;
+                border-radius: 9px;
+                padding: 4px;
+                font-size: 94%;
+                font-family: helvetica;
+                text-align: center;
+                color: black;
+                background-color: #f2f2f2;
+                box-shadow: 0 2px 3px 1px grey;
+                outline: none;
+                cursor: pointer;
+                border: none;
+            }
+            .otherButton:hover {
+                background:  #d9d9d9 radial-gradient(circle, transparent 1%,  #d9d9d9 1%) center/15000%;
+                box-shadow: 0 3px 7px 1px grey;
+                color: white;
+            }
+            .otherButton:active {
+                background-color: #cccccc;
+                background-size: 100%;
+                transition: background 0s;
+                box-shadow: 0 3px 10px 1px grey;
+            }
         </style>
     </head>
     <body id="body" style="background-color: rgb(245, 246, 250); margin: 0; padding: 0; min-width: 320px;">
         <script>
             document.body.className += 'fade-out';
             if (document.cookie.indexOf("class=") == -1) {
-                return "";
             } else {
                 window.location = "https://stevenaziz.github.io/Roths-Physics/homepage.html";
             }
@@ -110,10 +109,6 @@
                 document.getElementById("body").classList.remove("fade-out");
             }
             var cookieValue = getCookie("class");
-            function joinClass(course) {
-                document.cookie = "class=" + course + "; expires=Sun, 01 Jan 2040 03:00:00 UTC; path=/;";
-                window.location = "https://stevenaziz.github.io/Roths-Physics/homepage.html";
-            }
             function getCookie(cname) {
                 var name = cname + "=";
                 var decodedCookie = decodeURIComponent(document.cookie);
@@ -128,6 +123,10 @@
                     }
                 }
                 return "";
+            }
+            function joinClass(course) {
+                document.cookie = "class=" + course + "; expires=Sun, 01 Jan 2040 03:00:00 UTC; path=/;";
+                window.location = "https://stevenaziz.github.io/Roths-Physics/homepage.html";
             }
         </script>
         <img style="display: block; margin: 15vh auto 0 auto; min-width: 100px; width: 20vmin; max-width: 250px;" src="https://www.stevenaziz.com/Roths-Physics/Mount-Rainier-High-School.png" alt="Mount Rainier High School logo">
