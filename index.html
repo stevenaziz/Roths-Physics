@@ -98,14 +98,18 @@
     <body id="body" style="background-color: rgb(245, 246, 250); margin: 0; padding: 0; min-width: 320px;">
         <script>
             document.body.className += 'fade-out';
-            var cookieValue = getCookie("class");
+            if (document.cookie.indexOf("class=") == -1) {
+                return "";
+            } else {
+                window.location = "https://stevenaziz.github.io/Roths-Physics/homepage.html";
+            }
             window.onload=function() {
-                redirect();
                 fadeIn();
             }
             function fadeIn() {
                 document.getElementById("body").classList.remove("fade-out");
             }
+            var cookieValue = getCookie("class");
             function joinClass(course) {
                 document.cookie = "class=" + course + "; expires=Sun, 01 Jan 2040 03:00:00 UTC; path=/;";
                 window.location = "https://stevenaziz.github.io/Roths-Physics/homepage.html";
@@ -124,13 +128,6 @@
                     }
                 }
                 return "";
-            }
-            function redirect() {
-                if (document.cookie.indexOf("class=") == -1) {
-                    return "";
-                } else {
-                    window.location = "https://stevenaziz.github.io/Roths-Physics/homepage.html";
-                }
             }
         </script>
         <img style="display: block; margin: 15vh auto 0 auto; min-width: 100px; width: 20vmin; max-width: 250px;" src="https://www.stevenaziz.com/Roths-Physics/Mount-Rainier-High-School.png" alt="Mount Rainier High School logo">
