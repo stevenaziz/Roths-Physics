@@ -313,6 +313,7 @@
                     document.getElementById("courseDescription").innerHTML = "";
                     document.getElementById("courseDescription").style.display = "none";
                     document.getElementById("calendarBtn").disabled = true;
+                    document.getElementById("calendarBtn").style.pointerEvents = "none";
                     document.getElementById("calendar").style.display = "none";
                     quickLook("contactInfo");
                     return "";
@@ -741,9 +742,9 @@
             <p id="courseDescription" style="vertical-align: top; display: inline-block; font-family: helvetica; font-weight: 100; font-size: 18px; color: #4d4d4d; text-align: left; margin: 0 2vh 5vh 2vh;"></p>
             <div id="quickLook" style="display: inline-block; vertical-align: top; margin: 0 2vh 5vh 2vh;">
                 <h1 style="font-family: helvetica; font-weight: 100; font-size: 28px; color: black; text-align: center; margin: 0 10px 1vh 10px;">Quick Look</h1>
-                <button id="calendarBtn" onclick="quickLook('calendar')" style="margin: 0 6px 0 0;">Calendar</button>
+                <button type="button" id="calendarBtn" onclick="quickLook('calendar')" style="margin: 0 6px 0 0;">Calendar</button>
                 <button type="button" disabled onclick="quickLook('remind')" style="margin: 0 6px 0 0; pointer-events: none;">Remind</button>
-                <button onclick="quickLook('contactInfo')">Contact</button>
+                <button type="button" onclick="quickLook('contactInfo')">Contact</button>
                 <iframe id="calendar" style="border-width:0"></iframe>
                 <div id="contactInfo">
                     <h1 style="font-family: helvetica; font-weight: 100; margin: 10px 0 3px 0; font-size: 26px; color: black;">Richard Roths</h1>
