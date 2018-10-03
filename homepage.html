@@ -312,6 +312,9 @@
                     document.getElementById("welcome").innerHTML = "Welcome Physics Students!";
                     document.getElementById("courseDescription").innerHTML = "";
                     document.getElementById("calendar").style.display = "none";
+                    document.getElementById("calendarBtn").disabled = true;
+                    quickLook("contactInfo");
+                    document.getElementById("courseDescription").style.display = "none";
                     return "";
                 }
             }
@@ -738,7 +741,7 @@
             <p id="courseDescription" style="vertical-align: top; display: inline-block; font-family: helvetica; font-weight: 100; font-size: 18px; color: #4d4d4d; text-align: left; margin: 0 2vh 5vh 2vh;"></p>
             <div id="quickLook" style="display: inline-block; vertical-align: top; margin: 0 2vh 5vh 2vh;">
                 <h1 style="font-family: helvetica; font-weight: 100; font-size: 28px; color: black; text-align: center; margin: 0 10px 1vh 10px;">Quick Look</h1>
-                <button onclick="quickLook('calendar')" style="margin: 0 6px 0 0;">Calendar</button>
+                <button id="calendarBtn" onclick="quickLook('calendar')" style="margin: 0 6px 0 0;">Calendar</button>
                 <button type="button" disabled onclick="quickLook('remind')" style="margin: 0 6px 0 0; pointer-events: none;">Remind</button>
                 <button onclick="quickLook('contactInfo')">Contact</button>
                 <iframe id="calendar" style="border-width:0"></iframe>
