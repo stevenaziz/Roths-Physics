@@ -275,21 +275,22 @@
                     document.getElementById("leaveClassLink").innerHTML = "Leave <b style='vertical-align: top;'>SL 3,4</b>";
                 } else if (cookieValue == "HL12") {
                     document.getElementById("leaveClassLink").innerHTML = "Leave <b style='vertical-align: top;'>HL 1,2</b>";
-                    document.getElementById("chaptersDropdown").remove(20);
-                    document.getElementById("chaptersDropdown").remove(21);
-                    document.getElementById("chaptersDropdown").remove(22);
-                    document.getElementById("chaptersDropdown").remove(23);
-                    document.getElementById("chaptersDropdown").remove(24);
-                    document.getElementById("chaptersDropdown").remove(25);
-                    document.getElementById("chaptersDropdown").remove(26);
-                    document.getElementById("chaptersDropdown").remove(27);
-                    document.getElementById("chaptersDropdown").remove(28);
-                    document.getElementById("chaptersDropdown").remove(29);
-                    document.getElementById("chaptersDropdown").remove(30);
-                    document.getElementById("chaptersDropdown").remove(31);
-                    document.getElementById("chaptersDropdown").remove(32);
-                    document.getElementById("chaptersDropdown").remove(33);
-                    document.getElementById("chaptersDropdown").remove(34);
+                    var dropdown = document.getElementById("chaptersDropdown");
+                    dropdown.remove("20");
+                    dropdown.remove("21");
+                    dropdown.remove("22");
+                    dropdown.remove(23);
+                    dropdown.remove(24);
+                    dropdown.remove(25);
+                    dropdown.remove(26);
+                    dropdown.remove(27);
+                    dropdown.remove(28);
+                    dropdown.remove(29);
+                    dropdown.remove(30);
+                    dropdown.remove(31);
+                    dropdown.remove(32);
+                    dropdown.remove(33);
+                    dropdown.remove(34);
                 } else if (cookieValue == "HL34") {
                     document.getElementById("leaveClassLink").innerHTML = "Leave <b style='vertical-align: top;'>HL 3,4</b>";
                     document.getElementById("chaptersDropdown").remove(1);
@@ -721,9 +722,9 @@
         <!--    END OF GLOBAL HTML    -->
         
         <h1 id="homeworkTitle" style="font-family: helvetica; font-weight: 100; font-size: 32px; color: black; text-align: left; margin: 4vh 2vh 3vh 2vh;">Homework</h1>
-        <select id="chaptersDropdown" onchange="iframeTarget()" style="margin: 0 2vh 3vh 2vh; width: calc(100vw - 4vh);">
+        <select id="chaptersDropdown" onchange="iframeTarget()" style="margin: 0 2vh 3vh 2vh;">
             <option disabled selected>Please select a chapter.</option>
-            <option value="chapter_1" id="ch1">Chapter 1: The Nature of Science and Physics</option>
+            <option value="chapter_1">Chapter 1: The Nature of Science and Physics</option>
             <option value="chapter_2" id="ch2">Chapter 2: Kinematics</option>
             <option value="chapter_3" id="ch3">Chapter 3: Two-Dimensional Kinematics</option>
             <option value="chapter_4" id="ch4">Chapter 4: Force and Newton's Laws of Motion</option>
