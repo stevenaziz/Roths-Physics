@@ -315,35 +315,39 @@
                     document.getElementById("leaveClassLink").innerHTML = "Select Class";
                 }
             }
-        function myFunction(x) {
-            x.classList.toggle("change");
-            document.getElementById("mobileMenuDropdown").classList.toggle("display");
-        }
-        function responsiveDesign() {
-            if (window.innerWidth < 755) {
-                document.getElementById("home").style.display = "none";
-                document.getElementById("course").style.display = "none";
-                document.getElementById("hw").style.display = "none";
-                document.getElementById("labs").style.display = "none";
-                document.getElementById("projects").style.display = "none";
-                document.getElementById("resources").style.display = "none";
-                document.getElementById("mobileMenu").style.display = "inline-block";
-                document.getElementById("mrhs").style.display = "inline-block";
-                document.getElementById("homeworkTitle").style.textAlign = "center";
-            } else {
-                document.getElementById("home").style.display = "inline-block";
-                document.getElementById("course").style.display = "inline-block";
-                document.getElementById("hw").style.display = "inline-block";
-                document.getElementById("labs").style.display = "inline-block";
-                document.getElementById("projects").style.display = "inline-block";
-                document.getElementById("resources").style.display = "inline-block";
-                document.getElementById("mobileMenu").style.display = "none";
-                document.getElementById("mrhs").style.display = "none";
-                document.getElementById("homeworkTitle").style.textAlign = "left";
+            function myFunction(x) {
+                x.classList.toggle("change");
+                document.getElementById("mobileMenuDropdown").classList.toggle("display");
             }
-        }
+            function responsiveDesign() {
+                if (window.innerWidth < 755) {
+                    document.getElementById("home").style.display = "none";
+                    document.getElementById("course").style.display = "none";
+                    document.getElementById("hw").style.display = "none";
+                    document.getElementById("labs").style.display = "none";
+                    document.getElementById("projects").style.display = "none";
+                    document.getElementById("resources").style.display = "none";
+                    document.getElementById("mobileMenu").style.display = "inline-block";
+                    document.getElementById("mrhs").style.display = "inline-block";
+                    document.getElementById("homeworkTitle").style.textAlign = "center";
+                } else {
+                    document.getElementById("home").style.display = "inline-block";
+                    document.getElementById("course").style.display = "inline-block";
+                    document.getElementById("hw").style.display = "inline-block";
+                    document.getElementById("labs").style.display = "inline-block";
+                    document.getElementById("projects").style.display = "inline-block";
+                    document.getElementById("resources").style.display = "inline-block";
+                    document.getElementById("mobileMenu").style.display = "none";
+                    document.getElementById("mrhs").style.display = "none";
+                    document.getElementById("homeworkTitle").style.textAlign = "left";
+                }
+            }
         
-        /* END OF GLOBAL SCRIPT */
+            /* END OF GLOBAL SCRIPT */
+            
+            function iframeTarget(input) {
+                document.getElementById("hw").src = "http://www.stevenaziz.com/Roths-Physics/" + input + ".html"
+            }
         </script>
         
         <!--    BEGINNING OF GLOBAL HTML    -->
@@ -716,42 +720,43 @@
         <h1 id="homeworkTitle" style="font-family: helvetica; font-weight: 100; font-size: 32px; color: black; text-align: left; margin: 4vh 2vh 3vh 2vh;">Homework</h1>
         <select style="margin: 0 2vh 3vh 2vh; width: calc(100vw - 4vh);">
             <option disabled selected>Please select a chapter.</option>
-            <option id="ch1">Chapter 1: The Nature of Science and Physics</option>
-            <option id="ch2">Chapter 2: Kinematics</option>
-            <option id="ch3">Chapter 3: Two-Dimensional Kinematics</option>
-            <option id="ch4">Chapter 4: Force and Newton's Laws of Motion</option>
-            <option id="ch5">Chapter 5: Friction, Drag, and Elaticity</option>
-            <option id="ch6">Chapter 6: Uniform Circular Motion and Gravitation</option>
-            <option id="ch7">Chapter 7: Work, Energy, and Energy Resources</option>
-            <option id="ch8">Chapter 8: Linear Momentum and Collisions</option>
-            <option id="ch9">Chapter 9: Statics and Torqe</option>
-            <option id="ch10">Chapter 10: Rotational Momentum and Angular Momentum</option>
-            <option id="ch11">Chapter 11: Fluid Statics</option>
-            <option id="ch12">Chapter 12: Fluid Dynamics</option>
-            <option id="ch13">Chapter 13: Temperature, Kinetic Theory, and the Gas Laws</option>
-            <option id="ch14">Chapter 14: Heat and Heat Transfer Methods</option>
-            <option id="ch15">Chapter 15: Thermodynamics</option>
-            <option id="ch16">Chapter 16: Oscillatory Motion and Waves</option>
-            <option id="ch17">Chapter 17: Physics of Hearing</option>
-            <option id="ch18">Chapter 18: Electric Charge and Electric Field</option>
-            <option id="ch19">Chapter 19: Electric Potential and Electric Field</option>
-            <option id="ch20">Chapter 20: Electric Current, Resistance, and Ohm's Law</option>
-            <option id="ch21">Chapter 21: Circuits and DC Instruments</option>
-            <option id="ch22">Chapter 22: Magnetism</option>
-            <option id="ch23">Chapter 23: Electromagnetic Induction, AC Circuits, and Electrical Technologies</option>
-            <option id="ch24">Chapter 24: Electromagnetic Waves</option>
-            <option id="ch25">Chapter 25: Geometric Options</option>
-            <option id="ch26">Chapter 26: Vision and Optical Instruments</option>
-            <option id="ch27">Chapter 27: Wave Optics</option>
-            <option id="ch28">Chapter 28: Special Relativity</option>
-            <option id="ch29">Chapter 29: Introduction to Quantum Physics</option>
-            <option id="ch30">Chapter 30: Atomic Physics</option>
-            <option id="ch31">Chapter 31: Radioactrivity and Nuclear Physics</option>
-            <option id="ch32">Chapter 32: Medical Applications of Nuclear Physics</option>
-            <option id="ch33">Chapter 33: Particle Physics</option>
-            <option id="ch34">Chapter 34: Frontiers of Physics</option>
-            <option>Full Textbook</option>
+            <option onclick="iframeTarget('chapter_1')" id="ch1">Chapter 1: The Nature of Science and Physics</option>
+            <option onclick="iframeTarget('chapter_2')" id="ch2">Chapter 2: Kinematics</option>
+            <option onclick="iframeTarget('chapter_3')" id="ch3">Chapter 3: Two-Dimensional Kinematics</option>
+            <option onclick="iframeTarget('chapter_4')" id="ch4">Chapter 4: Force and Newton's Laws of Motion</option>
+            <option onclick="iframeTarget('chapter_5')" id="ch5">Chapter 5: Friction, Drag, and Elaticity</option>
+            <option onclick="iframeTarget('chapter_6')" id="ch6">Chapter 6: Uniform Circular Motion and Gravitation</option>
+            <option onclick="iframeTarget('chapter_7')" id="ch7">Chapter 7: Work, Energy, and Energy Resources</option>
+            <option onclick="iframeTarget('chapter_8')" id="ch8">Chapter 8: Linear Momentum and Collisions</option>
+            <option onclick="iframeTarget('chapter_9')" id="ch9">Chapter 9: Statics and Torqe</option>
+            <option onclick="iframeTarget('chapter_10')" id="ch10">Chapter 10: Rotational Momentum and Angular Momentum</option>
+            <option onclick="iframeTarget('chapter_11')" id="ch11">Chapter 11: Fluid Statics</option>
+            <option onclick="iframeTarget('chapter_12')" id="ch12">Chapter 12: Fluid Dynamics</option>
+            <option onclick="iframeTarget('chapter_13')" id="ch13">Chapter 13: Temperature, Kinetic Theory, and the Gas Laws</option>
+            <option onclick="iframeTarget('chapter_14')" id="ch14">Chapter 14: Heat and Heat Transfer Methods</option>
+            <option onclick="iframeTarget('chapter_15')" id="ch15">Chapter 15: Thermodynamics</option>
+            <option onclick="iframeTarget('chapter_16')" id="ch16">Chapter 16: Oscillatory Motion and Waves</option>
+            <option onclick="iframeTarget('chapter_17')" id="ch17">Chapter 17: Physics of Hearing</option>
+            <option onclick="iframeTarget('chapter_18')" id="ch18">Chapter 18: Electric Charge and Electric Field</option>
+            <option onclick="iframeTarget('chapter_19')" id="ch19">Chapter 19: Electric Potential and Electric Field</option>
+            <option onclick="iframeTarget('chapter_20')" id="ch20">Chapter 20: Electric Current, Resistance, and Ohm's Law</option>
+            <option onclick="iframeTarget('chapter_21')" id="ch21">Chapter 21: Circuits and DC Instruments</option>
+            <option onclick="iframeTarget('chapter_22')" id="ch22">Chapter 22: Magnetism</option>
+            <option onclick="iframeTarget('chapter_23')" id="ch23">Chapter 23: Electromagnetic Induction, AC Circuits, and Electrical Technologies</option>
+            <option onclick="iframeTarget('chapter_24')" id="ch24">Chapter 24: Electromagnetic Waves</option>
+            <option onclick="iframeTarget('chapter_25')" id="ch25">Chapter 25: Geometric Options</option>
+            <option onclick="iframeTarget('chapter_26')" id="ch26">Chapter 26: Vision and Optical Instruments</option>
+            <option onclick="iframeTarget('chapter_27')" id="ch27">Chapter 27: Wave Optics</option>
+            <option onclick="iframeTarget('chapter_28')" id="ch28">Chapter 28: Special Relativity</option>
+            <option onclick="iframeTarget('chapter_29')" id="ch29">Chapter 29: Introduction to Quantum Physics</option>
+            <option onclick="iframeTarget('chapter_30')" id="ch30">Chapter 30: Atomic Physics</option>
+            <option onclick="iframeTarget('chapter_31')" id="ch31">Chapter 31: Radioactrivity and Nuclear Physics</option>
+            <option onclick="iframeTarget('chapter_32')" id="ch32">Chapter 32: Medical Applications of Nuclear Physics</option>
+            <option onclick="iframeTarget('chapter_33')" id="ch33">Chapter 33: Particle Physics</option>
+            <option onclick="iframeTarget('chapter_34')" id="ch34">Chapter 34: Frontiers of Physics</option>
+            <option onclick="iframeTarget('full_textbook')">Full Textbook</option>
         </select>
+        <iframe id="hw"></iframe>
             <a id="topLink" href="#top">
                     <svg width="25" version="1.1" xmlns="http://www.w3.org/2000/svg" height="25" viewBox="0 0 64 64" xmlns:xlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 64 64">
                     <g>
