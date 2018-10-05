@@ -233,16 +233,6 @@
                 background-color: #a3abdc;
                 box-shadow: 0px 1px 4px 0px grey;
             }
-            .chapterSelector {
-                background-color: #f2f2f2;
-                text-align: left;
-                font-family: helvetica;
-                font-size: 14px;
-                color: black;
-                text-decoration: none;
-                padding: 11px 14px 11px 14px;
-                font-weight: 100;
-            }
         </style>
     </head>
     <body id="body" onresize="responsiveDesign()" style="min-height: 100vh; background-color: rgb(245, 246, 250); margin: 0; padding: 0; min-width: 320px;">
@@ -339,9 +329,6 @@
                 document.getElementById("resources").style.display = "none";
                 document.getElementById("mobileMenu").style.display = "inline-block";
                 document.getElementById("mrhs").style.display = "inline-block";
-                document.getElementById("welcome").style.textAlign = "center";
-                document.getElementById("courseDescription").style.width = "calc(100vw - 4vh)";
-                document.getElementById("quickLook").style.width = "calc(100vw - 4vh)";
                 document.getElementById("homeworkTitle").style.textAlign = "center";
             } else {
                 document.getElementById("home").style.display = "inline-block";
@@ -352,9 +339,6 @@
                 document.getElementById("resources").style.display = "inline-block";
                 document.getElementById("mobileMenu").style.display = "none";
                 document.getElementById("mrhs").style.display = "none";
-                document.getElementById("welcome").style.textAlign = "left";
-                document.getElementById("courseDescription").style.width = "55vw";
-                document.getElementById("quickLook").style.width = "calc(45vw - 10vh)";
                 document.getElementById("homeworkTitle").style.textAlign = "left";
             }
         }
@@ -730,43 +714,43 @@
         <!--    END OF GLOBAL HTML    -->
         
         <h1 id="homeworkTitle" style="font-family: helvetica; font-weight: 100; font-size: 32px; color: black; text-align: left; margin: 4vh 2vh 3vh 2vh;">Homework</h1>
-        <select style="margin: 0 2vh 3vh 2vh; padding: 11px 30px 11px 14px; width: calc(100vw - 4vh); border-radius: 4px;">
-            <option class="chapterSelector" disabled selected>Please select a chapter.</option>
-            <option id="ch1" class="chapterSelector">Chapter 1: The Nature of Science and Physics</option>
-            <option id="ch2" class="chapterSelector">Chapter 2: Kinematics</option>
-            <option id="ch3" class="chapterSelector">Chapter 3: Two-Dimensional Kinematics</option>
-            <option id="ch4" class="chapterSelector">Chapter 4: Force and Newton's Laws of Motion</option>
-            <option id="ch5" class="chapterSelector">Chapter 5: Friction, Drag, and Elaticity</option>
-            <option id="ch6" class="chapterSelector">Chapter 6: Uniform Circular Motion and Gravitation</option>
-            <option id="ch7" class="chapterSelector">Chapter 7: Work, Energy, and Energy Resources</option>
-            <option id="ch8" class="chapterSelector">Chapter 8: Linear Momentum and Collisions</option>
-            <option id="ch9" class="chapterSelector">Chapter 9: Statics and Torqe</option>
-            <option id="ch10" class="chapterSelector">Chapter 10: Rotational Momentum and Angular Momentum</option>
-            <option id="ch11" class="chapterSelector">Chapter 11: Fluid Statics</option>
-            <option id="ch12" class="chapterSelector">Chapter 12: Fluid Dynamics</option>
-            <option id="ch13" class="chapterSelector">Chapter 13: Temperature, Kinetic Theory, and the Gas Laws</option>
-            <option id="ch14" class="chapterSelector">Chapter 14: Heat and Heat Transfer Methods</option>
-            <option id="ch15" class="chapterSelector">Chapter 15: Thermodynamics</option>
-            <option id="ch16" class="chapterSelector">Chapter 16: Oscillatory Motion and Waves</option>
-            <option id="ch17" class="chapterSelector">Chapter 17: Physics of Hearing</option>
-            <option id="ch18" class="chapterSelector">Chapter 18: Electric Charge and Electric Field</option>
-            <option id="ch19" class="chapterSelector">Chapter 19: Electric Potential and Electric Field</option>
-            <option id="ch20" class="chapterSelector">Chapter 20: Electric Current, Resistance, and Ohm's Law</option>
-            <option id="ch21" class="chapterSelector">Chapter 21: Circuits and DC Instruments</option>
-            <option id="ch22" class="chapterSelector">Chapter 22: Magnetism</option>
-            <option id="ch23" class="chapterSelector">Chapter 23: Electromagnetic Induction, AC Circuits, and Electrical Technologies</option>
-            <option id="ch24" class="chapterSelector">Chapter 24: Electromagnetic Waves</option>
-            <option id="ch25" class="chapterSelector">Chapter 25: Geometric Options</option>
-            <option id="ch26" class="chapterSelector">Chapter 26: Vision and Optical Instruments</option>
-            <option id="ch27" class="chapterSelector">Chapter 27: Wave Optics</option>
-            <option id="ch28" class="chapterSelector">Chapter 28: Special Relativity</option>
-            <option id="ch29" class="chapterSelector">Chapter 29: Introduction to Quantum Physics</option>
-            <option id="ch30" class="chapterSelector">Chapter 30: Atomic Physics</option>
-            <option id="ch31" class="chapterSelector">Chapter 31: Radioactrivity and Nuclear Physics</option>
-            <option id="ch32" class="chapterSelector">Chapter 32: Medical Applications of Nuclear Physics</option>
-            <option id="ch33" class="chapterSelector">Chapter 33: Particle Physics</option>
-            <option id="ch34" class="chapterSelector">Chapter 34: Frontiers of Physics</option>
-            <option class="chapterSelector">Full Textbook</option>
+        <select style="margin: 0 2vh 3vh 2vh; width: calc(100vw - 4vh);">
+            <option disabled selected>Please select a chapter.</option>
+            <option id="ch1">Chapter 1: The Nature of Science and Physics</option>
+            <option id="ch2">Chapter 2: Kinematics</option>
+            <option id="ch3">Chapter 3: Two-Dimensional Kinematics</option>
+            <option id="ch4">Chapter 4: Force and Newton's Laws of Motion</option>
+            <option id="ch5">Chapter 5: Friction, Drag, and Elaticity</option>
+            <option id="ch6">Chapter 6: Uniform Circular Motion and Gravitation</option>
+            <option id="ch7">Chapter 7: Work, Energy, and Energy Resources</option>
+            <option id="ch8">Chapter 8: Linear Momentum and Collisions</option>
+            <option id="ch9">Chapter 9: Statics and Torqe</option>
+            <option id="ch10">Chapter 10: Rotational Momentum and Angular Momentum</option>
+            <option id="ch11">Chapter 11: Fluid Statics</option>
+            <option id="ch12">Chapter 12: Fluid Dynamics</option>
+            <option id="ch13">Chapter 13: Temperature, Kinetic Theory, and the Gas Laws</option>
+            <option id="ch14">Chapter 14: Heat and Heat Transfer Methods</option>
+            <option id="ch15">Chapter 15: Thermodynamics</option>
+            <option id="ch16">Chapter 16: Oscillatory Motion and Waves</option>
+            <option id="ch17">Chapter 17: Physics of Hearing</option>
+            <option id="ch18">Chapter 18: Electric Charge and Electric Field</option>
+            <option id="ch19">Chapter 19: Electric Potential and Electric Field</option>
+            <option id="ch20">Chapter 20: Electric Current, Resistance, and Ohm's Law</option>
+            <option id="ch21">Chapter 21: Circuits and DC Instruments</option>
+            <option id="ch22">Chapter 22: Magnetism</option>
+            <option id="ch23">Chapter 23: Electromagnetic Induction, AC Circuits, and Electrical Technologies</option>
+            <option id="ch24">Chapter 24: Electromagnetic Waves</option>
+            <option id="ch25">Chapter 25: Geometric Options</option>
+            <option id="ch26">Chapter 26: Vision and Optical Instruments</option>
+            <option id="ch27">Chapter 27: Wave Optics</option>
+            <option id="ch28">Chapter 28: Special Relativity</option>
+            <option id="ch29">Chapter 29: Introduction to Quantum Physics</option>
+            <option id="ch30">Chapter 30: Atomic Physics</option>
+            <option id="ch31">Chapter 31: Radioactrivity and Nuclear Physics</option>
+            <option id="ch32">Chapter 32: Medical Applications of Nuclear Physics</option>
+            <option id="ch33">Chapter 33: Particle Physics</option>
+            <option id="ch34">Chapter 34: Frontiers of Physics</option>
+            <option>Full Textbook</option>
         </select>
             <a id="topLink" href="#top">
                     <svg width="25" version="1.1" xmlns="http://www.w3.org/2000/svg" height="25" viewBox="0 0 64 64" xmlns:xlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 64 64">
