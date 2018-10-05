@@ -233,6 +233,16 @@
                 background-color: #a3abdc;
                 box-shadow: 0px 1px 4px 0px grey;
             }
+            .chapterSelector {
+                background-color: #f2f2f2;
+                text-align: left;
+                font-family: helvetica;
+                font-size: 14px;
+                color: black;
+                text-decoration: none;
+                padding: 11px 14px 11px 14px;
+                font-weight: 100;
+            }
         </style>
     </head>
     <body id="body" onresize="responsiveDesign()" style="min-height: 100vh; background-color: rgb(245, 246, 250); margin: 0; padding: 0; min-width: 320px;">
@@ -320,7 +330,7 @@
             document.getElementById("mobileMenuDropdown").classList.toggle("display");
         }
         function responsiveDesign() {
-            if (window.innerWidth < 750) {
+            if (window.innerWidth < 755) {
                 document.getElementById("home").style.display = "none";
                 document.getElementById("course").style.display = "none";
                 document.getElementById("hw").style.display = "none";
@@ -332,6 +342,7 @@
                 document.getElementById("welcome").style.textAlign = "center";
                 document.getElementById("courseDescription").style.width = "calc(100vw - 4vh)";
                 document.getElementById("quickLook").style.width = "calc(100vw - 4vh)";
+                document.getElementById("homeworkTitle").style.textAlign = "center";
             } else {
                 document.getElementById("home").style.display = "inline-block";
                 document.getElementById("course").style.display = "inline-block";
@@ -344,6 +355,7 @@
                 document.getElementById("welcome").style.textAlign = "left";
                 document.getElementById("courseDescription").style.width = "55vw";
                 document.getElementById("quickLook").style.width = "calc(45vw - 10vh)";
+                document.getElementById("homeworkTitle").style.textAlign = "left";
             }
         }
         
@@ -717,50 +729,45 @@
         
         <!--    END OF GLOBAL HTML    -->
         
-        <h1 id="homeworkTitle" style="font-family: helvetica; font-weight: 500; font-size: 3.5vmax; color: black; text-align: left; margin: 2vh 2vh 3vh 2vh;">Homework</h1>
-        <div>
-            <p style="display:inline-block; font-family: helvetica; font-weight: 100; font-size: 16px; margin: 0 0 0 2vh;">Please select a chapter:</p>
-            <div class="dropdown" style="display: inline-block; margin: 0 0 0 20px;">
-                <a class="navLink" style="border-radius: 9px; padding: 10px;" href="#">Chapters</a>
-                <div class="dropdown-content" style="height: 400px; overflow: auto;">
-                    <a id="ch1" class="dropdownLink" href="#ch1div">Chapter 1: The Nature of Science and Physics</a>
-                    <a id="ch2" class="dropdownLink" href="#ch2div">Chapter 2: Kinematics</a>
-                    <a id="ch3" class="dropdownLink" href="#ch3div">Chapter 3: Two-Dimensional Kinematics</a>
-                    <a id="ch4" class="dropdownLink" href="#ch4div">Chapter 4: Force and Newton's Laws of Motion</a>
-                    <a id="ch5" class="dropdownLink" href="#ch5div">Chapter 5: Friction, Drag, and Elaticity</a>
-                    <a id="ch6" class="dropdownLink" href="#ch6div">Chapter 6: Uniform Circular Motion and Gravitation</a>
-                    <a id="ch7" class="dropdownLink" href="#ch7div">Chapter 7: Work, Energy, and Energy Resources</a>
-                    <a id="ch8" class="dropdownLink" href="#ch8div">Chapter 8: Linear Momentum and Collisions</a>
-                    <a id="ch9" class="dropdownLink" href="#ch9div">Chapter 9: Statics and Torqe</a>
-                    <a id="ch10" class="dropdownLink" href="#ch10div">Chapter 10: Rotational Momentum and Angular Momentum</a>
-                    <a id="ch11" class="dropdownLink" href="#ch11div">Chapter 11: Fluid Statics</a>
-                    <a id="ch12" class="dropdownLink" href="#ch12div">Chapter 12: Fluid Dynamics</a>
-                    <a id="ch13" class="dropdownLink" href="#ch13div">Chapter 13: Temperature, Kinetic Theory, and the Gas Laws</a>
-                    <a id="ch14" class="dropdownLink" href="#ch14div">Chapter 14: Heat and Heat Transfer Methods</a>
-                    <a id="ch15" class="dropdownLink" href="#ch15div">Chapter 15: Thermodynamics</a>
-                    <a id="ch16" class="dropdownLink" href="#ch16div">Chapter 16: Oscillatory Motion and Waves</a>
-                    <a id="ch17" class="dropdownLink" href="#ch17div">Chapter 17: Physics of Hearing</a>
-                    <a id="ch18" class="dropdownLink" href="#ch18div">Chapter 18: Electric Charge and Electric Field</a>
-                    <a id="ch19" class="dropdownLink" href="#ch19div">Chapter 19: Electric Potential and Electric Field</a>
-                    <a id="ch20" class="dropdownLink" href="#ch20div">Chapter 20: Electric Current, Resistance, and Ohm's Law</a>
-                    <a id="ch21" class="dropdownLink" href="#ch21div">Chapter 21: Circuits and DC Instruments</a>
-                    <a id="ch22" class="dropdownLink" href="#ch22div">Chapter 22: Magnetism</a>
-                    <a id="ch23" class="dropdownLink" href="#ch23div">Chapter 23: Electromagnetic Induction, AC Circuits, and Electrical Technologies</a>
-                    <a id="ch24" class="dropdownLink" href="#ch24div">Chapter 24: Electromagnetic Waves</a>
-                    <a id="ch25" class="dropdownLink" href="#ch25div">Chapter 25: Geometric Options</a>
-                    <a id="ch26" class="dropdownLink" href="#ch26div">Chapter 26: Vision and Optical Instruments</a>
-                    <a id="ch27" class="dropdownLink" href="#ch27div">Chapter 27: Wave Optics</a>
-                    <a id="ch28" class="dropdownLink" href="#ch28div">Chapter 28: Special Relativity</a>
-                    <a id="ch29" class="dropdownLink" href="#ch29div">Chapter 29: Introduction to Quantum Physics</a>
-                    <a id="ch30" class="dropdownLink" href="#ch30div">Chapter 30: Atomic Physics</a>
-                    <a id="ch31" class="dropdownLink" href="#ch31div">Chapter 31: Radioactrivity and Nuclear Physics</a>
-                    <a id="ch32" class="dropdownLink" href="#ch32div">Chapter 32: Medical Applications of Nuclear Physics</a>
-                    <a id="ch33" class="dropdownLink" href="#ch33div">Chapter 33: Particle Physics</a>
-                    <a id="ch34" class="dropdownLink" href="#ch34div">Chapter 34: Frontiers of Physics</a>
-                    <a class="dropdownLink" href="#textbook">Full Textbook</a>
-                </div>
-            </div>
-            </div>
+        <h1 id="homeworkTitle" style="font-family: helvetica; font-weight: 100; font-size: 32px; color: black; text-align: left; margin: 4vh 2vh 3vh 2vh;">Homework</h1>
+        <select style="margin: 0 2vh 3vh 2vh; padding: 11px 30px 11px 14px; width: calc(100vw - 4vh); border-radius: 4px;">
+            <option class="chapterSelector" disabled selected>Please select a chapter.</option>
+            <option id="ch1" class="chapterSelector">Chapter 1: The Nature of Science and Physics</option>
+            <option id="ch2" class="chapterSelector">Chapter 2: Kinematics</option>
+            <option id="ch3" class="chapterSelector">Chapter 3: Two-Dimensional Kinematics</option>
+            <option id="ch4" class="chapterSelector">Chapter 4: Force and Newton's Laws of Motion</option>
+            <option id="ch5" class="chapterSelector">Chapter 5: Friction, Drag, and Elaticity</option>
+            <option id="ch6" class="chapterSelector">Chapter 6: Uniform Circular Motion and Gravitation</option>
+            <option id="ch7" class="chapterSelector">Chapter 7: Work, Energy, and Energy Resources</option>
+            <option id="ch8" class="chapterSelector">Chapter 8: Linear Momentum and Collisions</option>
+            <option id="ch9" class="chapterSelector">Chapter 9: Statics and Torqe</option>
+            <option id="ch10" class="chapterSelector">Chapter 10: Rotational Momentum and Angular Momentum</option>
+            <option id="ch11" class="chapterSelector">Chapter 11: Fluid Statics</option>
+            <option id="ch12" class="chapterSelector">Chapter 12: Fluid Dynamics</option>
+            <option id="ch13" class="chapterSelector">Chapter 13: Temperature, Kinetic Theory, and the Gas Laws</option>
+            <option id="ch14" class="chapterSelector">Chapter 14: Heat and Heat Transfer Methods</option>
+            <option id="ch15" class="chapterSelector">Chapter 15: Thermodynamics</option>
+            <option id="ch16" class="chapterSelector">Chapter 16: Oscillatory Motion and Waves</option>
+            <option id="ch17" class="chapterSelector">Chapter 17: Physics of Hearing</option>
+            <option id="ch18" class="chapterSelector">Chapter 18: Electric Charge and Electric Field</option>
+            <option id="ch19" class="chapterSelector">Chapter 19: Electric Potential and Electric Field</option>
+            <option id="ch20" class="chapterSelector">Chapter 20: Electric Current, Resistance, and Ohm's Law</option>
+            <option id="ch21" class="chapterSelector">Chapter 21: Circuits and DC Instruments</option>
+            <option id="ch22" class="chapterSelector">Chapter 22: Magnetism</option>
+            <option id="ch23" class="chapterSelector">Chapter 23: Electromagnetic Induction, AC Circuits, and Electrical Technologies</option>
+            <option id="ch24" class="chapterSelector">Chapter 24: Electromagnetic Waves</option>
+            <option id="ch25" class="chapterSelector">Chapter 25: Geometric Options</option>
+            <option id="ch26" class="chapterSelector">Chapter 26: Vision and Optical Instruments</option>
+            <option id="ch27" class="chapterSelector">Chapter 27: Wave Optics</option>
+            <option id="ch28" class="chapterSelector">Chapter 28: Special Relativity</option>
+            <option id="ch29" class="chapterSelector">Chapter 29: Introduction to Quantum Physics</option>
+            <option id="ch30" class="chapterSelector">Chapter 30: Atomic Physics</option>
+            <option id="ch31" class="chapterSelector">Chapter 31: Radioactrivity and Nuclear Physics</option>
+            <option id="ch32" class="chapterSelector">Chapter 32: Medical Applications of Nuclear Physics</option>
+            <option id="ch33" class="chapterSelector">Chapter 33: Particle Physics</option>
+            <option id="ch34" class="chapterSelector">Chapter 34: Frontiers of Physics</option>
+            <option class="chapterSelector">Full Textbook</option>
+        </select>
             <a id="topLink" href="#top">
                     <svg width="25" version="1.1" xmlns="http://www.w3.org/2000/svg" height="25" viewBox="0 0 64 64" xmlns:xlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 64 64">
                     <g>
@@ -769,7 +776,7 @@
                     </svg><br>
                     Top
                 </a>
-            <div id="ch1div" style="margin: 2vh 0 0 0; padding: 10px; text-align: center;">
+            <div style="margin: 2vh 0 0 0; padding: 10px; text-align: center;">
                 <table style="display: inline-block; vertical-align: top; font-family: helvetica; font-weight: 100; font-size: 14px; min-width: 290px; width: 85vmin; margin: 0 10px 15px 0;">
                     <tr>
                         <th colspan="3">Unit 1: Mechanics<br>Chapter 1: The Nature of Science and Physics<br>90 Days</th>
@@ -795,105 +802,6 @@
                     <td>30, 32, 34, 36</td>
                     </tr>
                     </table>
-            </div>
-            <div style="margin: 2vh 0 0 0;">
-                
-            </div>
-            <div style="margin: 2vh 0 0 0;">
-                
-            </div>
-            <div style="margin: 2vh 0 0 0;">
-                
-            </div>
-            <div style="margin: 2vh 0 0 0;">
-                
-            </div>
-            <div style="margin: 2vh 0 0 0;">
-                
-            </div>
-            <div style="margin: 2vh 0 0 0;">
-                
-            </div>
-            <div style="margin: 2vh 0 0 0;">
-                
-            </div>
-            <div style="margin: 2vh 0 0 0;">
-                
-            </div>
-            <div style="margin: 2vh 0 0 0;">
-                
-            </div>
-            <div style="margin: 2vh 0 0 0;">
-                
-            </div>
-            <div style="margin: 2vh 0 0 0;">
-                
-            </div>
-            <div style="margin: 2vh 0 0 0;">
-                
-            </div>
-            <div style="margin: 2vh 0 0 0;">
-                
-            </div>
-            <div style="margin: 2vh 0 0 0;">
-                
-            </div>
-            <div style="margin: 2vh 0 0 0;">
-                
-            </div>
-            <div style="margin: 2vh 0 0 0;">
-                
-            </div>
-            <div style="margin: 2vh 0 0 0;">
-                
-            </div>
-            <div style="margin: 2vh 0 0 0;">
-                
-            </div>
-            <div style="margin: 2vh 0 0 0;">
-                
-            </div>
-            <div style="margin: 2vh 0 0 0;">
-                
-            </div>
-            <div style="margin: 2vh 0 0 0;">
-                
-            </div>
-            <div style="margin: 2vh 0 0 0;">
-                
-            </div>
-            <div style="margin: 2vh 0 0 0;">
-                
-            </div>
-            <div style="margin: 2vh 0 0 0;">
-                
-            </div>
-            <div style="margin: 2vh 0 0 0;">
-                
-            </div>
-            <div style="margin: 2vh 0 0 0;">
-                
-            </div>
-            <div style="margin: 2vh 0 0 0;">
-                
-            </div>
-            <div style="margin: 2vh 0 0 0;">
-                
-            </div>
-            <div style="margin: 2vh 0 0 0;">
-                
-            </div>
-            <div style="margin: 2vh 0 0 0;">
-                
-            </div>
-            <div style="margin: 2vh 0 0 0;">
-                
-            </div>
-            <div style="margin: 2vh 0 0 0;">
-                
-            </div>
-            <div style="margin: 2vh 0 0 0;">
-                
             </div>
     </body>
 </html>
