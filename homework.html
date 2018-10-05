@@ -275,43 +275,8 @@
                     document.getElementById("leaveClassLink").innerHTML = "Leave <b style='vertical-align: top;'>SL 3,4</b>";
                 } else if (cookieValue == "HL12") {
                     document.getElementById("leaveClassLink").innerHTML = "Leave <b style='vertical-align: top;'>HL 1,2</b>";
-                    var dropdown = document.getElementById("chaptersDropdown");
-                    dropdown.remove("20");
-                    dropdown.remove("21");
-                    dropdown.remove("22");
-                    dropdown.remove(23);
-                    dropdown.remove(24);
-                    dropdown.remove(25);
-                    dropdown.remove(26);
-                    dropdown.remove(27);
-                    dropdown.remove(28);
-                    dropdown.remove(29);
-                    dropdown.remove(30);
-                    dropdown.remove(31);
-                    dropdown.remove(32);
-                    dropdown.remove(33);
-                    dropdown.remove(34);
                 } else if (cookieValue == "HL34") {
                     document.getElementById("leaveClassLink").innerHTML = "Leave <b style='vertical-align: top;'>HL 3,4</b>";
-                    document.getElementById("chaptersDropdown").remove(1);
-                    document.getElementById("chaptersDropdown").remove(2);
-                    document.getElementById("chaptersDropdown").remove(3);
-                    document.getElementById("chaptersDropdown").remove(4);
-                    document.getElementById("chaptersDropdown").remove(5);
-                    document.getElementById("chaptersDropdown").remove(6);
-                    document.getElementById("chaptersDropdown").remove(7);
-                    document.getElementById("chaptersDropdown").remove(8);
-                    document.getElementById("chaptersDropdown").remove(9);
-                    document.getElementById("chaptersDropdown").remove(10);
-                    document.getElementById("chaptersDropdown").remove(11);
-                    document.getElementById("chaptersDropdown").remove(12);
-                    document.getElementById("chaptersDropdown").remove(13);
-                    document.getElementById("chaptersDropdown").remove(14);
-                    document.getElementById("chaptersDropdown").remove(15);
-                    document.getElementById("chaptersDropdown").remove(16);
-                    document.getElementById("chaptersDropdown").remove(17);
-                    document.getElementById("chaptersDropdown").remove(18);
-                    document.getElementById("chaptersDropdown").remove(19);
                 } else {
                     document.getElementById("leaveClassLink").innerHTML = "Select Class";
                 }
@@ -351,6 +316,7 @@
             function iframeTarget() {
                 var input = document.getElementById("chaptersDropdown").value;
                 document.getElementById("chapterHomework").src = "https://www.stevenaziz.com/Roths-Physics/homework/" + input + ".html";
+                document.getElementById("chapterHomework").style.display = "block";
             }
         </script>
         
@@ -722,7 +688,7 @@
         <!--    END OF GLOBAL HTML    -->
         
         <h1 id="homeworkTitle" style="font-family: helvetica; font-weight: 100; font-size: 32px; color: black; text-align: left; margin: 4vh 2vh 3vh 2vh;">Homework</h1>
-        <select id="chaptersDropdown" onchange="iframeTarget()" style="margin: 0 2vh 3vh 2vh;">
+        <select id="chaptersDropdown" onchange="iframeTarget()" style="margin: 0 2vh 3vh 2vh; width: calc(100vw - 4vh);">
             <option disabled selected>Please select a chapter.</option>
             <option value="chapter_1">Chapter 1: The Nature of Science and Physics</option>
             <option value="chapter_2" id="ch2">Chapter 2: Kinematics</option>
@@ -760,7 +726,7 @@
             <option value="chapter_34" id="ch34">Chapter 34: Frontiers of Physics</option>
             <option value="full_textbook">Full Textbook</option>
         </select>
-        <iframe id="chapterHomework" style="border-style: none; width: 100vw; height: 500px; margin: 0 0 5vh 0;"></iframe>
+        <iframe id="chapterHomework" style="display: none; border-style: none; width: 100vw; height: 500px; margin: 0 0 5vh 0;"></iframe>
         <!--
             <a id="topLink" href="#top">
                     <svg width="25" version="1.1" xmlns="http://www.w3.org/2000/svg" height="25" viewBox="0 0 64 64" xmlns:xlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 64 64">
