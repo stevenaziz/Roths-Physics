@@ -318,6 +318,9 @@
                 document.getElementById("chapterHomework").src = "https://www.stevenaziz.com/Roths-Physics/homework/" + input + ".html";
                 document.getElementById("chapterHomework").style.display = "block";
             }
+            function resizeIframe(object) {
+                object.style.height = object.contentWindow.document.body.scrollHeight + 'px';
+            }
         </script>
         
         <!--    BEGINNING OF GLOBAL HTML    -->
@@ -726,7 +729,7 @@
             <option value="chapter_34" id="ch34">Chapter 34: Frontiers of Physics</option>
             <option value="full_textbook">Full Textbook</option>
         </select>
-        <iframe id="chapterHomework" style="display: none; border-style: none; width: 100vw; height: 500px; margin: 0;"></iframe>
+        <iframe id="chapterHomework" onload="resizeIframe(this)" onresize="resizeIframe(this)" style="display: none; border-style: none; width: 100vw; height: 500px; margin: 0;"></iframe>
         <!--
             <a id="topLink" href="#top">
                     <svg width="25" version="1.1" xmlns="http://www.w3.org/2000/svg" height="25" viewBox="0 0 64 64" xmlns:xlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 64 64">
