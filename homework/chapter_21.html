@@ -28,6 +28,8 @@
     </head>
     <body onload="responsiveDesign()" onresize="responsiveDesign()" style="margin: 0;">
         <script>
+            var h = document.getElementById("table").clientHeight;
+            document.getElementById("pdf").style.height = h + "px";
             function responsiveDesign() {
                 if (window.innerWidth < 755) {
                     document.getElementById("pdf").style.width = "calc(85vw - 4vh)";
@@ -37,7 +39,7 @@
             }
         </script>
         <div style="text-align: center; margin: 0; padding: 0;">
-            <table style="display: inline-block; vertical-align: top; font-family: helvetica; font-weight: 100; font-size: 14px; margin: 0 2vh 3vh 2vh;">
+            <table id="table" style="display: inline-block; vertical-align: top; font-family: helvetica; font-weight: 100; font-size: 14px; margin: 0 2vh 3vh 2vh;">
                 <tr style="background-color: #daddf1;">
                     <th style="padding: 10px; border-radius: 7px 7px 0 0;" colspan="3">Unit 5: Electromagnetism<br>Chapter 21: Circuits And DC Instruments<br>55 Days</th>
                 </tr>
@@ -84,7 +86,7 @@
                     </td>
                 </tr>
             </table>
-            <iframe name="pdf" id="pdf" src="https://www.stevenaziz.com/Roths-Physics/homework/chapter_21.pdf" style="vertical-align: top; margin: 0 2vh 5vh 2vh; border-style: none; width: calc(100vw - 300px - 8vh); height: 430px;"></iframe>
+            <iframe name="pdf" id="pdf" src="https://www.stevenaziz.com/Roths-Physics/homework/chapter_21.pdf" style="vertical-align: top; margin: 0 2vh 0 2vh; border-style: none; width: calc(100vw - 300px - 8vh);"></iframe>
         </div>
     </body>
 </html>
