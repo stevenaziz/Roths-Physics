@@ -28,13 +28,15 @@
     </head>
     <body onload="responsiveDesign()" onresize="responsiveDesign()" style="margin: 0;">
         <script>
-            var h = document.getElementById("table").clientHeight;
-            document.getElementById("pdf").style.height = h + "px";
+            var h = document.getElementById("table").offsetHeight;
+            var w = document.getElementById("table").offsetWidth;
             function responsiveDesign() {
                 if (window.innerWidth < 755) {
                     document.getElementById("pdf").style.width = "calc(85vw - 4vh)";
+                    document.getElementById("pdf").style.height = h + "px";
                 } else {
-                    document.getElementById("pdf").style.width = "calc(100vw - 300px - 8vh)";
+                    document.getElementById("pdf").style.width = "calc(100vw - " + w + " - 9vh)";
+                    document.getElementById("pdf").style.height = h + "px";
                 }
             }
         </script>
@@ -86,7 +88,7 @@
                     </td>
                 </tr>
             </table>
-            <iframe name="pdf" id="pdf" src="https://www.stevenaziz.com/Roths-Physics/homework/chapter_21.pdf" style="vertical-align: top; margin: 0 2vh 0 2vh; border-style: none; width: calc(100vw - 300px - 8vh);"></iframe>
+            <iframe name="pdf" id="pdf" src="https://www.stevenaziz.com/Roths-Physics/homework/chapter_21.pdf" style="vertical-align: top; margin: 0 2vh 0 2vh; border-style: none;"></iframe>
         </div>
     </body>
 </html>
