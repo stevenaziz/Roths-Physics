@@ -296,7 +296,18 @@
                     document.getElementById("mobileMenu").style.display = "inline-block";
                     document.getElementById("mrhs").style.display = "inline-block";
                     document.getElementById("homeworkTitle").style.textAlign = "center";
-                    document.getElementById("chapterHomework").style.height = "1000px";
+                    if( navigator.userAgent.match(/Android/i)
+                       || navigator.userAgent.match(/iPhone/i)
+                       || navigator.userAgent.match(/iPad/i)
+                       || navigator.userAgent.match(/iPod/i)
+                       || navigator.userAgent.match(/BlackBerry/i)
+                       || navigator.userAgent.match(/Windows Phone/i)
+                       ){
+                        document.getElementById("chapterHomework").style.height = "500px";
+                        alert("Unfortunately, your mobile device will not be able to view the textbook or the class documents in the cloud. Please try accessing this page from a laptop or desktop to access all features.");
+                    } else {
+                        document.getElementById("chapterHomework").style.height = "1000px";
+                    }
                 } else {
                     document.getElementById("home").style.display = "inline-block";
                     document.getElementById("course").style.display = "inline-block";
@@ -307,7 +318,18 @@
                     document.getElementById("mobileMenu").style.display = "none";
                     document.getElementById("mrhs").style.display = "none";
                     document.getElementById("homeworkTitle").style.textAlign = "left";
-                    document.getElementById("chapterHomework").style.height = "500px";
+                    if( navigator.userAgent.match(/Android/i)
+                       || navigator.userAgent.match(/iPhone/i)
+                       || navigator.userAgent.match(/iPad/i)
+                       || navigator.userAgent.match(/iPod/i)
+                       || navigator.userAgent.match(/BlackBerry/i)
+                       || navigator.userAgent.match(/Windows Phone/i)
+                       ){
+                        document.getElementById("chapterHomework").style.height = "500px";
+                        alert("Unfortunately, your mobile device will not be able to view the textbook or the class documents in the cloud. Please try accessing this page from a laptop or desktop to access all features.");
+                    } else {
+                        document.getElementById("chapterHomework").style.height = "500px";
+                    }
                 }
             }
         
