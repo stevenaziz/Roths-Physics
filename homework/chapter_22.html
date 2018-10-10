@@ -26,13 +26,30 @@
         }
         </style>
     </head>
-    <body onload="responsiveDesign()" onresize="responsiveDesign()" style="margin: 0;">
+    <body onload="responsiveDesign(); isMobile();" onresize="responsiveDesign()" style="margin: 0;">
         <script>
             function responsiveDesign() {
                 if (window.innerWidth < 755) {
                     document.getElementById("resource").style.width = "calc(85vw - 4vh)";
                 } else {
                     document.getElementById("resource").style.width = "calc(100vw - 300px - 8vh)";
+                }
+            }
+            function isMobile() {
+                if( navigator.userAgent.match(/Android/i)
+                   || navigator.userAgent.match(/iPhone/i)
+                   || navigator.userAgent.match(/iPad/i)
+                   || navigator.userAgent.match(/iPod/i)
+                   || navigator.userAgent.match(/BlackBerry/i)
+                   || navigator.userAgent.match(/Windows Phone/i)
+                   ){
+                    document.getElementById("resource").style.display = "none";
+                    document.getElementById("pdf").style.pointerEvents = "none";
+                    document.getElementById("boxDrive").style.cursor = "not-allowed";
+                    document.getElementById("boxDrive").style.pointerEvents = "none";
+                    document.getElementById("pdf").style.cursor = "not-allowed";
+                    alert("Unfortunately, your mobile device will not be able to view the textbook or the class documents in the cloud. Please try accessing this page from a laptop or desktop to access all features.");
+                } else {
                 }
             }
         </script>
@@ -84,8 +101,8 @@
                 <tr>
                     <td colspan="3" style="background-color: #daddf1; border-radius: 0 0 7px 7px; padding: 6px 6px 23px 6px;">
                         <h5 style="font-family: helvetica; font-size: 13px; font-weight: 100; color: rgb(55,55,55); padding: 0; margin: 0 0 20px 0;">Please select a resource.</h5>
-                        <a class="iframeLink" href="https://www.stevenaziz.com/Roths-Physics/homework/chapter_22.pdf" target="resource">Textbook</a>
-                        <a class="iframeLink" href="https://app.box.com/embed_widget/s/7txfngro6jgbcdt2wnkeuicnhwxkeuh6?view=list&sort=name&direction=ASC&theme=blue" target="resource">Box Drive</a>
+                        <a id="pdf" class="iframeLink" href="https://www.stevenaziz.com/Roths-Physics/homework/chapter_22.pdf" target="resource">Textbook</a>
+                        <a id="boxDrive" class="iframeLink" href="https://app.box.com/embed_widget/s/7txfngro6jgbcdt2wnkeuicnhwxkeuh6?view=list&sort=name&direction=ASC&theme=blue" target="resource">Box Drive</a>
                     </td>
                 </tr>
             </table>
