@@ -296,6 +296,7 @@
                     document.getElementById("mobileMenu").style.display = "inline-block";
                     document.getElementById("mrhs").style.display = "inline-block";
                     document.getElementById("homeworkTitle").style.textAlign = "center";
+                    document.getElementById("chapterHomework").style.height = "1000px";
                 } else {
                     document.getElementById("home").style.display = "inline-block";
                     document.getElementById("course").style.display = "inline-block";
@@ -306,6 +307,7 @@
                     document.getElementById("mobileMenu").style.display = "none";
                     document.getElementById("mrhs").style.display = "none";
                     document.getElementById("homeworkTitle").style.textAlign = "left";
+                    document.getElementById("chapterHomework").style.height = "500px";
                 }
             }
         
@@ -724,7 +726,7 @@
             <option value="chapter_34" id="ch34">Chapter 34: Frontiers of Physics</option>
             <option value="full_textbook">Full Textbook</option>
         </select>
-        <iframe id="chapterHomework" onload="this.style.height=this.contentDocument.body.scrollHeight + 30 + 'px';" onresize="this.style.height=this.contentDocument.body.scrollHeight + 30 + 'px';" style="display: none; border-style: none; width: 100vw; margin: 0;"></iframe>
+        <iframe id="chapterHomework" style="display: none; border-style: none; width: 100vw; margin: 0;"></iframe>
         <!--
             <a id="topLink" href="#top">
                     <svg width="25" version="1.1" xmlns="http://www.w3.org/2000/svg" height="25" viewBox="0 0 64 64" xmlns:xlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 64 64">

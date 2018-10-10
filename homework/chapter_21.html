@@ -6,7 +6,7 @@
                 border-collapse: collapse;
             }
         td {
-            padding: 8px 4px 8px 4px;
+            padding: 8px 4px;
         }
         .iframeLink {
             text-decoration: none;
@@ -27,6 +27,15 @@
         </style>
     </head>
     <body onload="responsiveDesign()" onresize="responsiveDesign()" style="margin: 0;">
+        <script>
+            function responsiveDesign() {
+                if (window.innerWidth < 755) {
+                    document.getElementById("resource").style.width = "calc(85vw - 4vh)";
+                } else {
+                    document.getElementById("resource").style.width = "calc(100vw - 300px - 8vh)";
+                }
+            }
+        </script>
         <div style="text-align: center; margin: 0; padding: 0;">
             <table id="table" style="display: inline-block; vertical-align: top; font-family: helvetica; font-weight: 100; font-size: 14px; margin: 0 2vh 3vh 2vh;">
                 <tr style="background-color: #daddf1;">
@@ -70,25 +79,12 @@
                 <tr>
                     <td colspan="3" style="background-color: #daddf1; border-radius: 0 0 7px 7px; padding: 6px 6px 23px 6px;">
                         <h5 style="font-family: helvetica; font-size: 13px; font-weight: 100; color: rgb(55,55,55); padding: 0; margin: 0 0 20px 0;">Please select a resource.</h5>
-                        <a class="iframeLink" href="https://www.stevenaziz.com/Roths-Physics/homework/chapter_21.pdf" target="pdf">Textbook</a>
-                        <a class="iframeLink" href="https://app.box.com/embed_widget/s/veuxw784d54n9854ymzwwa0v2zd0hkhe?view=list&sort=name&direction=ASC&theme=blue" target="pdf">Box Drive</a>
+                        <a class="iframeLink" href="https://www.stevenaziz.com/Roths-Physics/homework/chapter_21.pdf" target="resource">Textbook</a>
+                        <a class="iframeLink" href="https://app.box.com/embed_widget/s/veuxw784d54n9854ymzwwa0v2zd0hkhe?view=list&sort=name&direction=ASC&theme=blue" target="resource">Box Drive</a>
                     </td>
                 </tr>
             </table>
-            <iframe name="pdf" id="pdf" src="https://www.stevenaziz.com/Roths-Physics/homework/chapter_21.pdf" style="vertical-align: top; margin: 0 2vh 0 2vh; border-style: none;"></iframe>
+            <iframe name="resource" id="resource" src="https://www.stevenaziz.com/Roths-Physics/homework/chapter_21.pdf" style="vertical-align: top; margin: 0 2vh 0 2vh; border-style: none; height: 400px;"></iframe>
         </div>
-        <script>
-            var h = document.getElementById("table").offsetHeight;
-            var w = document.getElementById("table").offsetWidth;
-            function responsiveDesign() {
-                if (window.innerWidth < 755) {
-                    document.getElementById("pdf").style.width = "calc(85vw - 4vh)";
-                    document.getElementById("pdf").style.height = h + "px";
-                } else {
-                    document.getElementById("pdf").style.width = "calc(100vw - " + w + " - 9vh)";
-                    document.getElementById("pdf").style.height = h + "px";
-                }
-            }
-        </script>
     </body>
 </html>

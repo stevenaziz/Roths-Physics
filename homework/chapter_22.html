@@ -6,7 +6,7 @@
                 border-collapse: collapse;
             }
         td {
-            padding: 8px 4px 8px 4px;
+            padding: 8px 4px;
         }
         .iframeLink {
             text-decoration: none;
@@ -30,9 +30,9 @@
         <script>
             function responsiveDesign() {
                 if (window.innerWidth < 755) {
-                    document.getElementById("pdf").style.width = "calc(85vw - 4vh)";
+                    document.getElementById("resource").style.width = "calc(85vw - 4vh)";
                 } else {
-                    document.getElementById("pdf").style.width = "calc(100vw - 300px - 8vh)";
+                    document.getElementById("resource").style.width = "calc(100vw - 300px - 8vh)";
                 }
             }
         </script>
@@ -84,12 +84,12 @@
                 <tr>
                     <td colspan="3" style="background-color: #daddf1; border-radius: 0 0 7px 7px; padding: 6px 6px 23px 6px;">
                         <h5 style="font-family: helvetica; font-size: 13px; font-weight: 100; color: rgb(55,55,55); padding: 0; margin: 0 0 20px 0;">Please select a resource.</h5>
-                        <a class="iframeLink" href="https://www.stevenaziz.com/Roths-Physics/homework/chapter_22.pdf" target="pdf">Textbook</a>
-                        <a class="iframeLink" href="https://app.box.com/embed_widget/s/7txfngro6jgbcdt2wnkeuicnhwxkeuh6?view=list&sort=name&direction=ASC&theme=blue" target="pdf">Box Drive</a>
+                        <a class="iframeLink" href="https://www.stevenaziz.com/Roths-Physics/homework/chapter_22.pdf" target="resource">Textbook</a>
+                        <a class="iframeLink" href="https://app.box.com/embed_widget/s/7txfngro6jgbcdt2wnkeuicnhwxkeuh6?view=list&sort=name&direction=ASC&theme=blue" target="resource">Box Drive</a>
                     </td>
                 </tr>
             </table>
-            <iframe name="pdf" id="pdf" src="https://www.stevenaziz.com/Roths-Physics/homework/chapter_22.pdf" style="vertical-align: top; margin: 0 2vh 5vh 2vh; border-style: none; width: calc(100vw - 300px - 8vh); height: 430px;"></iframe>
+            <iframe name="resource" id="resource" src="https://www.stevenaziz.com/Roths-Physics/homework/chapter_22.pdf" style="vertical-align: top; margin: 0 2vh 0 2vh; border-style: none; height: 416px;"></iframe>
         </div>
     </body>
 </html>
