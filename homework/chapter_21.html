@@ -27,19 +27,6 @@
         </style>
     </head>
     <body onload="responsiveDesign()" onresize="responsiveDesign()" style="margin: 0;">
-        <script>
-            var h = document.getElementById("table").offsetHeight;
-            var w = document.getElementById("table").offsetWidth;
-            function responsiveDesign() {
-                if (window.innerWidth < 755) {
-                    document.getElementById("pdf").style.width = "calc(85vw - 4vh)";
-                    document.getElementById("pdf").style.height = h + "px";
-                } else {
-                    document.getElementById("pdf").style.width = "calc(100vw - " + w + " - 9vh)";
-                    document.getElementById("pdf").style.height = h + "px";
-                }
-            }
-        </script>
         <div style="text-align: center; margin: 0; padding: 0;">
             <table id="table" style="display: inline-block; vertical-align: top; font-family: helvetica; font-weight: 100; font-size: 14px; margin: 0 2vh 3vh 2vh;">
                 <tr style="background-color: #daddf1;">
@@ -90,5 +77,18 @@
             </table>
             <iframe name="pdf" id="pdf" src="https://www.stevenaziz.com/Roths-Physics/homework/chapter_21.pdf" style="vertical-align: top; margin: 0 2vh 0 2vh; border-style: none;"></iframe>
         </div>
+        <script>
+            var h = document.getElementById("table").offsetHeight;
+            var w = document.getElementById("table").offsetWidth;
+            function responsiveDesign() {
+                if (window.innerWidth < 755) {
+                    document.getElementById("pdf").style.width = "calc(85vw - 4vh)";
+                    document.getElementById("pdf").style.height = h + "px";
+                } else {
+                    document.getElementById("pdf").style.width = "calc(100vw - " + w + " - 9vh)";
+                    document.getElementById("pdf").style.height = h + "px";
+                }
+            }
+        </script>
     </body>
 </html>
