@@ -44,11 +44,8 @@
                    || navigator.userAgent.match(/Windows Phone/i)
                    ){
                     document.getElementById("resource").style.display = "none";
-                    document.getElementById("pdf").style.pointerEvents = "none";
-                    document.getElementById("boxDrive").style.cursor = "not-allowed";
-                    document.getElementById("boxDrive").style.pointerEvents = "none";
-                    document.getElementById("pdf").style.cursor = "not-allowed";
-                    alert("Unfortunately, your mobile device will not be able to view the textbook or the class documents in the cloud. Please try accessing this page from a laptop or desktop to access all features.");
+                    document.getElementById("pdf").target = "_blank";
+                    document.getElementById("boxDrive").target = "_blank";
                 } else {
                 }
             }
