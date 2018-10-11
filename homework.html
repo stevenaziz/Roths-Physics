@@ -296,17 +296,6 @@
                     document.getElementById("mobileMenu").style.display = "inline-block";
                     document.getElementById("mrhs").style.display = "inline-block";
                     document.getElementById("homeworkTitle").style.textAlign = "center";
-                    if( navigator.userAgent.match(/Android/i)
-                       || navigator.userAgent.match(/iPhone/i)
-                       || navigator.userAgent.match(/iPad/i)
-                       || navigator.userAgent.match(/iPod/i)
-                       || navigator.userAgent.match(/BlackBerry/i)
-                       || navigator.userAgent.match(/Windows Phone/i)
-                       ){
-                        document.getElementById("chapterHomework").style.height = "500px";
-                    } else {
-                        document.getElementById("chapterHomework").style.height = "1000px";
-                    }
                 } else {
                     document.getElementById("home").style.display = "inline-block";
                     document.getElementById("course").style.display = "inline-block";
@@ -317,7 +306,6 @@
                     document.getElementById("mobileMenu").style.display = "none";
                     document.getElementById("mrhs").style.display = "none";
                     document.getElementById("homeworkTitle").style.textAlign = "left";
-                    document.getElementById("chapterHomework").style.height = "500px";
                 }
             }
         
@@ -736,7 +724,7 @@
             <option value="chapter_34" id="ch34">Chapter 34: Frontiers of Physics</option>
             <option value="full_textbook">Full Textbook</option>
         </select>
-        <iframe id="chapterHomework" style="display: none; border-style: none; width: 100vw; margin: 0;"></iframe>
+        <iframe id="chapterHomework" scrolling="no" style="overflow: hidden; display: none; border-style: none; width: 100vw; margin: 0;"></iframe>
         <!--
             <a id="topLink" href="#top">
                     <svg width="25" version="1.1" xmlns="http://www.w3.org/2000/svg" height="25" viewBox="0 0 64 64" xmlns:xlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 64 64">
