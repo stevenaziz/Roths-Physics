@@ -32,7 +32,7 @@
                 var table = document.getElementById("table");
                 if (window.innerWidth < 755) {
                     document.getElementById("resource").style.width = "calc(85vw - 4vh)";
-                    document.getElementById("resource").style.height = (2 * table.clientHeight) + "px";
+                    document.getElementById("resource").style.height = "calc(1.295 * (85vw - 4vh))";
                 } else {
                     document.getElementById("resource").style.width = "calc(99vw - 8vh - " + table.clientWidth + "px)";
                     document.getElementById("resource").style.height = table.clientHeight + "px";
@@ -52,6 +52,9 @@
                 } else {
                 }
             }
+            setInterval(function() {
+                window.top.postMessage(document.body.scrollHeight, "*");
+                }, 100);
         </script>
         <div style="text-align: center; margin: 0; padding: 0;">
             <table id="table" style="display: inline-block; vertical-align: top; font-family: helvetica; font-weight: 100; font-size: 14px; margin: 0 2vh 3vh 2vh;">

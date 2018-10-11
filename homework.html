@@ -316,6 +316,10 @@
                 document.getElementById("chapterHomework").src = "https://www.stevenaziz.com/rothsphysics/homework/" + input + ".html";
                 document.getElementById("chapterHomework").style.display = "block";
             }
+            window.addEventListener('message', function(e) {
+                var scroll_height = e.data;
+                document.getElementById('resource').style.height = scroll_height + 'px';
+                } , false);
         </script>
         
         <!--    BEGINNING OF GLOBAL HTML    -->
