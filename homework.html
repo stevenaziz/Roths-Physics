@@ -269,14 +269,49 @@
                 return "";
             }
             function relevantClass() {
+                var select = document.getElementById("chaptersDropdown");
                 if (cookieValue == "SL12") {
                     document.getElementById("leaveClassLink").innerHTML = "Leave <b style='vertical-align: top;'>SL 1,2</b>";
                 } else if (cookieValue == "SL34") {
                     document.getElementById("leaveClassLink").innerHTML = "Leave <b style='vertical-align: top;'>SL 3,4</b>";
                 } else if (cookieValue == "HL12") {
                     document.getElementById("leaveClassLink").innerHTML = "Leave <b style='vertical-align: top;'>HL 1,2</b>";
+                    select.remove(20);
+                    select.remove(20);
+                    select.remove(20);
+                    select.remove(20);
+                    select.remove(20);
+                    select.remove(20);
+                    select.remove(20);
+                    select.remove(20);
+                    select.remove(20);
+                    select.remove(20);
+                    select.remove(20);
+                    select.remove(20);
+                    select.remove(20);
+                    select.remove(20);
+                    select.remove(20);
                 } else if (cookieValue == "HL34") {
                     document.getElementById("leaveClassLink").innerHTML = "Leave <b style='vertical-align: top;'>HL 3,4</b>";
+                    select.remove(1);
+                    select.remove(1);
+                    select.remove(1);
+                    select.remove(1);
+                    select.remove(1);
+                    select.remove(1);
+                    select.remove(1);
+                    select.remove(1);
+                    select.remove(1);
+                    select.remove(1);
+                    select.remove(1);
+                    select.remove(1);
+                    select.remove(1);
+                    select.remove(1);
+                    select.remove(1);
+                    select.remove(1);
+                    select.remove(1);
+                    select.remove(1);
+                    select.remove(1);
                 } else {
                     document.getElementById("leaveClassLink").innerHTML = "Select Class";
                 }
