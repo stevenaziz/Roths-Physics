@@ -38,28 +38,28 @@
                     document.getElementById("resource").style.height = table.clientHeight + "px";
                 }
             }
-            function isMobile() {
-                if( navigator.userAgent.match(/Android/i)
-                   || navigator.userAgent.match(/iPhone/i)
-                   || navigator.userAgent.match(/iPad/i)
-                   || navigator.userAgent.match(/iPod/i)
-                   || navigator.userAgent.match(/BlackBerry/i)
-                   || navigator.userAgent.match(/Windows Phone/i)
-                   ){
-                    document.getElementById("resource").style.display = "none";
-                    document.getElementById("pdf").target = "_blank";
-                    document.getElementById("boxDrive").target = "_blank";
-                } else {
-                }
+        function isMobile() {
+            if( navigator.userAgent.match(/Android/i)
+               || navigator.userAgent.match(/iPhone/i)
+               || navigator.userAgent.match(/iPad/i)
+               || navigator.userAgent.match(/iPod/i)
+               || navigator.userAgent.match(/BlackBerry/i)
+               || navigator.userAgent.match(/Windows Phone/i)
+               ){
+                document.getElementById("resource").style.display = "none";
+                document.getElementById("pdf").target = "_blank";
+                document.getElementById("boxDrive").target = "_blank";
+            } else {
             }
-            setInterval(function() {
-                window.top.postMessage(document.body.scrollHeight, "*");
-                }, 100);
-        </script>
+        }
+        setInterval(function() {
+                    window.top.postMessage(document.body.scrollHeight, "*");
+                    }, 100);
+            </script>
         <div style="text-align: center; margin: 0; padding: 0;">
             <table id="table" style="display: inline-block; vertical-align: top; font-family: helvetica; font-weight: 100; font-size: 14px; margin: 0 2vh 3vh 2vh;">
                 <tr style="background-color: #daddf1;">
-                    <th style="padding: 10px; border-radius: 7px 7px 0 0;" colspan="3">Unit 1: Mechanics<br>Chapter 1: The Nature Of Science And Physics<br>90 Days</th>
+                    <th style="padding: 10px; border-radius: 7px 7px 0 0;" colspan="3">Unit 1: Mechanics<br>Chapter 3: Two-Dimensional Kinematics<br>90 Days</th>
                 </tr>
                 <tr style="border-bottom: 1px solid grey;">
                     <td style="padding: 8px 7px 3px 7px;">Section</td>
@@ -67,29 +67,34 @@
                     <td style="padding: 8px 7px 3px 7px;">Problems &amp;<br>Exercises</td>
                 </tr>
                 <tr style="background-color: #e6e6e6;">
-                    <td>1.1-1.2</td>
-                    <td>9-10</td>
-                    <td>2, 9</td>
+                    <td>3.1-3.2</td>
+                    <td>4, 6</td>
+                    <td>2, 10</td>
                 </tr>
                 <tr>
-                    <td>1.3</td>
-                    <td>11</td>
-                    <td>11, 21, 28</td>
+                    <td>3.3</td>
+                    <td>9, 12</td>
+                    <td>16, 22</td>
                 </tr>
                 <tr style="background-color: #e6e6e6;">
-                    <td>1.4</td>
-                    <td> </td>
-                    <td>30, 32, 34, 36</td>
+                    <td>3.4</td>
+                    <td>14, 16</td>
+                    <td>26, 39</td>
                 </tr>
                 <tr>
-                    <td colspan="3" style="background-color: #daddf1; border-radius: 0 0 7px 7px; padding: 6px 6px 23px 6px;">
-                        <h5 style="font-family: helvetica; font-size: 13px; font-weight: 100; color: rgb(55,55,55); padding: 0; margin: 0 0 20px 0;">Please select a resource.</h5>
-                        <a id="pdf" class="iframeLink" href="https://www.stevenaziz.com/rothsphysics/homework/chapter_1.pdf" target="resource">Textbook</a>
-                        <a id="boxDrive" class="iframeLink" href="https://app.box.com/embed_widget/s/o81opkeep7qlwym7323v3j2ug8vmw3p7?view=list&sort=name&direction=ASC&theme=blue" target="resource">Box Drive</a>
-                    </td>
+                    <td>3.5</td>
+                    <td>19, 21</td>
+                    <td>54, 62</td>
+                </tr>
+                <tr>
+                <td colspan="3" style="background-color: #daddf1; border-radius: 0 0 7px 7px; padding: 6px 6px 23px 6px;">
+                    <h5 style="font-family: helvetica; font-size: 13px; font-weight: 100; color: rgb(55,55,55); padding: 0; margin: 0 0 20px 0;">Please select a resource.</h5>
+                    <a id="pdf" class="iframeLink" href="https://www.stevenaziz.com/rothsphysics/homework/chapter_3.pdf" target="resource">Textbook</a>
+                    <a id="boxDrive" class="iframeLink" href="https://app.box.com/embed_widget/s/4jfgicu02qb2e5dcy4l1junjp5hhbgzp?view=list&sort=name&direction=ASC&theme=blue" target="resource">Box Drive</a>
+                </td>
                 </tr>
             </table>
-            <iframe name="resource" id="resource" src="https://www.stevenaziz.com/rothsphysics/homework/chapter_1.pdf" style="vertical-align: top; margin: 0 2vh 0 2vh; border-style: none;"></iframe>
+            <iframe name="resource" id="resource" src="https://www.stevenaziz.com/rothsphysics/homework/chapter_3.pdf" style="vertical-align: top; margin: 0 2vh 0 2vh; border-style: none;"></iframe>
         </div>
     </body>
 </html>
