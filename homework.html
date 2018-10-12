@@ -316,6 +316,10 @@
                 document.getElementById("chapterHomework").src = "https://www.stevenaziz.com/rothsphysics/homework/" + input + ".html";
                 document.getElementById("chapterHomework").style.display = "block";
             }
+        window.addEventListener('message', function(e) {
+                                var scroll_height = e.data;
+                                document.getElementById('chapterHomework').style.height = scroll_height + 'px';
+                                } , false);
         </script>
         
         <!--    BEGINNING OF GLOBAL HTML    -->
@@ -725,12 +729,6 @@
             <option value="full_textbook">Full Textbook</option>
         </select>
         <iframe id="chapterHomework" style="display: none; border-style: none; width: 100vw; margin: 0;"></iframe>
-        <script>
-            window.addEventListener('message', function(e) {
-                                    var scroll_height = e.data;
-                                    document.getElementById('resource').style.height = scroll_height + 'px';
-                                    } , false);
-                                    </script>
         <!--
             <a id="topLink" href="#top">
                     <svg width="25" version="1.1" xmlns="http://www.w3.org/2000/svg" height="25" viewBox="0 0 64 64" xmlns:xlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 64 64">
