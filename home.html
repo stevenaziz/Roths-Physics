@@ -243,14 +243,14 @@
                 text-align: left;
                 display: none;
             }
-            /*
+        
              #remind {
                 margin-top: 1vh;
                 width: 100%;
                 height: 80vh;
                 display: none;
             }
-            */
+        
         </style>
     </head>
     <body id="body" onresize="responsiveDesign()" style="min-height: 100vh; background-color: rgb(245, 246, 250); margin: 0; padding: 0; min-width: 320px;">
@@ -307,6 +307,7 @@
                     document.getElementById("welcome").innerHTML = "Welcome Higher Level Physics 3,4 Students!";
                     document.getElementById("courseDescription").innerHTML = "IB Higher Level Physics 3-4 is the second year of a course that cover two years of an introductory, algebra-based course in college physics.  At this point in time, perhaps you have shown a strong interest in the content and wish to pursue further understanding or maybe you have a desire to be a physicist or engineer.  You may also have decided to test in IB Physics as a Certificate or Diploma candidate.  There may be many reasons for your choice but, nevertheless, your passion for physics will continue to be piqued this year.  As you should be aware, this course will prepare you for the IB Standard Level (SL) or Higher Level (HL) exams, although you are not required to partake in these tests.  The exam, at both levels, includes three papers covering core content requirements plus a component called the Interal Assessment which incorporates performance on laboratory skills and an interdisciplinary and collaborative research project known as the 'Group 4 Project'.<br><br>This year the course will give you the opportunity to continue your exploration into the field of electromagnetism that you started at the end of last year with electric force and energy.  The content will encompass the topics of electric circuits, magnetic force, Faraday's Law of Electromagnetic Induction, electromagnetic waves, geometric and wave optics, Special and General Relativity, atomic and nuclear physics, and elementary particle physics.  Much like the previous year, you should still expect to explore theoretical concepts in a rigorous fashion through problem-solving along with representative laboratory experiments based on current and relevant topics of study.  Engineering principles may be utilized through the Internal Assessment in an appropriate way, which you will be engaged in during the 1st semester and a couple of weeks into the 2nd semester.  After the exams in May, further opportunities for projects will be available to do since we will have completed the curriculum for the entire course by the end of April.  Additionally, you will be afforded opportunities and resources to prepare for the IB Physics exam throughout the year. After school sessions for test practice and/or content review will be offered but attendance would not be required, only recommendeded.";
                     document.getElementById("calendar").src = "https://calendar.google.com/calendar/embed?src=vn4svtaf3dprnohv6nncqm3leg%40group.calendar.google.com&ctz=America%2FLos_Angeles";
+                    document.getElementById("remind").src = "https://widgets.remind.com/widget?height=500&join=true&token=944ec2b0edf4013591610242ac110008";
                 } else {
                     document.getElementById("leaveClassLink").innerHTML = "Leave Class";
                     document.getElementById("welcome").innerHTML = "Welcome Physics Students!";
@@ -353,16 +354,16 @@
             
             function quickLook(option) {
                 if (option == "calendar") {
-                    //document.getElementById("remind").style.display = "none";
+                    document.getElementById("remind").style.display = "none";
                     document.getElementById("contactInfo").style.display = "none";
                     document.getElementById("calendar").style.display = "block";
                 } else if (option == "remind") {
                     document.getElementById("calendar").style.display = "none";
                     document.getElementById("contactInfo").style.display = "none";
-                    //document.getElementById("remind").style.display = "inline-block";
+                    document.getElementById("remind").style.display = "block";
                 } else {
                     document.getElementById("calendar").style.display = "none";
-                    //document.getElementById("remind").style.display = "none";
+                    document.getElementById("remind").style.display = "none";
                     document.getElementById("contactInfo").style.display = "block";
                 }
             }
@@ -741,9 +742,10 @@
             <div id="quickLook" style="display: inline-block; vertical-align: top; margin: 0 2vh 5vh 2vh;">
                 <h1 style="font-family: helvetica; font-weight: 100; font-size: 28px; color: black; text-align: center; margin: 0 10px 1vh 10px;">Quick Look</h1>
                 <button type="button" id="calendarBtn" onclick="quickLook('calendar')" style="margin: 0 6px 0 0;">Calendar</button>
-                <button type="button" disabled onclick="quickLook('remind')" style="margin: 0 6px 0 0; pointer-events: none;">Remind</button>
+                <button type="button" onclick="quickLook('remind')" style="margin: 0 6px 0 0;">Remind</button>
                 <button type="button" onclick="quickLook('contactInfo')">Contact</button>
-                <iframe id="calendar" style="border-width:0"></iframe>
+                <iframe id="calendar" style="border-style: none;"></iframe>
+                <iframe id="remind" style="border-style: none;"></iframe>
                 <div id="contactInfo">
                     <h1 style="font-family: helvetica; font-weight: 100; margin: 10px 0 3px 0; font-size: 26px; color: black;">Richard Roths</h1>
                     <h3 style="font-family: helvetica; font-weight: 100; margin: 0; font-size: 16px; color: black; margin-top: 0.5vh;">MRHS Math Team Coach</h3>
