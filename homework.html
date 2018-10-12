@@ -307,6 +307,10 @@
                     document.getElementById("mrhs").style.display = "none";
                     document.getElementById("homeworkTitle").style.textAlign = "left";
                 }
+                window.addEventListener('message', function(e) {
+                    var scroll_height = e.data;
+                    document.getElementById('chapterHomework').style.height =   scroll_height + 'px';
+                    } , false);
             }
         
             /* END OF GLOBAL SCRIPT */
@@ -316,10 +320,6 @@
                 document.getElementById("chapterHomework").src = "https://www.stevenaziz.com/rothsphysics/homework/" + input + ".html";
                 document.getElementById("chapterHomework").style.display = "block";
             }
-        window.addEventListener('message', function(e) {
-                                var scroll_height = e.data;
-                                document.getElementById('chapterHomework').style.height = scroll_height + 'px';
-                                } , false);
         </script>
         
         <!--    BEGINNING OF GLOBAL HTML    -->
@@ -696,7 +696,7 @@
             <option value="chapter_2" id="ch2">Chapter 2: Kinematics</option>
             <option value="chapter_3" id="ch3">Chapter 3: Two-Dimensional Kinematics</option>
             <option value="chapter_4" id="ch4">Chapter 4: Force and Newton's Laws of Motion</option>
-            <option value="chapter_5" id="ch5">Chapter 5: Friction, Drag, and Elaticity</option>
+            <option value="chapter_5" id="ch5">Chapter 5: Friction, Drag, and Elasticity</option>
             <option value="chapter_6" id="ch6">Chapter 6: Uniform Circular Motion and Gravitation</option>
             <option value="chapter_7" id="ch7">Chapter 7: Work, Energy, and Energy Resources</option>
             <option value="chapter_8" id="ch8">Chapter 8: Linear Momentum and Collisions</option>
