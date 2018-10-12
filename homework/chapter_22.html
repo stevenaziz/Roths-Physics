@@ -38,26 +38,26 @@
                     document.getElementById("resource").style.height = table.clientHeight + "px";
                 }
             }
-            function isMobile() {
-                if( navigator.userAgent.match(/Android/i)
-                   || navigator.userAgent.match(/iPhone/i)
-                   || navigator.userAgent.match(/iPad/i)
-                   || navigator.userAgent.match(/iPod/i)
-                   || navigator.userAgent.match(/BlackBerry/i)
-                   || navigator.userAgent.match(/Windows Phone/i)
-                   ){
-                    document.getElementById("resource").style.display = "none";
-                    document.getElementById("pdf").target = "_blank";
-                    document.getElementById("boxDrive").target = "_blank";
-                } else {
-                }
+        function isMobile() {
+            if( navigator.userAgent.match(/Android/i)
+               || navigator.userAgent.match(/iPhone/i)
+               || navigator.userAgent.match(/iPad/i)
+               || navigator.userAgent.match(/iPod/i)
+               || navigator.userAgent.match(/BlackBerry/i)
+               || navigator.userAgent.match(/Windows Phone/i)
+               ){
+                document.getElementById("resource").style.display = "none";
+                document.getElementById("pdf").target = "_blank";
+                document.getElementById("boxDrive").target = "_blank";
+            } else {
             }
-            setInterval(function() {
-                window.top.postMessage(document.body.scrollHeight, "*");
-                }, 100);
-        </script>
+        }
+        setInterval(function() {
+                    window.top.postMessage(document.body.scrollHeight, "*");
+                    }, 100);
+            </script>
         <div style="text-align: center; margin: 0; padding: 0;">
-            <table style="display: inline-block; vertical-align: top; font-family: helvetica; font-weight: 100; font-size: 14px; margin: 0 2vh 3vh 2vh;">
+            <table id="table" style="display: inline-block; vertical-align: top; font-family: helvetica; font-weight: 100; font-size: 14px; margin: 0 2vh 3vh 2vh;">
                 <tr style="background-color: #daddf1;">
                     <th style="padding: 10px; border-radius: 7px 7px 0 0;" colspan="3">Unit 5: Electromagnetism<br>Chapter 22: Magnetism<br>55 Days</th>
                 </tr>
