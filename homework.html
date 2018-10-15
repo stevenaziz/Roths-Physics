@@ -355,6 +355,7 @@
                 var input = document.getElementById("chaptersDropdown").value;
                 if (input == "full_textbook") {
                     window.open("https://drive.google.com/file/d/0ByE5T005cqJIU1hQdUFCdzZlUjA/view?usp=sharing", "_self");
+                    document.getElementById("fullTextbook").selected = true;
                 } else {
                 document.getElementById("chapterHomework").src = "https://www.stevenaziz.com/rothsphysics/homework/" + input + ".html";
                 document.getElementById("chapterHomework").style.display = "block";
@@ -766,7 +767,7 @@
             <option value="chapter_32" id="ch32">Chapter 32: Medical Applications of Nuclear Physics</option>
             <option value="chapter_33" id="ch33">Chapter 33: Particle Physics</option>
             <option value="chapter_34" id="ch34">Chapter 34: Frontiers of Physics</option>
-            <option value="full_textbook">Full Textbook</option>
+            <option id="fullTextbook" value="full_textbook">Full Textbook</option>
         </select>
         <iframe id="chapterHomework" style="display: none; border-style: none; width: 100vw; margin: 0;"></iframe>
         <!--
