@@ -354,8 +354,8 @@
             function iframeTarget() {
                 var input = document.getElementById("chaptersDropdown").value;
                 if (input == "full_textbook") {
-                    document.getElementById("fullTextbook").selected = true;
-                    window.open("https://drive.google.com/file/d/0ByE5T005cqJIU1hQdUFCdzZlUjA/view?usp=sharing", "_parent");
+                    document.getElementById("defaultOption").selected = true;
+                    window.open("https://drive.google.com/file/d/0ByE5T005cqJIU1hQdUFCdzZlUjA/view?usp=sharing", "_blank");
                 } else {
                 document.getElementById("chapterHomework").src = "https://www.stevenaziz.com/rothsphysics/homework/" + input + ".html";
                 document.getElementById("chapterHomework").style.display = "block";
@@ -732,7 +732,7 @@
         
         <h1 id="homeworkTitle" style="font-family: helvetica; font-weight: 100; font-size: 32px; color: black; text-align: left; margin: 4vh 2vh 3vh 2vh;">Homework</h1>
         <select id="chaptersDropdown" onchange="iframeTarget()" style="margin: 0 2vh 3vh 2vh; width: calc(100vw - 4vh);">
-            <option disabled selected>Please select a chapter.</option>
+            <option id="defaultOption" disabled selected>Please select a chapter.</option>
             <option value="chapter_1">Chapter 1: The Nature of Science and Physics</option>
             <option value="chapter_2" id="ch2">Chapter 2: Kinematics</option>
             <option value="chapter_3" id="ch3">Chapter 3: Two-Dimensional Kinematics</option>
@@ -767,7 +767,7 @@
             <option value="chapter_32" id="ch32">Chapter 32: Medical Applications of Nuclear Physics</option>
             <option value="chapter_33" id="ch33">Chapter 33: Particle Physics</option>
             <option value="chapter_34" id="ch34">Chapter 34: Frontiers of Physics</option>
-            <option id="fullTextbook" value="full_textbook">Full Textbook</option>
+            <option value="full_textbook">Full Textbook</option>
         </select>
         <iframe id="chapterHomework" style="display: none; border-style: none; width: 100vw; margin: 0;"></iframe>
         <!--
