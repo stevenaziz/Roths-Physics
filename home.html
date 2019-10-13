@@ -42,11 +42,16 @@
                 top: 0;
                 left: 0;
                 z-index: 9998;
-                -webkit-backdrop-filter: saturate(1.8) blur(5px);
-                height: 48px;
+                -webkit-backdrop-filter: saturate(1.8) blur(6px);
                 width: 100vw;
                 display: block;
                 margin: 0;
+            }
+            .normal {
+                height: 48px;
+            }
+            .extended {
+                height: 258px;
             }
             #leftArrow {
                 fill: white;
@@ -158,7 +163,7 @@
             .display {
                 display: block;
                 transition: opacity 0.8s;
-                opacity: 0.9;
+                opacity: 0.85;
             }
             .container {
                 display: inline-block;
@@ -349,6 +354,7 @@
             function myFunction(x) {
                 x.classList.toggle("change");
                 document.getElementById("mobileMenuDropdown").classList.toggle("display");
+                document.getElementById("blur").classList.toggle("extended");
             }
             function responsiveDesign() {
                 if (window.innerWidth < 755) {
@@ -399,7 +405,7 @@
         
         <!--    BEGINNING OF GLOBAL HTML    -->
         
-        <div id="blur"></div>
+        <div id="blur" class="normal"></div>
         <div class="navBar">
             <a id="home" class="navLink" href="/home.html" style="margin-left: 12px;">Home</a>
             <div id="course" class="dropdown">
