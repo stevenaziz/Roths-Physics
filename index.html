@@ -17,28 +17,33 @@
         <meta name="theme-color" content="#f5f6fa">
         <style>
             html {
-                background-color: rgb(245,246,250);
+                background-color: rgb(235,235,235);
+                margin: 0;
+                height: 100vh;
             }
             body {
                 opacity: 1;
                 transition: 0.8s opacity;
+                margin: 0;
+                min-height: 85vh;
+                background: rgb(235,235,235);
+                background: linear-gradient(180deg, rgba(235,235,235,1) 50%, rgba(54,67,144,1) 100%);
+                min-width: 320px;
+                padding: 15vh 0 0 0;
             }
             body.fade-out {
                 opacity: 0;
                 transition: none;
             }
             .redirectButton:hover {
-                background:  #4657b9 radial-gradient(circle, transparent 1%,  #4657b9 1%) center/15000%;
-                box-shadow: 0 3px 7px 1px grey;
+                background-color:  #4657b9;
+                box-shadow: 0 2px 20px -4px #000000;
                 }
             .redirectButton:active {
                 background-color: #7e8ace;
-                background-size: 100%;
                 transition: background 0s;
-                box-shadow: 0 3px 10px 1px grey;
                 }
             .redirectButton {
-                background-position: center;
                 transition: background 0.4s, box-shadow 0.4s;
                 min-width: 67px;
                 min-height: 27px;
@@ -55,14 +60,13 @@
                 cursor: pointer;
                 color: white;
                 background-color: rgb(54, 67, 144);
-                box-shadow: 0 2px 3px 1px grey;
+                box-shadow: 0 2px 20px -6px #000000;
                 outline: none;
                 border: none;
-                opacity: 0.95;
                 }
         </style>
     </head>
-    <body id="body" style="background-color: rgb(245, 246, 250); margin: 0; padding: 0; min-width: 320px;">
+    <body id="body">
         <script>
             document.body.className += 'fade-out';
             if (document.cookie.indexOf("class=") == -1) {
@@ -96,7 +100,7 @@
                 window.location = "https://www.rothsphysics.net/home.html";
             }
         </script>
-        <img style="display: block; margin: 15vh auto 0 auto; min-width: 100px; width: 20vmin; max-width: 250px;" src="https://www.rothsphysics.net/Mount-Rainier-High-School.png" alt="Mount Rainier High School logo">
+        <img style="display: block; margin: 0 auto; min-width: 100px; width: 20vmin; max-width: 250px;" src="https://www.rothsphysics.net/Mount-Rainier-High-School.png" alt="Mount Rainier High School logo">
         <h1 style="margin: 4vh 16px 0 16px; text-align: center; font-family: helvetica; font-size: 5vmin; color: #1a1a1a; font-weight: 100;">Welcome to Roths Physics!</h1>
         <h2 style="margin: 1vh 16px 0 16px; text-align: center; font-family: helvetica; font-size: 3.5vmin; color: #404040; font-weight: 100;">Please select your class.</h2>
         <div style="text-align: center;">

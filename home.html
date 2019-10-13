@@ -20,14 +20,33 @@
             
             html {
                  -webkit-text-size-adjust: 100%;
+                 background-color: rgb(235,235,235);
+                 margin: 0;
+                 height: 100vh;
             }
             body {
                 opacity: 1;
                 transition: 0.8s opacity;
+                margin: 0;
+                min-height: 100vh;
+                background: rgb(235,235,235);
+                min-width: 320px;
+                padding: 0;
             }
             body.fade-out {
                 opacity: 0;
                 transition: none;
+            }
+            #blur {
+                position: fixed;
+                top: 0;
+                left: 0;
+                z-index: 9998;
+                -webkit-backdrop-filter: saturate(1.8) blur(5px);
+                height: 48px;
+                width: 100vw;
+                display: block;
+                margin: 0;
             }
             #leftArrow {
                 fill: white;
@@ -53,10 +72,11 @@
                 background-color: rgb(54, 67, 144);
                 text-align: left;
                 height: 48px;
-                opacity: 0.95;
+                opacity: 0.85;
                 position: sticky;
                 position: -webkit-sticky;
                 top: 0;
+                z-index: 9999;
             }
             .navLink {
                 display: inline-block;
@@ -257,7 +277,7 @@
         
         </style>
     </head>
-    <body id="body" onresize="responsiveDesign()" style="min-height: 100vh; background-color: rgb(245, 246, 250); margin: 0; padding: 0; min-width: 320px;">
+    <body id="body" onresize="responsiveDesign()">
         <script>
             /* BEGINNING OF GLOBAL SCRIPT */
             
@@ -379,6 +399,7 @@
         
         <!--    BEGINNING OF GLOBAL HTML    -->
         
+        <div id="blur"></div>
         <div class="navBar">
             <a id="home" class="navLink" href="/home.html" style="margin-left: 12px;">Home</a>
             <div id="course" class="dropdown">
