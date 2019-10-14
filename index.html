@@ -17,7 +17,7 @@
         <meta name="theme-color" content="#f5f6fa">
         <style>
             html {
-                background-color: rgb(235,235,235);
+                background-color: rgb(53,65,148);
                 margin: 0;
                 height: 100vh;
             }
@@ -26,8 +26,8 @@
                 transition: 0.8s opacity;
                 margin: 0;
                 min-height: 85vh;
-                background: rgb(235,235,235);
-                background: linear-gradient(180deg, rgba(235,235,235,1) 50%, rgba(54,67,144,1) 100%);
+                background: rgb(53,65,148);
+                background: linear-gradient(180deg, rgba(53,65,148,1) 1%, rgba(14,17,38,1) 100%);
                 min-width: 320px;
                 padding: 15vh 0 0 0;
             }
@@ -36,21 +36,22 @@
                 transition: none;
             }
             .redirectButton:hover {
-                background-color:  #4657b9;
+                background-color: #404fb3;
                 box-shadow: 0 2px 20px -4px #000000;
                 }
             .redirectButton:active {
-                background-color: #7e8ace;
-                transition: background 0s;
+                background-color: #4e5fd9;
+                color: #0e1126
+                transition: background-color 0s, color 0s;
                 }
             .redirectButton {
                 transition: background 0.4s, box-shadow 0.4s;
                 min-width: 67px;
                 min-height: 27px;
                 width: 15vw;
-                height: 6vw;
+                height: 7vw;
                 max-width: 84px;
-                max-height: 33px;
+                max-height: 39px;
                 font-weight: 100;
                 border-radius: 9px;
                 padding: 4px;
@@ -58,8 +59,8 @@
                 font-family: helvetica, sans-serif;
                 text-align: center;
                 cursor: pointer;
-                color: white;
-                background-color: rgb(54, 67, 144);
+                color: #e3e7ff;
+                background-color: rgb(53, 65, 149);
                 box-shadow: 0 2px 20px -6px #000000;
                 outline: none;
                 border: none;
@@ -100,9 +101,9 @@
                 window.location = "https://www.rothsphysics.net/home.html";
             }
         </script>
-        <img style="display: block; margin: 0 auto; min-width: 100px; width: 20vmin; max-width: 250px;" src="https://www.rothsphysics.net/Mount-Rainier-High-School.png" alt="Mount Rainier High School logo">
-        <h1 style="margin: 4vh 16px 0 16px; text-align: center; font-family: helvetica; font-size: 5vmin; color: #1a1a1a; font-weight: 100;">Welcome to Roths Physics!</h1>
-        <h2 style="margin: 1vh 16px 0 16px; text-align: center; font-family: helvetica; font-size: 3.5vmin; color: #404040; font-weight: 100;">Please select your class.</h2>
+        <img style="display: block; margin: 0 auto; min-width: 100px; width: 20vmin; max-width: 250px;" src="https://www.rothsphysics.net/MRHS-icon.png" alt="Mount Rainier High School logo">
+        <h1 style="margin: 4vh 16px 0 16px; text-align: center; font-family: helvetica; font-size: 5vmin; color: #e3e7ff; font-weight: 100;">Welcome to Roths Physics!</h1>
+        <h2 style="margin: 1vh 16px 0 16px; text-align: center; font-family: helvetica; font-size: 3.5vmin; color: #b3bdff; font-weight: 100;">Please select your class.</h2>
         <div style="text-align: center;">
             <button onclick="joinClass('SL12')" style="margin: 4vh 1.7vw 0 0;" class="redirectButton">SL 1,2</button>
             <button onclick="joinClass('SL34')" style="margin: 4vh 1.7vw 0 0;" class="redirectButton">SL 3,4</button>
