@@ -8,19 +8,19 @@
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=GvmmqzW0AN">
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=GvmmqzW0AN">
         <link rel="manifest" href="/site.webmanifest?v=GvmmqzW0AN">
-        <link rel="mask-icon" href="/safari-pinned-tab.svg?v=GvmmqzW0AN" color="#364390">
+        <link rel="mask-icon" href="/safari-pinned-tab.svg?v=GvmmqzW0AN" color="#354195">
         <link rel="shortcut icon" href="/favicon.ico?v=GvmmqzW0AN">
         <meta name="apple-mobile-web-app-title" content="Roths Physics">
         <meta name="application-name" content="Roths Physics">
-        <meta name="msapplication-TileColor" content="#364390">
+        <meta name="msapplication-TileColor" content="#354195">
         <meta name="msapplication-TileImage" content="/mstile-144x144.png?v=GvmmqzW0AN">
-        <meta name="theme-color" content="#f5f6fa">
+        <meta name="theme-color" content="#e3e7ff">
         <style>
             /* BEGINNING OF GLOBAL STYLES */
             
             html {
                  -webkit-text-size-adjust: 100%;
-                 background-color: rgb(235,235,235);
+                 background-color: #000000;
                  margin: 0;
                  height: 100vh;
             }
@@ -29,7 +29,7 @@
                 transition: 0.8s opacity;
                 margin: 0;
                 min-height: 100vh;
-                background: rgb(235,235,235);
+                background: #f0f0f0;
                 min-width: 320px;
                 padding: 0;
             }
@@ -46,19 +46,20 @@
                 width: 100vw;
                 display: block;
                 margin: 0;
+                transition: height 0.5s ease-in;
             }
             .normal {
                 height: 48px;
             }
             .extended {
-                height: 258px;
+                height: 100vh;
             }
             #leftArrow {
-                fill: white;
+                fill: #e3e7ff;
                 transition: fill 0.4s;
             }
             #leaveClassLink {
-                color: white;
+                color: #e3e7ff;
                 vertical-align: top;
                 font-size: 16px;
                 font-family: helvetica, sans-serif;
@@ -68,13 +69,13 @@
                 cursor: pointer;
             }
             #leaveClass:hover  {
-                background-color: #4657b9;
+                background-color: #4552bf;
             }
             .navBar {
                 margin: 0;
                 padding: 0;
                 overflow: visible;
-                background-color: rgb(54, 67, 144);
+                background-color: rgb(53, 65, 149);
                 text-align: left;
                 height: 48px;
                 opacity: 0.85;
@@ -85,11 +86,11 @@
             }
             .navLink {
                 display: inline-block;
-                background-color: rgb(54, 67, 144);
+                background-color: rgb(53, 65, 149);
                 text-align: center;
                 font-family: helvetica;
                 font-size: 16px;
-                color: white;
+                color: #e3e7ff;
                 text-decoration: none;
                 transition: background-color 0.4s;
                 padding: 15px;
@@ -97,10 +98,10 @@
                 height: 18px;
             }
             .navLink:active {
-                background-color: #7e8ace;
+                background-color: #495acc;
             }
             .navLink:hover {
-                background-color: #4657b9;
+                background-color: #4552bf;
             }
             .dropdown {
                 display: inline-block;
@@ -136,34 +137,37 @@
                 text-align: left;
                 font-family: helvetica;
                 font-size: 17px;
-                color: white;
+                color: #e3e7ff;
                 text-decoration: none;
                 transition: background-color 0.4s;
                 padding: 11px;
                 font-weight: 100;
             }
             .navLinkMobile:active {
-                background-color: #7e8ace;
+                background-color: #495acc;
             }
             .navLinkMobile:hover {
-                background-color: #4657b9;
+                background-color: #4552bf;
             }
             #mobileMenu {
                 display: none;
             }
             .mobileMenuDropdown {
-                display: none;
-                position: absolute;
-                background-color: rgb(54, 67, 144);
-                opacity: 0;
-                z-index: 2;
-                transition: opacity 0.8s;
+                visibility: hidden;
+                position: fixed;
+                top: 48px;
+                left: 0;
+                background-color: rgb(53, 65, 149);
+                opacity: 1;
+                overflow: hidden;
+                z-index: 9999;
+                transition: visibility 0.5s ease-in, height 0.5s ease-in;
                 width: 100vw;
+                height: 0;
             }
             .display {
-                display: block;
-                transition: opacity 0.8s;
-                opacity: 0.85;
+                visibility: visible;
+                height: calc(100vh - 48px);
             }
             .container {
                 display: inline-block;
@@ -222,15 +226,12 @@
                 cursor: pointer;
             }
             #mrhsIcon {
-                fill: white;
-                transition: fill 0.8s;
+                fill: #e3e7ff;
+                transition: fill 0.4s;
                 vertical-align: top;
             }
             #homeLink:hover #mrhsIcon {
-                fill: #b5b6e3;
-            }
-            html {
-                background-color: rgb(54,67,144);
+                fill: #4552bf;
             }
         
             /* END OF GLOBAL STYLES */
@@ -246,29 +247,29 @@
                 border-radius: 5px;
                 outline: none;
                 border: none;
-                background-color: white;
-                box-shadow: 0px 1px 4px -1px grey;
-                color: black;
+                background-color: rgb(53, 65, 149);
+                box-shadow: 0px 1px 10px -6px #000000;
+                color: #e3e7ff;
                 cursor: pointer;
                 text-align: center;
                 font-family: helvetica;
                 font-size: 14px;
                 padding: 4px;
                 font-weight: 100;
-                transition: background-color 0.4s;
+                transition: background-color 0.4s, box-shadow 0.4s;
             }
             button:hover {
-                background-color: #b5b6e3;
-                box-shadow: 0px 1px 4px 0px grey;
+                background-color: #404fb3;
+                box-shadow: 0px 1px 10px -4px #000000;
             }
             button:active {
-                background-color: #9091d5;
-                box-shadow: 0px 1px 4px 1px grey;
+                transition: background-color 0s;
+                background-color: #4e5fd9;
             }
             #contactInfo {
                 margin-top: 1vh;
                 padding: 10px;
-                background-color: white;
+                background-color: #f0f0f0;
                 text-align: left;
                 display: none;
             }
@@ -381,8 +382,6 @@
                     document.getElementById("welcome").style.textAlign = "left";
                     document.getElementById("courseDescription").style.width = "55vw";
                     document.getElementById("quickLook").style.width = "calc(45vw - 10vh)";
-                    document.getElementById("blur").classList.remove("extended");
-                    document.getElementById("blur").classList.add("normal");
                 }
             }
         
@@ -775,7 +774,7 @@
         
         <h1 id="welcome" style="font-family: helvetica; font-weight: 100; font-size: 32px; color: black; text-align: left; margin: 4vh 2vh 3vh 2vh;"></h1>
         <div style="text-align: center;">
-            <p id="courseDescription" style="vertical-align: top; display: inline-block; font-family: helvetica; font-weight: 100; font-size: 18px; color: #4d4d4d; text-align: left; margin: 0 2vh 5vh 2vh;"></p>
+            <p id="courseDescription" style="vertical-align: top; display: inline-block; font-family: helvetica; font-weight: 100; font-size: 18px; color: #4d4d4d; text-align: left; margin: 0 2vh 5vh 2vh; line-height: 1.8;"></p>
             <div id="quickLook" style="display: inline-block; vertical-align: top; margin: 0 2vh 5vh 2vh;">
                 <h1 style="font-family: helvetica; font-weight: 100; font-size: 28px; color: black; text-align: center; margin: 0 10px 1vh 10px;">Quick Look</h1>
                 <button type="button" id="calendarBtn" onclick="quickLook('calendar')" style="margin: 0 6px 0 0;">Calendar</button>
