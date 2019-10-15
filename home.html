@@ -37,16 +37,19 @@
                 opacity: 0;
                 transition: none;
             }
+            .noScroll {
+                overflow: hidden;
+            }
             #blur {
                 position: fixed;
                 top: 0;
                 left: 0;
-                z-index: 9998;
+                z-index: 9997;
                 -webkit-backdrop-filter: saturate(1.8) blur(6px);
                 width: 100vw;
                 display: block;
                 margin: 0;
-                transition: height 0.5s ease-in;
+                transition: height 0.6s ease-in-out;
             }
             .normal {
                 height: 48px;
@@ -139,15 +142,14 @@
                 font-size: 17px;
                 color: #e3e7ff;
                 text-decoration: none;
-                transition: background-color 0.4s;
-                padding: 11px;
+                transition: color 0.4s;
+                padding: 14px 0;
                 font-weight: 100;
-            }
-            .navLinkMobile:active {
-                background-color: #495acc;
+                margin: 0;
+                border-bottom: 1px solid #4552bf;
             }
             .navLinkMobile:hover {
-                background-color: #4552bf;
+                color: #4552bf;
             }
             #mobileMenu {
                 display: none;
@@ -155,19 +157,22 @@
             .mobileMenuDropdown {
                 visibility: hidden;
                 position: fixed;
-                top: 48px;
+                top: 0;
                 left: 0;
                 background-color: rgb(53, 65, 149);
-                opacity: 1;
+                opacity: 0.85;
                 overflow: hidden;
-                z-index: 9999;
-                transition: visibility 0.5s ease-in, height 0.5s ease-in;
-                width: 100vw;
+                z-index: 9998;
+                transition: visibility 0.5s ease-in-out, height 0.5s ease-in-out, opacity 0.5s ease-in-out;
+                width: calc(100vw - 140px);
                 height: 0;
+                margin: 0;
+                padding: 48px 70px;
             }
             .display {
                 visibility: visible;
-                height: calc(100vh - 48px);
+                height: calc(100vh - 96px);
+                opacity: 1;
             }
             .container {
                 display: inline-block;
@@ -231,7 +236,7 @@
                 vertical-align: top;
             }
             #homeLink:hover #mrhsIcon {
-                fill: #4552bf;
+                fill: #ffffff;
             }
         
             /* END OF GLOBAL STYLES */
@@ -356,6 +361,7 @@
                 x.classList.toggle("change");
                 document.getElementById("mobileMenuDropdown").classList.toggle("display");
                 document.getElementById("blur").classList.toggle("extended");
+                document.getElementById("body").classList.toggle("noScroll");
             }
             function responsiveDesign() {
                 if (window.innerWidth < 755) {
@@ -407,25 +413,27 @@
         <!--    BEGINNING OF GLOBAL HTML    -->
         
         <div id="blur" class="normal"></div>
+        <div id="mobileMenuDropdown" class="mobileMenuDropdown">
+            <a class="navLinkMobile" href="/course.html">Course</a>
+            <a class="navLinkMobile" href="/homework.html">Homework</a>
+            <a class="navLinkMobile" href="/experiments.html">Experiments</a>
+            <a class="navLinkMobile" href="/projects.html">Projects</a>
+            <a class="navLinkMobile" style="border: none;" href="/resources.html">Resources</a>
+        </div>
         <div class="navBar">
             <a id="home" class="navLink" href="/home.html" style="margin-left: 12px;">Home</a>
-            <div id="course" class="dropdown">
-                <a class="navLink" href="/course.html">Course</a>
-                <div class="dropdown-content">
+            <a id="course" class="navLink" href="/course.html">Course</a>
+            <!--<div class="dropdown-content">
                     <a class="dropdownLink" href="/course.html#classExpectations">Class Expectations</a>
                     <a class="dropdownLink" href="/course.html#gradingThresholds">Grading Thresholds</a>
                     <a class="dropdownLink" href="/course.html#categoriesReassessments">Categories &amp; Reassessments</a>
                     <a class="dropdownLink" href="/course.html#gradingRoutines">Grading Routines</a>
                     <a class="dropdownLink" href="/safetyContract.pdf">Safety Contract</a>
                     <a class="dropdownLink" href="/course.html#FAQ">FAQ</a>
-                </div>
-            </div>
-            <div id="hw" class="dropdown">
-                <a class="navLink" href="/homework.html">Homework</a>
-            </div>
-            <div id="labs" class="dropdown">
-                <a class="navLink" href="/experiments.html">Experiments</a>
-                <div class="dropdown-content" style="height: 400px; overflow: auto;">
+                </div>-->
+            <a id="hw" class="navLink" href="/homework.html">Homework</a>
+            <a id="labs" class="navLink" href="/experiments.html">Experiments</a>
+                <!--<div class="dropdown-content" style="height: 400px; overflow: auto;">
                     <a class="dropdownLink" href="/experiments.html#1">The Sextant</a>
                     <a class="dropdownLink" href="/experiments.html#2">Determining g on an incline plane</a>
                     <a class="dropdownLink" href="/experiments.html#3">The Atwood Machine</a>
@@ -446,11 +454,9 @@
                     <a class="dropdownLink" href="/experiments.html#18">Spectroscopy and Interferometry</a>
                     <a class="dropdownLink" href="/experiments.html#19">The Photoelectric Effect</a>
                     <a class="dropdownLink" href="/experiments.html#20">Radioactive Decay</a>
-                </div>
-            </div>
-            <div id="projects" class="dropdown">
-                <a class="navLink" href="/projects.html">Projects</a>
-                <div class="dropdown-content">
+                </div>-->
+            <a id="projects" class="navLink" href="/projects.html">Projects</a>
+                <!--<div class="dropdown-content">
                     <a class="dropdownLink" href="/projects.html#1">Target Practice</a>
                     <a class="dropdownLink" href="/projects.html#2">Destructive Testing</a>
                     <a class="dropdownLink" href="/projects.html#3">Solar Oven</a>
@@ -461,11 +467,9 @@
                     <a class="dropdownLink" href="/projects.html#8">Compound Lenses</a>
                     <a class="dropdownLink" href="/projects.html#9">Camera Obscura</a>
                     <a class="dropdownLink" href="/projects.html#10">Human Enhancement Debates</a>
-                </div>
-            </div>
-            <div id="resources" class="dropdown">
-                <a class="navLink" href="/resources.html">Resources</a>
-                <div class="dropdown-content">
+                </div>-->
+            <a id="resources" class="navLink" href="/resources.html">Resources</a>
+                <!--<div class="dropdown-content">
                     <a class="dropdownLink" href="/resources.html#1">Target Practice</a>
                     <a class="dropdownLink" href="/resources.html#2">Destructive Testing</a>
                     <a class="dropdownLink" href="/resources.html#3">Solar Oven</a>
@@ -476,20 +480,12 @@
                     <a class="dropdownLink" href="/resources.html#8">Compound Lenses</a>
                     <a class="dropdownLink" href="/resources.html#9">Camera Obscura</a>
                     <a class="dropdownLink" href="/resources.html#10">Human Enhancement Debates</a>
-                </div>
-            </div>
+                </div>-->
             <div id="mobileMenu">
                 <div class="container" onclick="myFunction(this)">
                     <div class="bar1"></div>
                     <div class="bar2"></div>
                     <div class="bar3"></div>
-                </div>
-                <div id="mobileMenuDropdown" class="mobileMenuDropdown">
-                    <a class="navLinkMobile" href="/course.html">Course</a>
-                    <a class="navLinkMobile" href="/homework.html">Homework</a>
-                    <a class="navLinkMobile" href="/experiments.html">Experiments</a>
-                    <a class="navLinkMobile" href="/projects.html">Projects</a>
-                    <a class="navLinkMobile" href="/resources.html">Resources</a>
                 </div>
             </div>
             <a id="homeLink" href="/home.html">
