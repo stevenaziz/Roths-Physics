@@ -2,36 +2,67 @@
 <html lang="en-us">
     <head>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1,user-scalable=0"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
         <title>Roths Physics | Homework</title>
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=GvmmqzW0AN">
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=GvmmqzW0AN">
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=GvmmqzW0AN">
         <link rel="manifest" href="/site.webmanifest?v=GvmmqzW0AN">
-        <link rel="mask-icon" href="/safari-pinned-tab.svg?v=GvmmqzW0AN" color="#364390">
+        <link rel="mask-icon" href="/safari-pinned-tab.svg?v=GvmmqzW0AN" color="#354195">
         <link rel="shortcut icon" href="/favicon.ico?v=GvmmqzW0AN">
         <meta name="apple-mobile-web-app-title" content="Roths Physics">
         <meta name="application-name" content="Roths Physics">
-        <meta name="msapplication-TileColor" content="#364390">
+        <meta name="msapplication-TileColor" content="#354195">
         <meta name="msapplication-TileImage" content="/mstile-144x144.png?v=GvmmqzW0AN">
-        <meta name="theme-color" content="#f5f6fa">
+        <meta name="theme-color" content="#e3e7ff">
         <style>
             /* BEGINNING OF GLOBAL STYLES */
             
+            html {
+                 background-color: #000000;
+                 margin: 0;
+                 height: 100vh;
+            }
             body {
                 opacity: 1;
                 transition: 0.8s opacity;
+                margin: 0;
+                min-height: 100vh;
+                background: #f0f0f0;
+                min-width: 320px;
+                padding: 0;
             }
             body.fade-out {
                 opacity: 0;
                 transition: none;
             }
+            .noScroll {
+                overflow: hidden;
+            }
+            #blur {
+                position: fixed;
+                top: 0;
+                left: 0;
+                z-index: 9997;
+                -webkit-backdrop-filter: saturate(1.8) blur(6px);
+                backdrop-filter: saturate(1.8) blur(6px);
+                width: 100vw;
+                display: block;
+                margin: 0;
+                transition: height 0.5s ease-in-out;
+            }
+            .normal {
+                height: 48px;
+            }
+            .extended {
+                height: 100vh;
+            }
             #leftArrow {
-                fill: white;
+                fill: #e3e7ff;
                 transition: fill 0.4s;
             }
             #leaveClassLink {
-                color: white;
+                color: #e3e7ff;
                 vertical-align: top;
                 font-size: 16px;
                 font-family: helvetica, sans-serif;
@@ -41,101 +72,76 @@
                 cursor: pointer;
             }
             #leaveClass:hover  {
-                background-color: #4657b9;
+                background-color: #4552bf;
             }
             .navBar {
                 margin: 0;
                 padding: 0;
                 overflow: visible;
-                background-color: rgb(54, 67, 144);
+                background-color: rgb(53, 65, 149);
                 text-align: left;
                 height: 48px;
-                opacity: 0.95;
+                opacity: 0.85;
                 position: sticky;
                 position: -webkit-sticky;
                 top: 0;
+                z-index: 9999;
             }
             .navLink {
                 display: inline-block;
-                background-color: rgb(54, 67, 144);
+                background-color: rgb(53, 65, 149);
                 text-align: center;
                 font-family: helvetica;
                 font-size: 16px;
-                color: white;
+                color: #e3e7ff;
                 text-decoration: none;
                 transition: background-color 0.4s;
                 padding: 15px;
                 font-weight: 100;
                 height: 18px;
             }
-            .navLink:active {
-                background-color: #7e8ace;
-            }
             .navLink:hover {
-                background-color: #4657b9;
-            }
-            .dropdown {
-                display: inline-block;
-            }
-            .dropdown-content {
-                display: none;
-                position: absolute;
-                background-color: #f2f2f2;
-                min-width: 60px;
-                box-shadow: 0px 11px 11px -4px grey;
-                z-index: 2;
-            }
-            .dropdownLink {
-                display: block;
-                background-color: #f2f2f2;
-                text-align: left;
-                font-family: helvetica;
-                font-size: 14px;
-                color: black;
-                text-decoration: none;
-                transition: background-color 0.4s;
-                padding: 7px;
-                font-weight: 100;
-            }
-            .dropdownLink:hover {
-                background-color: #d9d9d9;
-            }
-            .dropdown:hover .dropdown-content {
-                display: block;
+                background-color: #4552bf;
             }
             .navLinkMobile {
                 display: block;
                 text-align: left;
                 font-family: helvetica;
                 font-size: 17px;
-                color: white;
+                color: #e3e7ff;
                 text-decoration: none;
-                transition: background-color 0.4s;
-                padding: 11px;
+                transition: color 0.4s;
+                padding: 14px 0;
                 font-weight: 100;
-            }
-            .navLinkMobile:active {
-                background-color: #7e8ace;
+                margin: 0;
+                border-bottom: 1px solid #b3beff;
             }
             .navLinkMobile:hover {
-                background-color: #4657b9;
+                background-color: #b3beff;
             }
             #mobileMenu {
                 display: none;
             }
             .mobileMenuDropdown {
-                display: none;
-                position: absolute;
-                background-color: rgb(54, 67, 144);
-                opacity: 0;
-                z-index: 2;
-                transition: opacity 0.8s;
-                width: 100vw;
+                visibility: hidden;
+                position: fixed;
+                top: 0;
+                left: 0;
+                background-color: rgb(53, 65, 149);
+                opacity: 0.85;
+                overflow: hidden;
+                z-index: 9998;
+                transition: visibility 0.5s ease-in-out, height 0.5s ease-in-out, opacity 0.5s ease-in-out, padding 0.5s ease-in-out;
+                width: calc(100vw - 140px);
+                height: 0;
+                margin: 0;
+                padding: 0 70px;
             }
             .display {
-                display: block;
-                transition: opacity 0.8s;
-                opacity: 0.9;
+                visibility: visible;
+                height: calc(100vh - 96px);
+                opacity: 1;
+                padding: 48px 70px;
             }
             .container {
                 display: inline-block;
@@ -194,15 +200,12 @@
                 cursor: pointer;
             }
             #mrhsIcon {
-                fill: white;
-                transition: fill 0.8s;
+                fill: #e3e7ff;
+                transition: fill 0.4s;
                 vertical-align: top;
             }
             #homeLink:hover #mrhsIcon {
-                fill: #b5b6e3;
-            }
-            html {
-                background-color: rgb(54,67,144);
+                fill: #ffffff;
             }
         
             /* END OF GLOBAL STYLES */
@@ -236,7 +239,7 @@
             }
         </style>
     </head>
-    <body id="body" onresize="responsiveDesign()" style="min-height: 100vh; background-color: rgb(245, 246, 250); margin: 0; padding: 0; min-width: 320px;">
+    <body id="body" onresize="responsiveDesign()">
         <script>
             /* BEGINNING OF GLOBAL SCRIPT */
             
@@ -320,6 +323,8 @@
             function myFunction(x) {
                 x.classList.toggle("change");
                 document.getElementById("mobileMenuDropdown").classList.toggle("display");
+                document.getElementById("blur").classList.toggle("extended");
+                document.getElementById("body").classList.toggle("noScroll");
             }
             function responsiveDesign() {
                 if (window.innerWidth < 755) {
@@ -366,25 +371,28 @@
         
         <!--    BEGINNING OF GLOBAL HTML    -->
         
+        <div id="blur" class="normal"></div>
+        <div id="mobileMenuDropdown" class="mobileMenuDropdown">
+            <a class="navLinkMobile" href="/course.html">Course</a>
+            <a class="navLinkMobile" href="/homework.html">Homework</a>
+            <a class="navLinkMobile" href="/experiments.html">Experiments</a>
+            <a class="navLinkMobile" href="/projects.html">Projects</a>
+            <a class="navLinkMobile" style="border: none;" href="/resources.html">Resources</a>
+        </div>
         <div class="navBar">
             <a id="home" class="navLink" href="/home.html" style="margin-left: 12px;">Home</a>
-            <div id="course" class="dropdown">
-                <a class="navLink" href="/course.html">Course</a>
-                <div class="dropdown-content">
+            <a id="course" class="navLink" href="/course.html">Course</a>
+                <!--<div class="dropdown-content">
                     <a class="dropdownLink" href="/course.html#classExpectations">Class Expectations</a>
                     <a class="dropdownLink" href="/course.html#gradingThresholds">Grading Thresholds</a>
                     <a class="dropdownLink" href="/course.html#categoriesReassessments">Categories &amp; Reassessments</a>
                     <a class="dropdownLink" href="/course.html#gradingRoutines">Grading Routines</a>
                     <a class="dropdownLink" href="/safetyContract.pdf">Safety Contract</a>
                     <a class="dropdownLink" href="/course.html#FAQ">FAQ</a>
-                </div>
-            </div>
-            <div id="hw" class="dropdown">
-                <a class="navLink" href="/homework.html">Homework</a>
-            </div>
-            <div id="labs" class="dropdown">
-                <a class="navLink" href="/experiments.html">Experiments</a>
-                <div class="dropdown-content" style="height: 400px; overflow: auto;">
+                </div>-->
+            <a id="hw" class="navLink" href="/homework.html">Homework</a>
+            <a id="labs" class="navLink" href="/experiments.html">Experiments</a>
+                <!--<div class="dropdown-content" style="height: 400px; overflow: auto;">
                     <a class="dropdownLink" href="/experiments.html#1">The Sextant</a>
                     <a class="dropdownLink" href="/experiments.html#2">Determining g on an incline plane</a>
                     <a class="dropdownLink" href="/experiments.html#3">The Atwood Machine</a>
@@ -405,11 +413,9 @@
                     <a class="dropdownLink" href="/experiments.html#18">Spectroscopy and Interferometry</a>
                     <a class="dropdownLink" href="/experiments.html#19">The Photoelectric Effect</a>
                     <a class="dropdownLink" href="/experiments.html#20">Radioactive Decay</a>
-                </div>
-            </div>
-            <div id="projects" class="dropdown">
-                <a class="navLink" href="/projects.html">Projects</a>
-                <div class="dropdown-content">
+                </div>-->
+            <a id="projects" class="navLink" href="/projects.html">Projects</a>
+                <!--<div class="dropdown-content">
                     <a class="dropdownLink" href="/projects.html#1">Target Practice</a>
                     <a class="dropdownLink" href="/projects.html#2">Destructive Testing</a>
                     <a class="dropdownLink" href="/projects.html#3">Solar Oven</a>
@@ -420,11 +426,9 @@
                     <a class="dropdownLink" href="/projects.html#8">Compound Lenses</a>
                     <a class="dropdownLink" href="/projects.html#9">Camera Obscura</a>
                     <a class="dropdownLink" href="/projects.html#10">Human Enhancement Debates</a>
-                </div>
-            </div>
-            <div id="resources" class="dropdown">
-                <a class="navLink" href="/resources.html">Resources</a>
-                <div class="dropdown-content">
+                </div>-->
+            <a id="resources" class="navLink" href="/resources.html">Resources</a>
+                <!--<div class="dropdown-content">
                     <a class="dropdownLink" href="/resources.html#1">Target Practice</a>
                     <a class="dropdownLink" href="/resources.html#2">Destructive Testing</a>
                     <a class="dropdownLink" href="/resources.html#3">Solar Oven</a>
@@ -435,20 +439,12 @@
                     <a class="dropdownLink" href="/resources.html#8">Compound Lenses</a>
                     <a class="dropdownLink" href="/resources.html#9">Camera Obscura</a>
                     <a class="dropdownLink" href="/resources.html#10">Human Enhancement Debates</a>
-                </div>
-            </div>
+                </div>-->
             <div id="mobileMenu">
                 <div class="container" onclick="myFunction(this)">
                     <div class="bar1"></div>
                     <div class="bar2"></div>
                     <div class="bar3"></div>
-                </div>
-                <div id="mobileMenuDropdown" class="mobileMenuDropdown">
-                    <a class="navLinkMobile" href="/course.html">Course</a>
-                    <a class="navLinkMobile" href="/homework.html">Homework</a>
-                    <a class="navLinkMobile" href="/experiments.html">Experiments</a>
-                    <a class="navLinkMobile" href="/projects.html">Projects</a>
-                    <a class="navLinkMobile" href="/resources.html">Resources</a>
                 </div>
             </div>
             <a id="homeLink" href="/home.html">
